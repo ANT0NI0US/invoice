@@ -135,6 +135,7 @@ export default function NewUserForm({ toggleIsLogin }) {
             />
           )}
 
+          {/* Error */}
           <div className="mt-[20px]">
             <p className={`text-center text-red-500 ${!error && "opacity-0"}`}>
               {error}

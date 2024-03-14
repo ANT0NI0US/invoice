@@ -13,14 +13,16 @@ const resources = {
   },
 };
 
+const selectedLanguage = localStorage.getItem("i18nextLng") || "en";
+
 i18n
   .use(languagedetector)
   .use(initReactI18next)
   .init({
     resources,
-    lng: "en",
+    lng: selectedLanguage,
     interpolation: {
-      escapeValue: false, // react already safes from xss
+      escapeValue: false,
     },
     react: {
       useSuspense: false,
