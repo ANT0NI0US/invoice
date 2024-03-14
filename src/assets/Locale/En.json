@@ -1,0 +1,49 @@
+{
+  "sidebar": {
+    "Home": "Home",
+    "Bills": "Bills",
+    "Customers": "Customers",
+    "Products": "Products"
+  },
+  "login": {
+    "title": "Login",
+    "userName": "User Name",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "newUser": "New User?"
+  },
+
+  "newUser": {
+    "title": "Add Facility (New User)",
+    "formsData": {
+      "next": "Next",
+      "previous": "previous",
+      "error": "Please Fill Out All Fields.",
+      "submit": "Submit",
+      "back": "Back",
+
+      "formOneTitle": "Establishment Data",
+      "facilityName": "Facility Name",
+      "facilityAddress": "Facility Address",
+      "theCommercialRegistrationNumberOfTheEstablishment": "The Commercial RegistrationNumber Of The Establishment",
+      "facilityTaxRegistrationNumber": "Facility Tax Registration Number",
+      "email": "E-mail",
+      "contactNumber": "Contact Number",
+
+      "formTwoTitle": "Data of the person responsible for the facility",
+      "name": "Name",
+      "IDNumber": "ID Number",
+      "personEmail": "Person Email",
+      "phone": "Phone",
+
+      "formThreeTitle": "Login Data",
+      "userName": "User Name",
+      "phoneNumber": "Phone Number",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+
+      "formFourTitle": "Complete the registration information and activate the account",
+      "enterTheActivationCode": "Enter The Activation Code"
+    }
+  }
+}
