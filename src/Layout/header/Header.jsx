@@ -1,6 +1,6 @@
 import { BsFillGridFill } from "react-icons/bs";
-import TranslateButton from "../../ui/TranslateButton";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import TranslateButton from "../../ui/TranslateButton";
 import Logo from "./Logo";
 import userImage from "../../assets/user.png";
 
@@ -13,7 +13,7 @@ function Header({ tggleSidebar }) {
         <div>
           <BsFillGridFill
             onClick={tggleSidebar}
-            className="hidden text-primary sm:block"
+            className="block text-primary sm:hidden"
           />
         </div>
 
