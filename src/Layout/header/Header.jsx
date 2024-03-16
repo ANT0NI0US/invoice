@@ -1,19 +1,16 @@
 import { BsFillGridFill } from "react-icons/bs";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import TranslateButton from "../../ui/TranslateButton";
-import Logo from "./Logo";
 import userImage from "../../assets/user.png";
 
 function Header({ tggleSidebar }) {
   return (
-    <div className="flex h-[113px] items-center justify-between">
-      <Logo />
-
-      <div className="flex w-full items-center justify-between  p-[10px]">
+    <div className="flex h-[113px] items-center justify-between bg-bgColor">
+      <div className="flex w-full items-center justify-between p-[15px]">
         <div>
           <BsFillGridFill
             onClick={tggleSidebar}
-            className="block text-primary sm:hidden"
+            className="block text-primary md:hidden"
           />
         </div>
 
