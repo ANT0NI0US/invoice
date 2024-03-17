@@ -1,93 +1,13 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { IoIosArrowForward, IoMdSettings } from "react-icons/io";
-import { IoStatsChartSharp, IoShieldCheckmarkSharp } from "react-icons/io5";
-import { LiaMoneyBillWaveSolid } from "react-icons/lia";
-import { RiMoneyDollarCircleLine } from "react-icons/ri";
-import { GrDocumentText } from "react-icons/gr";
-import { ImFilesEmpty } from "react-icons/im";
-import { NavLink } from "react-router-dom";
+import { IoIosArrowForward } from "react-icons/io";
+import { Link, NavLink } from "react-router-dom";
+import links from "./links";
 
 export default function SidebarLinks() {
   const [t] = useTranslation();
 
-  const [menuItems, setMenuItems] = useState([
-    {
-      label: `${t("sidebar.sales")}`,
-      submenuOpenState: "isSalesSubMenuOpen",
-      icon: IoStatsChartSharp,
-      submenuItems: [
-        t("sidebar.outwardInvoice"),
-        t("sidebar.manageCustomer"),
-        t("sidebar.creditNotes"),
-        t("sidebar.debitNotes"),
-        t("sidebar.importOutwardInvoices"),
-        t("sidebar.importCreditNotes"),
-      ],
-      href: "sales",
-    },
-    {
-      label: `${t("sidebar.purchases")}`,
-      submenuOpenState: "isPurchasesSubMenuOpen",
-      icon: LiaMoneyBillWaveSolid,
-      submenuItems: [
-        t("sidebar.inwardInvoices"),
-        t("sidebar.manageVendor"),
-        t("sidebar.internalInvoices"),
-      ],
-      href: "purchases",
-    },
-
-    {
-      label: `${t("sidebar.payment")}`,
-      submenuOpenState: "isPaymentSubMenuOpen",
-      icon: RiMoneyDollarCircleLine,
-      submenuItems: [t("sidebar.collectedInvoices")],
-      href: "payment",
-    },
-
-    {
-      label: `${t("sidebar.reports")}`,
-      submenuOpenState: "isReportsSubMenuOpen",
-      icon: GrDocumentText,
-      submenuItems: [t("sidebar.salesReports")],
-      href: "reports",
-    },
-
-    {
-      label: `${t("sidebar.authorization")}`,
-      submenuOpenState: "isAuthorizationSubMenuOpen",
-      icon: IoShieldCheckmarkSharp,
-      submenuItems: [
-        t("sidebar.manageUser"),
-        t("sidebar.mangeDepartment"),
-        t("sidebar.designWorkflow"),
-        t("sidebar.manageDepartments"),
-      ],
-      href: "authorization",
-    },
-    {
-      label: `${t("sidebar.settings")}`,
-      submenuOpenState: "isSettingsSubMenuOpen",
-      icon: IoMdSettings,
-      submenuItems: [
-        t("sidebar.products"),
-        t("sidebar.corporateProfile"),
-        t("sidebar.customFields"),
-        t("sidebar.zatcaConfigurations"),
-        t("sidebar.sequenceGenerator"),
-        t("sidebar.notifications"),
-      ],
-      href: "settings",
-    },
-    {
-      label: `${t("sidebar.generateReport")}`,
-      submenuOpenState: "isGenerateReportSubMenuOpen",
-      icon: ImFilesEmpty,
-      submenuItems: [],
-      href: "generateReport",
-    },
-  ]);
+  const [menuItems, setMenuItems] = useState(links);
 
   const toggleSubMenu = (index) => {
     const updatedMenuItems = [...menuItems];
@@ -110,7 +30,7 @@ export default function SidebarLinks() {
             >
               <div className="flex items-center gap-[10px]">
                 {Icon && <Icon />}
-                {item.label}
+                {t(`${item.label}`)}
               </div>
 
               <IoIosArrowForward
@@ -120,16 +40,17 @@ export default function SidebarLinks() {
 
             {menuItems[index][item.submenuOpenState] && (
               <div
-                className="mx-auto mt-3 w-[90%] border-l text-left text-sm font-bold transition-all"
+                className=" mx-auto mr-[2px] mt-3 w-[90%] border-l-2 border-gray pl-3 text-left text-sm font-bold transition-all"
                 id={`submenu-${index}`}
               >
                 {item.submenuItems.map((submenuItem, subIndex) => (
-                  <li
-                    className="mt-1 cursor-pointer rounded-md p-2"
+                  <Link
+                    to={submenuItem.path}
+                    className="block mt-1 cursor-pointer list-none rounded-md p-2 text-[16px] text-lightB"
                     key={subIndex}
                   >
-                    {submenuItem}
-                  </li>
+                    {t(`${submenuItem.text}`)}
+                  </Link>
                 ))}
               </div>
             )}
