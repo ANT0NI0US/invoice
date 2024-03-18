@@ -1,12 +1,15 @@
+import { useTranslation } from "react-i18next";
 import { FaInfoCircle } from "react-icons/fa";
 import { MdError } from "react-icons/md";
 // import { GrNext } from "react-icons/gr";
 // import { GrPrevious } from "react-icons/gr";
 
 const Table = ({ columns, data }) => {
+  const [t] = useTranslation();
+
   return (
-    <div className="h-[calc(100vh-113px)] overflow-auto">
-      <table className="min-w-full space-y-6">
+    <div className="max-h-[calc(100vh-150px)]  overflow-auto">
+      <table className="min-w-full space-y-6 ">
         <thead className=" bg-[#BCD2E0] bg-opacity-[12%]">
           <tr className=" rounded-[12px]">
             {columns.map((column, index) => (
@@ -16,7 +19,7 @@ const Table = ({ columns, data }) => {
                   columns.length - 1 === index && " rounded-tr-[12px]"
                 } ${index === 0 && " rounded-tl-[12px]"}`}
               >
-                {column}
+                {t(`${column}`)}
               </th>
             ))}
           </tr>

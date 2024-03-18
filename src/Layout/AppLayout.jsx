@@ -12,15 +12,15 @@ function AppLayout() {
 
   return (
     <div className="bg-bgColor">
-      <div className="flex min-h-[calc(100vh-113px)]">
+      <div className="flex">
         <Sidebar
           openSidebar={openSidebar}
           closeSidebar={closeSidebar}
           setOpenSidebar={setOpenSidebar}
         />
-        <div className="w-full">
+        <div className="w-full md:w-[calc(100%-300px)]">
           <Header tggleSidebar={tggleSidebar} />
-          <main className="min-h-[calc(100vh-113px)] bg-[#FFFFFF] p-[20px]">
+          <main className="h-[calc(100vh-113px)]  bg-[#FFFFFF] p-[20px]">
             <Outlet />
           </main>
         </div>
