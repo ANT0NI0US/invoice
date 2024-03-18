@@ -25,7 +25,7 @@ function Sidebar({ openSidebar, closeSidebar }) {
 
       <nav
         ref={ref}
-        className={`links-list absolute top-0 z-[101] h-[100vh] w-[250px] overflow-y-auto bg-lightRed transition-all md:static md:w-[300px] 
+        className={`links-list absolute top-0 z-[101] h-[100vh] w-[270px] overflow-y-auto bg-lightRed transition-all md:static md:w-[300px] 
         ${openSidebar ? "ltr:left-0 rtl:right-0" : "ltr:left-[-300px] rtl:right-[-300px]"} shadow-[0_0_1.5px_#576E7E] `}
         style={{
           scrollbarWidth: "thin",

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { NavLink, useLocation } from "react-router-dom";
 import links from "./links";
 
@@ -50,19 +50,23 @@ export default function SidebarLinks() {
               </div>
 
               <IoIosArrowForward
-                className={`${menuItems[index][item.submenuOpenState] && item.submenuItems.length > 0 ? "rotate-[90deg]" : ""} transition-all`}
+                className={`${menuItems[index][item.submenuOpenState] && item.submenuItems.length > 0 ? "rotate-[90deg]" : ""} transition-all rtl:hidden`}
+              />
+
+              <IoIosArrowBack
+                className={`${menuItems[index][item.submenuOpenState] && item.submenuItems.length > 0 ? "rotate-[-90deg]" : ""} transition-all ltr:hidden`}
               />
             </div>
 
             {menuItems[index][item.submenuOpenState] && (
               <div
-                className="mx-auto mt-3 w-[90%] border-l-2 border-gray px-3 text-left text-sm font-bold transition-all"
+                className="mx-auto mt-3 w-[90%] border-gray px-3 text-left text-sm font-bold transition-all ltr:border-l-2 rtl:border-r-2"
                 id={`submenu-${index}`}
               >
                 {item.submenuItems.map((submenuItem, subIndex) => (
                   <NavLink
                     to={submenuItem.path}
-                    className="mt-1 block cursor-pointer list-none rounded-md p-2 text-[16px] text-lightB"
+                    className="mt-1 block cursor-pointer list-none rounded-md p-2 text-[16px] text-lightB ltr:text-left rtl:text-right"
                     key={subIndex}
                   >
                     {t(`${submenuItem.text}`)}
