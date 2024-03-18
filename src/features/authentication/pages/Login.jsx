@@ -1,7 +1,7 @@
 import { useState } from "react";
-import logo from "../assets/logo2.png";
-import image from "../assets/loginImage.png";
-import billImage from "../assets/billImage.png";
+import logo from "../../../assets/logo2.png";
+import image from "../../../assets/loginImage.png";
+import billImage from "../../../assets/billImage.png";
 import LoginForm from "../LoginForm";
 import NewUserForm from "../newUser/NewUserForm";
 import TranslateButton from "../../../ui/TranslateButton";

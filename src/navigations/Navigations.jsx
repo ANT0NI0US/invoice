@@ -45,8 +45,10 @@ import SequenceGenerator from "../features/settings/sequenceGenerator/pages/Sequ
 import Notifications from "../features/settings/notifications/pages/Notifications";
 
 const AppLayout = lazy(() => import("../Layout/AppLayout"));
-const Dashboard = lazy(() => import("../pages/Dashboard"));
-const Login = lazy(() => import("../pages/Login"));
+const Dashboard = lazy(
+  () => import("../features/dashboard/pages/Dashboard.jsx"),
+);
+const Login = lazy(() => import("../features/authentication/pages/Login.jsx"));
 
 export default function Navigations() {
   return (
