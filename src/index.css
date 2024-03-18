@@ -12,6 +12,9 @@
   .input {
     @apply mt-[7px] rounded-md border border-gray p-[10px] outline-none transition-all focus:border-darkB;
   }
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
 }
 
 /* Add special border color to the active link. */
@@ -52,9 +55,12 @@ label {
   background-color: #576e7e;
 }
 
+/* Vertical scrollbar */
+*::-webkit-scrollbar:vertical {
+  width: 10px;
+}
 
-.flexCenter{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Horizontal scrollbar */
+*::-webkit-scrollbar:horizontal {
+  height: 10px;
 }

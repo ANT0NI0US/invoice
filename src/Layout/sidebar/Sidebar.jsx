@@ -17,7 +17,7 @@ function Sidebar({ openSidebar, closeSidebar }) {
   // shadow-[1px_0px_7px_rgb(0,0,0,0.5)]
 
   return (
-    <>
+    <div>
       {/* Overlay for the sidebar */}
       {openSidebar && (
         <div className="absolute left-0 top-0 z-[100] h-full w-full bg-[#00000080] md:hidden"></div>
@@ -25,7 +25,7 @@ function Sidebar({ openSidebar, closeSidebar }) {
 
       <nav
         ref={ref}
-        className={`links-list absolute top-0 z-[101] h-[100vh] w-[250px] overflow-y-auto bg-lightRed transition-all md:static md:w-[400px] 
+        className={`links-list absolute top-0 z-[101] h-[100vh] w-[250px] overflow-y-auto bg-lightRed transition-all md:static md:w-[300px] 
         ${openSidebar ? "ltr:left-0 rtl:right-0" : "ltr:left-[-300px] rtl:right-[-300px]"} shadow-[0_0_1.5px_#576E7E] `}
         style={{
           scrollbarWidth: "thin",
@@ -52,7 +52,7 @@ function Sidebar({ openSidebar, closeSidebar }) {
         {/* Sidebar Links */}
         <SidebarLinks />
       </nav>
-    </>
+    </div>
   );
 }
 
