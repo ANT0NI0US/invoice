@@ -15,9 +15,15 @@
 }
 
 /* Add special border color to the active link. */
-a.active {
+div.active,
+.links-list > div > a.active {
   color: #fff;
   background-color: #02bec4;
+}
+
+a.active {
+  color: #2d404e;
+  background-color: #bcd2e0;
 }
 
 /* making all svg icons begger */
