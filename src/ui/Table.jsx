@@ -1,36 +1,89 @@
-const Table = ({columns , data}) => {
+import { FaInfoCircle } from "react-icons/fa";
+import { MdError } from "react-icons/md";
+// import { GrNext } from "react-icons/gr";
+// import { GrPrevious } from "react-icons/gr";
+
+const Table = ({ columns, data }) => {
   return (
-    <div className="overflow-x-auto">
-    <table className="space-y-6 min-w-full">
-      <thead className=" bg-[#BCD2E0] bg-opacity-[12%]">
-        <tr className=" rounded-[12px]">
-          {columns.map((column, index) => (
-            <th
-              key={index}
-              className={`text-gray-500 py-7 text-[14px] capitalize font-medium tracking-wider text-center ${columns.length - 1 === index && " rounded-tr-[12px]"} ${index === 0 && " rounded-tl-[12px]"}`}
-            >
-              {column}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody className="bg-white">
-        {data.map((row, rowIndex) => (
-          <tr key={rowIndex} className={`${rowIndex %2 === 0 ? "bg-white" : "bg-[#BCD2E0] bg-opacity-[12%]"} border-b border-gray`}>
-            {row.map((cell, cellIndex) => (
-              <td
-                key={cellIndex}
-                className={`text-gray-500 whitespace-nowrap px-6 py-4 text-sm text-center`}
+    <div className="h-[calc(100vh-113px)] overflow-auto">
+      <table className="min-w-full space-y-6">
+        <thead className=" bg-[#BCD2E0] bg-opacity-[12%]">
+          <tr className=" rounded-[12px]">
+            {columns.map((column, index) => (
+              <th
+                key={index}
+                className={`text-gray-500 py-7 text-center text-[14px] font-medium capitalize tracking-wider ${
+                  columns.length - 1 === index && " rounded-tr-[12px]"
+                } ${index === 0 && " rounded-tl-[12px]"}`}
               >
-                {cell}
-              </td>
+                {column}
+              </th>
             ))}
           </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-  )
-}
+        </thead>
+        {data.length === 0 ? (
+          <tbody>
+            <tr>
+              <td colSpan={columns.length}>
+                <div className="flexCenter mt-5 gap-1 text-center">
+                  <MdError />
+                  <p className="font-semibold">No Data Found</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        ) : (
+          <tbody className="bg-white">
+            {data.map((row, rowIndex) => (
+              <tr
+                key={rowIndex}
+                className={`${rowIndex % 2 === 0 ? "bg-white" : "bg-[#BCD2E0] bg-opacity-[12%]"} border-b border-gray`}
+              >
+                {row.map((cell, cellIndex) => (
+                  <td
+                    key={cellIndex}
+                    className={`text-gray-500 whitespace-nowrap px-6 py-4 text-center text-sm ${cell === "info" && "flexCenter"}`}
+                  >
+                    {cell === "info" ? <FaInfoCircle /> : cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        )}
+      </table>
+      {/* 
+      <div className="mt-6 sm:flex sm:items-center sm:justify-between ">
+        <div className="text-gray-500 dark:text-gray-400 text-sm">
+          Page
+          <span className="text-gray-700 dark:text-gray-100 font-medium">
+            1 of 10
+          </span>
+        </div>
 
-export default Table
+        <div className="mt-4 flex items-center gap-x-4 sm:mt-0">
+          <a
+            href="#"
+            className="text-gray-700 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 flex w-1/2 items-center justify-center gap-x-2 rounded-md border bg-white px-5 py-2 text-sm capitalize transition-colors duration-200 sm:w-auto"
+          >
+            <GrPrevious />
+
+            <span>previous</span>
+          </a>
+
+          <a
+            href="#"
+            className="text-gray-700 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 flex w-1/2 items-center justify-center gap-x-2 rounded-md border bg-white px-5 py-2 text-sm capitalize transition-colors duration-200 sm:w-auto"
+          >
+            <span>Next</span>
+
+            <GrNext />
+          </a>
+        </div>
+        </div>
+      */}
+    </div>
+  );
+};
+
+export default Table;

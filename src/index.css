@@ -51,3 +51,10 @@ label {
   border-radius: 20px;
   background-color: #576e7e;
 }
+
+
+.flexCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

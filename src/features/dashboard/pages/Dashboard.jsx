@@ -1,4 +1,3 @@
-import React from "react";
 import Table from "../../../ui/Table";
 
 const columns = [
@@ -159,9 +158,7 @@ const data = [
 ];
 
 function Dashboard() {
-  return (
-    <Table columns={columns} data={data}/>
-  );
+  return <Table columns={columns} data={data} />;
 }
 
 export default Dashboard;
