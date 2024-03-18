@@ -77,7 +77,12 @@ const links = [
     label: "sidebar.reports",
     submenuOpenState: "isReportsSubMenuOpen",
     icon: GrDocumentText,
-    submenuItems: ["sidebar.salesReports"],
+    submenuItems: [
+      {
+        text: "sidebar.salesReports",
+        path: routes.salesReports,
+      },
+    ],
     href: "reports",
   },
 
@@ -86,10 +91,22 @@ const links = [
     submenuOpenState: "isAuthorizationSubMenuOpen",
     icon: IoShieldCheckmarkSharp,
     submenuItems: [
-      "sidebar.manageUser",
-      "sidebar.mangeDepartment",
-      "sidebar.designWorkflow",
-      "sidebar.manageDepartments",
+      {
+        text: "sidebar.manageUser",
+        path: routes.manageUser,
+      },
+      {
+        text: "sidebar.mangeDepartment",
+        path: routes.mangeDepartment,
+      },
+      {
+        text: "sidebar.designWorkflow",
+        path: routes.designWorkflow,
+      },
+      {
+        text: "sidebar.manageDepartments",
+        path: routes.manageDepartments,
+      },
     ],
     href: "authorization",
   },
@@ -98,12 +115,30 @@ const links = [
     submenuOpenState: "isSettingsSubMenuOpen",
     icon: IoMdSettings,
     submenuItems: [
-      "sidebar.products",
-      "sidebar.corporateProfile",
-      "sidebar.customFields",
-      "sidebar.zatcaConfigurations",
-      "sidebar.sequenceGenerator",
-      "sidebar.notifications",
+      {
+        text: "sidebar.products",
+        path: routes.products,
+      },
+      {
+        text: "sidebar.corporateProfile",
+        path: routes.corporateProfile,
+      },
+      {
+        text: "sidebar.customFields",
+        path: routes.customFields,
+      },
+      {
+        text: "sidebar.zatcaConfigurations",
+        path: routes.zatcaConfigurations,
+      },
+      {
+        text: "sidebar.sequenceGenerator",
+        path: routes.sequenceGenerator,
+      },
+      {
+        text: "sidebar.notifications",
+        path: routes.notifications,
+      },
     ],
     href: "settings",
   },

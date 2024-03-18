@@ -26,6 +26,24 @@ import ManageVendor from "../features/purchases/manageVendor/pages/ManageVendor"
 import CollectInvoices from "../features/payment/collectInvoices/pages/CollectInvoices";
 /* end payment */
 
+/* start reports */
+import SalesReports from "../features/reports/salesReports/pages/SalesReports";
+/* end reports */
+
+/* start authorization */
+import ManageUser from "../features/authorization/manageUser/pages/ManageUser";
+import ManageDepartment from "../features/authorization/manageDepartment/pages/ManageDepartment";
+import DesignWorkFlow from "../features/authorization/designWorkFlow/pages/DesignWorkFlow";
+import ManageDepartments from "../features/authorization/ManageDepartments/pages/ManageDepartments";
+/* end authorization */
+
+import Products from "../features/settings/products/pages/Products";
+import CoraporateProfile from "../features/settings/coraporateProfile/pages/CoraporateProfile";
+import CustomFields from "../features/settings/customFields/pages/CustomFields";
+import ZatcaConfigrations from "../features/settings/zatcaConfigrations/pages/ZatcaConfigrations";
+import SequenceGenerator from "../features/settings/sequenceGenerator/pages/SequenceGenerator";
+import Notifications from "../features/settings/notifications/pages/Notifications";
+
 const AppLayout = lazy(() => import("../Layout/AppLayout"));
 const Dashboard = lazy(() => import("../pages/Dashboard"));
 const Login = lazy(() => import("../pages/Login"));
@@ -71,8 +89,46 @@ export default function Navigations() {
           {/* End purchases */}
 
           {/* Start payment */}
-          <Route path={routes.collectedInvoices} element={<CollectInvoices />} />
+          <Route
+            path={routes.collectedInvoices}
+            element={<CollectInvoices />}
+          />
           {/* End payment */}
+
+          {/* Start Reports */}
+          <Route path={routes.salesReports} element={<SalesReports />} />
+          {/* end Reports */}
+
+          {/* Start Authorization */}
+          <Route path={routes.manageUser} element={<ManageUser />} />
+          <Route path={routes.mangeDepartment} element={<ManageDepartment />} />
+          <Route path={routes.designWorkflow} element={<DesignWorkFlow />} />
+          <Route
+            path={routes.manageDepartments}
+            element={<ManageDepartments />}
+          />
+          {/* end Authorization */}
+
+          {/* Start Settings */}
+          <Route path={routes.products} element={<Products />} />
+          <Route
+            path={routes.corporateProfile}
+            element={<CoraporateProfile />}
+          />
+          <Route path={routes.customFields} element={<CustomFields />} />
+          <Route
+            path={routes.zatcaConfigurations}
+            element={<ZatcaConfigrations />}
+          />
+          <Route
+            path={routes.sequenceGenerator}
+            element={<SequenceGenerator />}
+          />
+          <Route path={routes.notifications} element={<Notifications />} />
+          {/* end Settings */}
+
+          {/* Start General Reports */}
+          {/* end General Reports */}
         </Route>
       </Routes>
     </Suspense>
