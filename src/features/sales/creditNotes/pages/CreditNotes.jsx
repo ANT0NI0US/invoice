@@ -1,9 +1,49 @@
-import React from 'react'
+import Table from "../../../../ui/Table";
 
+const columns = [
+  "invoice Number",
+  "Credit Number",
+  "Note Reference",
+  "Refunded Amount",
+  "Refund Date",
+  "status",
+];
+const data = [
+  [
+    "5",
+    "8451651516546545",
+    "Note Reference",
+    "Refunded Amount",
+    "Refund Date",
+    "Active",
+  ],
+  [
+    "5",
+    "8451651516546545",
+    "Note Reference",
+    "Refunded Amount",
+    "Refund Date",
+    "Active",
+  ],
+  [
+    "5",
+    "8451651516546545",
+    "Note Reference",
+    "Refunded Amount",
+    "Refund Date",
+    "Active",
+  ],
+  [
+    "5",
+    "8451651516546545",
+    "Note Reference",
+    "Refunded Amount",
+    "Refund Date",
+    "Active",
+  ],
+];
 const CreditNotes = () => {
-  return (
-    <div>CreditNotes</div>
-  )
-}
+  return <Table columns={columns} data={data} />;
+};
 
-export default CreditNotes
+export default CreditNotes;
