@@ -2,9 +2,9 @@ import { useState } from "react";
 import logo from "../assets/logo2.png";
 import image from "../assets/loginImage.png";
 import billImage from "../assets/billImage.png";
-import LoginForm from "../features/authentication/LoginForm";
-import NewUserForm from "../features/authentication/newUser/NewUserForm";
-import TranslateButton from "../ui/TranslateButton";
+import LoginForm from "../LoginForm";
+import NewUserForm from "../newUser/NewUserForm";
+import TranslateButton from "../../../ui/TranslateButton";
 
 function Login() {
   const [isLogin, setIsLogin] = useState(true);

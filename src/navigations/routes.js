@@ -7,12 +7,25 @@ const routes = {
   importOutwardInvoices: "sales/ImportOutwardInvoices",
   importCreditNotes: "sales/ImportCreditNotes",
 
-  inwardInvoices:"purchases/inwardInvoices",
+  inwardInvoices: "purchases/inwardInvoices",
   manageVendor: "purchases/manageVendor",
   internalInvoices: "purchases/internalInvoices",
 
+  collectedInvoices: "payment/collectedInvoices",
 
-  collectedInvoices:"payment/collectedInvoices"
+  salesReports: "reports/salesReports",
+
+  manageUser: "authorization/manageUser",
+  mangeDepartment: "authorization/mangeDepartment",
+  designWorkflow: "authorization/designWorkflow",
+  manageDepartments: "authorization/manageDepartments",
+
+  products: "settings/products",
+  corporateProfile: "settings/corporateProfile",
+  customFields: "settings/customFields",
+  zatcaConfigurations: "settings/zatcaConfigurations",
+  sequenceGenerator: "settings/sequenceGenerator",
+  notifications: "settings/notifications",
 };
 
 export default routes;
