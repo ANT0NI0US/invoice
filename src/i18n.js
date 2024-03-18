@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import translationEn from "./assets/Locale/En.json";
-import translationAr from "./assets/Locale/Ar.json";
+import translationEn from "../public/Locale/En.json";
+import translationAr from "../public/Locale/Ar.json";
 import languagedetector from "i18next-browser-languagedetector";
 
 const resources = {

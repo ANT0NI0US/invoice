@@ -1,15 +1,15 @@
 import Table from "../../../../ui/Table";
 
 const columns = [
-  "invoice Tax Number",
-  "invoiceNumber",
-  "customer Name",
-  "invoice Amount",
-  "Due Amount",
-  "Issue Date",
-  "Due Date",
-  "Status",
-  "Info",
+  "sidebar.sales.outwardInvoice.invoiceTaxNumber",
+  "sidebar.sales.outwardInvoice.invoiceNumber",
+  "sidebar.sales.outwardInvoice.customerName",
+  "sidebar.sales.outwardInvoice.invoiceAmount",
+  "sidebar.sales.outwardInvoice.dueAmount",
+  "sidebar.sales.outwardInvoice.issueDate",
+  "sidebar.sales.outwardInvoice.dueDate",
+  "sidebar.sales.outwardInvoice.status",
+  "sidebar.sales.outwardInvoice.info",
 ];
 const data = [
   [
@@ -158,10 +158,7 @@ const data = [
 ];
 
 const OutwardInvoice = () => {
-  return (
-
-    <Table columns={columns} data={data}/>
-  );
+  return <Table columns={columns} data={data} />;
 };
 
 export default OutwardInvoice;

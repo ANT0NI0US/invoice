@@ -1,0 +1,135 @@
+{
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "sales": {
+      "sales": "Sales",
+      "outwardInvoice": {
+        "outwardInvoice": "Outward Invoice",
+        "invoiceTaxNumber": "invoice Tax Number",
+        "invoiceNumber": "invoice Number",
+        "customerName": "customer Name",
+        "invoiceAmount": "invoice Amount",
+        "dueAmount": "Due Amount",
+        "issueDate": "Issue Date",
+        "dueDate": "Due Date",
+        "status": "Status",
+        "info": "Info"
+      },
+      "manageCustomer": {
+        "manageCustomer": "Manage Customer",
+        "code": "Code",
+        "englishName": "English Name",
+        "taxNumber": "Tax Number",
+        "email": "Email",
+        "mobile": "Mobile",
+        "status": "Status"
+      },
+      "creditNotes": {
+        "creditNotes": "Credit Notes",
+        "invoiceNumber": "Invoice Number",
+        "creditNumber": "Credit Number",
+        "noteReference": "Note Reference",
+        "refundedAmount": "Refunded Amount",
+        "refundDate": "Refund Date",
+        "status": "Status"
+      },
+      "debitNotes": {
+        "debitNotes": "Debit Notes",
+        "invoiceNumber": "Invoice Number",
+        "debitNumber": "Debit Number",
+        "noteReference": "Note Reference",
+        "debitNoteAmount": "Debit Note Amount",
+        "debitNoteDate": "Debit Note Date",
+        "status": "Status"
+      },
+      "importOutwardInvoices": {
+        "importOutwardInvoices": "Import Outward Invoices",
+        "invoiceNumber": "Invoice Number",
+        "debitNumber": "Debit Number",
+        "noteReference": "Note Reference",
+        "debitNoteAmount": "Debit Note Amount",
+        "debitNoteDate": "Debit Note Date",
+        "status": "Status"
+      },
+      "importCreditNotes": {
+        "importCreditNotes": "Import Credit Notes",
+        "description": "Description",
+        "uploadDate": "Upload Date",
+        "importDate": "Import Date",
+        "status": "Status"
+      },
+      "integrationFaliure": {
+        "integrationFaliure": "Integration Faliure",
+        "id": "ID",
+        "subReference": "Sub Reference",
+        "dueAmount": "Due Amount",
+        "integrationTarget": "Integration Target",
+        "invoiceType": "Invoice Type",
+        "invoiceModel": "Invoice Model",
+        "retryCounts": "Retry Counts"
+      }
+    },
+    "purchases": "Purchases",
+    "payment": "Payment",
+    "reports": "Reports",
+    "authorization": "Authorization",
+    "settings": "Settings",
+    "generateReport": "Generate Report",
+    "inwardInvoices": "Inward Invoices",
+    "manageVendor": "Manage Vendor",
+    "internalInvoices": "Internal Invoices",
+    "collectedInvoices": "Collected Invoices",
+    "salesReports": "Sales Reports",
+    "manageUser": "Manage User",
+    "mangeDepartment": "Mange Department",
+    "designWorkflow": "Design Workflow",
+    "manageDepartments": "Manage Departments",
+    "products": "Products",
+    "corporateProfile": "Corporate Profile",
+    "customFields": "Custom Fields",
+    "zatcaConfigurations": "Zatca Configurations",
+    "sequenceGenerator": "Sequence Generator",
+    "notifications": "Notifications"
+  },
+  "login": {
+    "title": "Login",
+    "userName": "User Name",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "newUser": "New User?"
+  },
+
+  "newUser": {
+    "title": "Add Facility (New User)",
+    "formsData": {
+      "next": "Next",
+      "previous": "previous",
+      "error": "Please Fill Out All Fields.",
+      "submit": "Submit",
+      "back": "Back",
+
+      "formOneTitle": "Establishment Data",
+      "facilityName": "Facility Name",
+      "facilityAddress": "Facility Address",
+      "theCommercialRegistrationNumberOfTheEstablishment": "The Commercial RegistrationNumber Of The Establishment",
+      "facilityTaxRegistrationNumber": "Facility Tax Registration Number",
+      "email": "E-mail",
+      "contactNumber": "Contact Number",
+
+      "formTwoTitle": "Data of the person responsible for the facility",
+      "name": "Name",
+      "IDNumber": "ID Number",
+      "personEmail": "Person Email",
+      "phone": "Phone",
+
+      "formThreeTitle": "Login Data",
+      "userName": "User Name",
+      "phoneNumber": "Phone Number",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+
+      "formFourTitle": "Complete the registration information and activate the account",
+      "enterTheActivationCode": "Enter The Activation Code"
+    }
+  }
+}

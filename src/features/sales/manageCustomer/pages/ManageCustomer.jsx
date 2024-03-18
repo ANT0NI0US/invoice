@@ -1,12 +1,12 @@
 import Table from "../../../../ui/Table";
 
 const columns = [
-  "code",
-  "english name",
-  "tax number",
-  "email",
-  "mobile",
-  "status",
+  "sidebar.sales.manageCustomer.code",
+  "sidebar.sales.manageCustomer.englishName",
+  "sidebar.sales.manageCustomer.taxNumber",
+  "sidebar.sales.manageCustomer.email",
+  "sidebar.sales.manageCustomer.mobile",
+  "sidebar.sales.manageCustomer.status",
 ];
 const data = [
   [

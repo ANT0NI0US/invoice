@@ -1,11 +1,13 @@
 const routes = {
   dashboard: "dashboard",
+
   outwardInvoice: "sales/OutwardInvoice",
   manageCustomer: "sales/ManageCustomer",
   creditNotes: "sales/CreditNotes",
   debitNotes: "sales/DebitNotes",
   importOutwardInvoices: "sales/ImportOutwardInvoices",
   importCreditNotes: "sales/ImportCreditNotes",
+  integrationFaliure: "sales/IntegrationFaliure",
 
   inwardInvoices: "purchases/inwardInvoices",
   manageVendor: "purchases/manageVendor",

@@ -1,0 +1,130 @@
+{
+  "sidebar": {
+    "dashboard": "لوحة القيادة",
+    "sales": {
+      "sales": "المبيعات",
+      "outwardInvoice": {
+        "outwardInvoice": "فاتورة الصادرة",
+        "invoiceTaxNumber": "رقم ضريبة الفاتورة",
+        "invoiceNumber": "رقم الفاتورة",
+        "customerName": "اسم العميل",
+        "invoiceAmount": "مبلغ الفاتورة",
+        "dueAmount": "المبلغ المستحق",
+        "issueDate": "تاريخ الإصدار",
+        "dueDate": "تاريخ الاستحقاق",
+        "status": "الحالة",
+        "info": "معلومات"
+      },
+      "manageCustomer": {
+        "manageCustomer": "إدارة العميل",
+        "code": "الكود",
+        "englishName": "الاسم بالإنجليزية",
+        "taxNumber": "الرقم الضريبي",
+        "email": "البريد الإلكتروني",
+        "mobile": "الجوال",
+        "status": "الحالة"
+      },
+      "creditNotes": {
+        "creditNotes": "مذكرات الائتمان",
+        "invoiceNumber": "رقم الفاتورة",
+        "creditNumber": "رقم الائتمان",
+        "noteReference": "مرجع المذكرة",
+        "refundedAmount": "المبلغ المسترد",
+        "refundDate": "تاريخ الاسترداد",
+        "status": "الحالة"
+      },
+      "debitNotes": {
+        "debitNotes": "مذكرات الخصم",
+        "invoiceNumber": "رقم الفاتورة",
+        "debitNumber": "رقم الخصم",
+        "noteReference": "مرجع المذكرة",
+        "debitNoteAmount": "مبلغ مذكرة الخصم",
+        "debitNoteDate": "تاريخ مذكرة الخصم",
+        "status": "الحالة"
+      },
+      "importOutwardInvoices": {
+        "importOutwardInvoices": "استيراد فواتير الصادرات",
+        "invoiceNumber": "رقم الفاتورة",
+        "debitNumber": "رقم الخصم",
+        "noteReference": "مرجع المذكرة",
+        "debitNoteAmount": "مبلغ مذكرة الخصم",
+        "debitNoteDate": "تاريخ مذكرة الخصم",
+        "status": "الحالة"
+      },
+      "importCreditNotes": {
+        "importCreditNotes": "استيراد مذكرات الائتمان",
+        "description": "الوصف",
+        "uploadDate": "تاريخ التحميل",
+        "importDate": "تاريخ الاستيراد",
+        "status": "الحالة"
+      },
+      "integrationFaliure": {
+        "integrationFaliure": "فشل التكامل",
+        "id": "المعرف",
+        "subReference": "المرجع الفرعي",
+        "dueAmount": "المبلغ المستحق",
+        "integrationTarget": "الهدف التكامل",
+        "invoiceType": "نوع الفاتورة",
+        "invoiceModel": "نموذج الفاتورة",
+        "retryCounts": "عدد محاولات المحاولة"
+      }
+    },
+    "purchases": "المشتريات",
+    "payment": "الدفع",
+    "reports": "التقارير",
+    "authorization": "التفويض",
+    "settings": "الإعدادات",
+    "generateReport": "إنشاء تقرير",
+    "inwardInvoices": "فواتير الواردة",
+    "manageVendor": "إدارة البائع",
+    "internalInvoices": "الفواتير الداخلية",
+    "collectedInvoices": "الفواتير المحصلة",
+    "salesReports": "تقارير المبيعات",
+    "manageUser": "إدارة المستخدم",
+    "mangeDepartment": "إدارة القسم",
+    "designWorkflow": "تصميم سير العمل",
+    "manageDepartments": "إدارة الأقسام",
+    "products": "المنتجات",
+    "corporateProfile": "الملف الشخصي للشركة",
+    "customFields": "الحقول المخصصة",
+    "zatcaConfigurations": "تكوينات زاتكا",
+    "sequenceGenerator": "مولد التسلسل",
+    "notifications": "الإشعارات"
+  },
+  "login": {
+    "title": "تسجيل الدخول",
+    "userName": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "forgotPassword": "هل نسيت كلمة المرور؟",
+    "newUser": "مستخدم جديد؟"
+  },
+  "newUser": {
+    "title": "إضافة منشأة (مستخدم جديد)",
+    "formsData": {
+      "next": "التالي",
+      "previous": "السابق",
+      "error": "يرجى ملء جميع الحقول.",
+      "submit": "إرسال",
+      "back": "الرجوع",
+      "formOneTitle": "بيانات المؤسسة",
+      "facilityName": "اسم المنشأة",
+      "facilityAddress": "عنوان المنشأة",
+      "theCommercialRegistrationNumberOfTheEstablishment": "الرقم التجاري للمؤسسة",
+      "facilityTaxRegistrationNumber": "رقم التسجيل الضريبي للمنشأة",
+      "email": "البريد الإلكتروني",
+      "contactNumber": "رقم الاتصال",
+      "formTwoTitle": "بيانات الشخص المسؤول عن المنشأة",
+      "name": "الاسم",
+      "IDNumber": "رقم الهوية",
+      "personEmail": "بريد الشخص",
+      "phone": "الهاتف",
+      "formThreeTitle": "بيانات تسجيل الدخول",
+      "userName": "اسم المستخدم",
+      "phoneNumber": "رقم الهاتف",
+      "password": "كلمة المرور",
+      "confirmPassword": "تأكيد كلمة المرور",
+      "formFourTitle": "اكمال معلومات التسجيل وتفعيل الحساب",
+      "enterTheActivationCode": "أدخل رمز التنشيط"
+    }
+  }
+}
