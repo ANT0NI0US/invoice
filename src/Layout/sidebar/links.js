@@ -8,33 +8,37 @@ import { ImFilesEmpty } from "react-icons/im";
 
 const links = [
   {
-    label: "sidebar.sales",
+    label: "sidebar.sales.sales",
     submenuOpenState: "isSalesSubMenuOpen",
     icon: IoStatsChartSharp,
     submenuItems: [
       {
-        text: "sidebar.outwardInvoice",
+        text: "sidebar.sales.outwardInvoice.outwardInvoice",
         path: routes.outwardInvoice,
       },
       {
-        text: "sidebar.manageCustomer",
+        text: "sidebar.sales.manageCustomer.manageCustomer",
         path: routes.manageCustomer,
       },
       {
-        text: "sidebar.creditNotes",
+        text: "sidebar.sales.creditNotes.creditNotes",
         path: routes.creditNotes,
       },
       {
-        text: "sidebar.debitNotes",
+        text: "sidebar.sales.debitNotes.debitNotes",
         path: routes.debitNotes,
       },
       {
-        text: "sidebar.importOutwardInvoices",
+        text: "sidebar.sales.importOutwardInvoices.importOutwardInvoices",
         path: routes.importOutwardInvoices,
       },
       {
-        text: "sidebar.importCreditNotes",
+        text: "sidebar.sales.importCreditNotes.importCreditNotes",
         path: routes.importCreditNotes,
+      },
+      {
+        text: "sidebar.sales.integrationFaliure.integrationFaliure",
+        path: routes.integrationFaliure,
       },
     ],
     href: "sales",

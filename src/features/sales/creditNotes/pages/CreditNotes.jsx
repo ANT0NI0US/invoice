@@ -1,12 +1,12 @@
 import Table from "../../../../ui/Table";
 
 const columns = [
-  "invoice Number",
-  "Credit Number",
-  "Note Reference",
-  "Refunded Amount",
-  "Refund Date",
-  "status",
+  "sidebar.sales.creditNotes.invoiceNumber",
+  "sidebar.sales.creditNotes.creditNumber",
+  "sidebar.sales.creditNotes.noteReference",
+  "sidebar.sales.creditNotes.refundedAmount",
+  "sidebar.sales.creditNotes.refundDate",
+  "sidebar.sales.creditNotes.status",
 ];
 const data = [
   [

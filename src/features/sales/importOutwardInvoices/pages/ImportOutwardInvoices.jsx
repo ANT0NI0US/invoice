@@ -1,12 +1,12 @@
 import Table from "../../../../ui/Table";
 
 const columns = [
-  "invoice Number",
-  "Debit Number",
-  "Note Reference",
-  "Debit Note Amount",
-  "Debit Note Date",
-  "status",
+  "sidebar.sales.importOutwardInvoices.invoiceNumber",
+  "sidebar.sales.importOutwardInvoices.debitNumber",
+  "sidebar.sales.importOutwardInvoices.noteReference",
+  "sidebar.sales.importOutwardInvoices.debitNoteAmount",
+  "sidebar.sales.importOutwardInvoices.debitNoteDate",
+  "sidebar.sales.importOutwardInvoices.status",
 ];
 const data = [];
 const ImportOutwardInvoices = () => {

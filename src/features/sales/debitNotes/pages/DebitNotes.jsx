@@ -1,12 +1,12 @@
 import Table from "../../../../ui/Table";
 
 const columns = [
-  "invoice Number",
-  "Debit Number",
-  "Note Reference",
-  "Debit Note Amount",
-  "Debit Note Date",
-  "status",
+  "sidebar.sales.debitNotes.invoiceNumber",
+  "sidebar.sales.debitNotes.debitNumber",
+  "sidebar.sales.debitNotes.noteReference",
+  "sidebar.sales.debitNotes.debitNoteAmount",
+  "sidebar.sales.debitNotes.debitNoteDate",
+  "sidebar.sales.debitNotes.status",
 ];
 const data = [
   [
@@ -41,7 +41,6 @@ const data = [
     "Debit Note Date",
     "Active",
   ],
-
 ];
 
 const DebitNotes = () => {

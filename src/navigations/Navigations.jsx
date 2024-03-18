@@ -14,6 +14,7 @@ import ImportCreditNotes from "../features/sales/importCreditNotes/pages/ImportC
 import DebitNotes from "../features/sales/debitNotes/pages/DebitNotes";
 import CreditNotes from "../features/sales/creditNotes/pages/CreditNotes";
 import ManageCustomer from "../features/sales/manageCustomer/pages/ManageCustomer";
+import IntegrationFailure from "../features/sales/integrationFailure/pages/IntegrationFailure.jsx";
 /* end sales */
 
 /* start purchases */
@@ -37,12 +38,14 @@ import DesignWorkFlow from "../features/authorization/designWorkFlow/pages/Desig
 import ManageDepartments from "../features/authorization/ManageDepartments/pages/ManageDepartments";
 /* end authorization */
 
+/* start settings */
 import Products from "../features/settings/products/pages/Products";
 import CoraporateProfile from "../features/settings/coraporateProfile/pages/CoraporateProfile";
 import CustomFields from "../features/settings/customFields/pages/CustomFields";
 import ZatcaConfigrations from "../features/settings/zatcaConfigrations/pages/ZatcaConfigrations";
 import SequenceGenerator from "../features/settings/sequenceGenerator/pages/SequenceGenerator";
 import Notifications from "../features/settings/notifications/pages/Notifications";
+/* end settings */
 
 const AppLayout = lazy(() => import("../Layout/AppLayout"));
 const Dashboard = lazy(
@@ -78,6 +81,10 @@ export default function Navigations() {
           <Route
             path={routes.importCreditNotes}
             element={<ImportCreditNotes />}
+          />
+          <Route
+            path={routes.integrationFaliure}
+            element={<IntegrationFailure />}
           />
           {/* End Sales */}
 
