@@ -158,7 +158,11 @@
         "default": "Default"
       },
       "corporateProfile": {
-        "corporateProfile": "Corporate Profile"
+        "corporateProfile": "Corporate Profile",
+        "identityDetails":"Identity Details",
+        "addressDetails":"Address Details",
+        "invoiceLayout":"Invoice Layout",
+        "configurations":"Configurations"
       },
       "customFields": {
         "customFields": "Custom Fields",
