@@ -4,7 +4,6 @@ import { IoStatsChartSharp, IoShieldCheckmarkSharp } from "react-icons/io5";
 import { LiaMoneyBillWaveSolid } from "react-icons/lia";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { GrDocumentText } from "react-icons/gr";
-import { ImFilesEmpty } from "react-icons/im";
 
 const links = [
   {
@@ -148,13 +147,6 @@ const links = [
       },
     ],
     href: "settings",
-  },
-  {
-    label: "sidebar.generateReport.generateReport",
-    submenuOpenState: "isGenerateReportSubMenuOpen",
-    icon: ImFilesEmpty,
-    submenuItems: [],
-    href: "generateReport",
   },
 ];
 

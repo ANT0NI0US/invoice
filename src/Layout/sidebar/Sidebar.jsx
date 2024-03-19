@@ -2,7 +2,10 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useOutsideClick } from "../../hooks/useOutesideClick";
+import { ImFilesEmpty } from "react-icons/im";
 import { FaHome } from "react-icons/fa";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+
 import Logo from "./Logo";
 import MainTitle from "./MainTitle";
 import SidebarLinks from "./SidebarLinks";
@@ -51,6 +54,26 @@ function Sidebar({ openSidebar, closeSidebar }) {
 
         {/* Sidebar Links */}
         <SidebarLinks navigations={navigations} />
+
+        {/* Generate Report Icon */}
+        {navigations !== "todo" && (
+          <div className="flex w-full cursor-pointer items-center justify-between rounded-md p-[10px] font-medium">
+            <NavLink
+              to={"/generateReport"}
+              className="flex w-full items-center justify-between rounded-md p-[10px] font-medium"
+            >
+              <div className="flex  gap-[10px]">
+                <ImFilesEmpty />
+                {t("sidebar.generateReport")}
+              </div>
+
+              {/* Arrows For ltr and Rtl directions */}
+              <IoIosArrowForward className={`transition-all rtl:hidden`} />
+
+              <IoIosArrowBack className={`transition-all ltr:hidden`} />
+            </NavLink>
+          </div>
+        )}
       </nav>
     </div>
   );
