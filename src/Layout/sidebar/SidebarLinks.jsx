@@ -1,13 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { NavLink, useLocation } from "react-router-dom";
 import links from "./links";
 
-export default function SidebarLinks() {
-  const [menuItems, setMenuItems] = useState(links);
+export default function SidebarLinks({ navigations }) {
+  const [menuItems, setMenuItems] = useState([]);
   const [t] = useTranslation();
   const location = useLocation();
+
+  useEffect(() => {
+    let filteredLinks = links;
+    if (navigations === "todo") {
+      filteredLinks = links.filter((link) => link?.cetegory === "todo");
+    }
+    setMenuItems(filteredLinks);
+  }, [navigations]);
 
   const toggleSubMenu = (index) => {
     const updatedMenuItems = menuItems.map((item, idx) => {
@@ -49,6 +57,7 @@ export default function SidebarLinks() {
                 {t(`${item.label}`)}
               </div>
 
+              {/* Arrows For ltr and Rtl directions */}
               <IoIosArrowForward
                 className={`${menuItems[index][item.submenuOpenState] && item.submenuItems.length > 0 ? "rotate-[90deg]" : ""} transition-all rtl:hidden`}
               />

@@ -42,6 +42,7 @@ const links = [
       },
     ],
     href: "sales",
+    cetegory: "todo",
   },
   {
     label: "sidebar.purchases.purchases",
@@ -62,6 +63,7 @@ const links = [
       },
     ],
     href: "purchases",
+    cetegory: "todo",
   },
 
   {
@@ -113,6 +115,7 @@ const links = [
       },
     ],
     href: "authorization",
+    cetegory: "todo",
   },
   {
     label: "sidebar.settings.settings",
