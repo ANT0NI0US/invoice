@@ -17,7 +17,7 @@ const data = [];
 const CollectInvoices = () => {
   return (
     <Fragment>
-      <Header title="Collect Invoices" />
+      <Header title="sidebar.payment.collectedInvoices.collectedInvoices" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

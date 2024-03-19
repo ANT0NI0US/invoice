@@ -14,7 +14,7 @@ const data = [];
 const ImportOutwardInvoices = () => {
   return (
     <Fragment>
-      <Header title="Import Outward Invoices" />
+      <Header title="sidebar.sales.importOutwardInvoices.importOutwardInvoices" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

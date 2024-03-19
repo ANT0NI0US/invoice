@@ -48,7 +48,7 @@ const data = [
 const DebitNotes = () => {
   return (
     <Fragment>
-      <Header title="Debit Notes" />
+      <Header title="sidebar.sales.debitNotes.debitNotes" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

@@ -1,6 +1,5 @@
 {
   "sidebar": {
-    "dashboard": "Dashboard",
     "sales": {
       "sales": "Sales",
       "outwardInvoice": {
@@ -192,8 +191,13 @@
         "ccStatus": "CC Status"
       }
     },
-    "generateReport": "Generate Report",
-    "mangeDepartment": "Mange Department"
+    "dashboard": {
+      "dashboard": "Dashboard"
+    },
+    "generateReport": {
+      "generateReport": "Generate Report",
+      "reportRequests": "Report Requests"
+    }
   },
   "login": {
     "title": "Login",

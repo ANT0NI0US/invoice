@@ -13,7 +13,7 @@ const data = [];
 const ImportCreditNotes = () => {
   return (
     <Fragment>
-      <Header title="Import Credit Notes" />
+      <Header title="sidebar.sales.importCreditNotes.importCreditNotes" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

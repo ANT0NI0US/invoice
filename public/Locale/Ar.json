@@ -1,10 +1,9 @@
 {
   "sidebar": {
-    "dashboard": "لوحة القيادة",
     "sales": {
       "sales": "المبيعات",
       "outwardInvoice": {
-        "outwardInvoice": "فاتورة الصادرة",
+        "outwardInvoice": "فاتورة صادرة",
         "invoiceTaxNumber": "رقم ضريبة الفاتورة",
         "invoiceNumber": "رقم الفاتورة",
         "customerName": "اسم العميل",
@@ -16,8 +15,8 @@
         "info": "معلومات"
       },
       "manageCustomer": {
-        "manageCustomer": "إدارة العميل",
-        "code": "الكود",
+        "manageCustomer": "إدارة العملاء",
+        "code": "الرمز",
         "englishName": "الاسم بالإنجليزية",
         "taxNumber": "الرقم الضريبي",
         "email": "البريد الإلكتروني",
@@ -43,7 +42,7 @@
         "status": "الحالة"
       },
       "importOutwardInvoices": {
-        "importOutwardInvoices": "استيراد فواتير الصادرات",
+        "importOutwardInvoices": "استيراد الفواتير الصادرة",
         "invoiceNumber": "رقم الفاتورة",
         "debitNumber": "رقم الخصم",
         "noteReference": "مرجع المذكرة",
@@ -54,7 +53,7 @@
       "importCreditNotes": {
         "importCreditNotes": "استيراد مذكرات الائتمان",
         "description": "الوصف",
-        "uploadDate": "تاريخ التحميل",
+        "uploadDate": "تاريخ الرفع",
         "importDate": "تاريخ الاستيراد",
         "status": "الحالة"
       },
@@ -63,43 +62,153 @@
         "id": "المعرف",
         "subReference": "المرجع الفرعي",
         "dueAmount": "المبلغ المستحق",
-        "integrationTarget": "الهدف التكامل",
+        "integrationTarget": "هدف التكامل",
         "invoiceType": "نوع الفاتورة",
         "invoiceModel": "نموذج الفاتورة",
         "retryCounts": "عدد محاولات المحاولة"
       }
     },
-    "purchases": "المشتريات",
-    "payment": "الدفع",
-    "reports": "التقارير",
-    "authorization": "التفويض",
-    "settings": "الإعدادات",
-    "generateReport": "إنشاء تقرير",
-    "inwardInvoices": "فواتير الواردة",
-    "manageVendor": "إدارة البائع",
-    "internalInvoices": "الفواتير الداخلية",
-    "collectedInvoices": "الفواتير المحصلة",
-    "salesReports": "تقارير المبيعات",
-    "manageUser": "إدارة المستخدم",
-    "mangeDepartment": "إدارة القسم",
-    "designWorkflow": "تصميم سير العمل",
-    "manageDepartments": "إدارة الأقسام",
-    "products": "المنتجات",
-    "corporateProfile": "الملف الشخصي للشركة",
-    "customFields": "الحقول المخصصة",
-    "zatcaConfigurations": "تكوينات زاتكا",
-    "sequenceGenerator": "مولد التسلسل",
-    "notifications": "الإشعارات"
+    "purchases": {
+      "purchases": "المشتريات",
+      "inwardInvoices": {
+        "inwardInvoices": "فواتير الواردة"
+      },
+      "manageVendor": {
+        "manageVendor": "إدارة البائعين",
+        "code": "الرمز",
+        "englishName": "الاسم بالإنجليزية",
+        "email": "البريد الإلكتروني",
+        "mobile": "الجوال",
+        "status": "الحالة"
+      },
+      "internalInvoices": {
+        "internalInvoices": "فواتير داخلية",
+        "invoiceNumber": "رقم الفاتورة",
+        "vender": "البائع",
+        "invoiceAmount": "مبلغ الفاتورة",
+        "netInvoiceAmount": "صافي مبلغ الفاتورة",
+        "dueDate": "تاريخ الاستحقاق",
+        "notes": "ملاحظات",
+        "status": "الحالة"
+      }
+    },
+    "payment": {
+      "payment": "الدفع",
+      "collectedInvoices": {
+        "collectedInvoices": "الفواتير المحصلة",
+        "invoiceNumber": "رقم الفاتورة",
+        "customer": "العميل",
+        "paymentDate": "تاريخ الدفع",
+        "invoiceAmount": "مبلغ الفاتورة",
+        "paymentAmount": "مبلغ الدفع",
+        "dueAmount": "المبلغ المستحق",
+        "channel": "القناة",
+        "status": "الحالة"
+      }
+    },
+    "reports": {
+      "reports": "التقارير",
+      "salesReports": {
+        "salesReports": "تقارير المبيعات",
+        "invoiceNumber": "رقم الفاتورة",
+        "issueDate": "تاريخ الإصدار",
+        "customer": "العميل",
+        "invoiceAmount": "مبلغ الفاتورة",
+        "paidAmount": "المبلغ المدفوع",
+        "status": "الحالة"
+      }
+    },
+    "authorization": {
+      "authorization": "التفويض",
+      "manageUser": {
+        "manageUser": "إدارة المستخدمين",
+        "id": "المعرف",
+        "displayName": "اسم العرض",
+        "userName": "اسم المستخدم",
+        "department": "القسم"
+      },
+      "manageGroups": {
+        "manageGroups": "إدارة المجموعات",
+        "id": "المعرف",
+        "name": "الاسم",
+        "status": "الحالة"
+      },
+      "designWorkflow": {
+        "designWorkflow": "تصميم سير العمل",
+        "id": "المعرف",
+        "process": "العملية",
+        "processId": "معرف العملية"
+      },
+      "manageDepartments": {
+        "manageDepartments": "إدارة الأقسام",
+        "id": "المعرف",
+        "departmentName": "اسم القسم",
+        "manager": "المدير"
+      }
+    },
+    "settings": {
+      "settings": "الإعدادات",
+      "products": {
+        "products": "المنتجات",
+        "id": "المعرف",
+        "englishName": "الاسم بالإنجليزية",
+        "description": "الوصف",
+        "unitPrice": "سعر الوحدة",
+        "tax": "الضريبة",
+        "default": "افتراضي"
+      },
+      "corporateProfile": {
+        "corporateProfile": "الملف الشخصي للشركة"
+      },
+      "customFields": {
+        "customFields": "الحقول المخصصة",
+        "code": "الرمز",
+        "attributeName": "اسم السمة",
+        "attributeType": "نوع السمة",
+        "attributeValue": "قيمة السمة",
+        "required": "مطلوب",
+        "printLabel": "طباعة التسمية",
+        "isShare": "هل مشارك",
+        "channelId": "معرف القناة"
+      },
+      "zatcaConfigurations": {
+        "zatcaConfigurations": "تكوينات زاتكا",
+        "otp": "رمز OTP",
+        "egsCode": "كود EGS",
+        "egsAlias": "اسم مستعار EGS",
+        "invoiceType": "نوع الفاتورة",
+        "channelId": "معرف القناة",
+        "sequenceFormatter": "منسق التسلسل",
+        "seperator": "فاصل"
+      },
+      "sequenceGenerator": {
+        "sequenceGenerator": "مولد التسلسل"
+      },
+      "notifications": {
+        "notifications": "الإشعارات",
+        "subject": "الموضوع",
+        "to": "إلى",
+        "ccStatus": "حالة النسخة"
+      }
+    },
+    "dashboard": {
+      "dashboard": "لوحة القيادة"
+    },
+    "generateReport": {
+      "generateReport": "انشاء التقرير",
+      "reportRequests": "طلب التقرير"
+    }
   },
   "login": {
     "title": "تسجيل الدخول",
     "userName": "اسم المستخدم",
     "password": "كلمة المرور",
-    "forgotPassword": "هل نسيت كلمة المرور؟",
+    "forgotPassword": "نسيت كلمة المرور؟",
     "newUser": "مستخدم جديد؟"
   },
+
   "newUser": {
-    "title": "إضافة منشأة (مستخدم جديد)",
+    "title": "إضافة مرفق (مستخدم جديد)",
     "formsData": {
       "next": "التالي",
       "previous": "السابق",
@@ -109,22 +218,25 @@
       "formOneTitle": "بيانات المؤسسة",
       "facilityName": "اسم المنشأة",
       "facilityAddress": "عنوان المنشأة",
-      "theCommercialRegistrationNumberOfTheEstablishment": "الرقم التجاري للمؤسسة",
-      "facilityTaxRegistrationNumber": "رقم التسجيل الضريبي للمنشأة",
+      "theCommercialRegistrationNumberOfTheEstablishment": "رقم التسجيل التجاري للمؤسسة",
+      "facilityTaxRegistrationNumber": "رقم تسجيل ضريبة المنشأة",
       "email": "البريد الإلكتروني",
       "contactNumber": "رقم الاتصال",
+
       "formTwoTitle": "بيانات الشخص المسؤول عن المنشأة",
       "name": "الاسم",
       "IDNumber": "رقم الهوية",
       "personEmail": "بريد الشخص",
       "phone": "الهاتف",
+
       "formThreeTitle": "بيانات تسجيل الدخول",
       "userName": "اسم المستخدم",
       "phoneNumber": "رقم الهاتف",
       "password": "كلمة المرور",
       "confirmPassword": "تأكيد كلمة المرور",
-      "formFourTitle": "اكمال معلومات التسجيل وتفعيل الحساب",
-      "enterTheActivationCode": "أدخل رمز التنشيط"
+
+      "formFourTitle": "أكمل معلومات التسجيل وقم بتنشيط الحساب",
+      "enterTheActivationCode": "أدخل رمز التفعيل"
     }
   }
 }

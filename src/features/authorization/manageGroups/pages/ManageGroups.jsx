@@ -12,7 +12,7 @@ const data = [];
 const ManageGroups = () => {
   return (
     <Fragment>
-      <Header title="Manage Groups" />
+      <Header title="sidebar.authorization.manageGroups.manageGroups" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

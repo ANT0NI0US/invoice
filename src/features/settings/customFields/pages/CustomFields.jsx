@@ -17,7 +17,7 @@ const data = [];
 const CustomFields = () => {
   return (
     <Fragment>
-      <Header title="Custom Fields" />
+      <Header title="sidebar.settings.customFields.customFields" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

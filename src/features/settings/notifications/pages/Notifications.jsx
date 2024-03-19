@@ -12,7 +12,7 @@ const data = [];
 const Notifications = () => {
   return (
     <Fragment>
-      <Header title="Notifications"/>
+      <Header title="sidebar.settings.notifications.notifications" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

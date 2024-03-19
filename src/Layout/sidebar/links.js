@@ -150,7 +150,7 @@ const links = [
     href: "settings",
   },
   {
-    label: "sidebar.generateReport",
+    label: "sidebar.generateReport.generateReport",
     submenuOpenState: "isGenerateReportSubMenuOpen",
     icon: ImFilesEmpty,
     submenuItems: [],

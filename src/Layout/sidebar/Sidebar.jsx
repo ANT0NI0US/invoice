@@ -44,7 +44,7 @@ function Sidebar({ openSidebar, closeSidebar }) {
               className="flex w-full items-center gap-[10px] rounded-md p-[10px] font-medium"
             >
               <FaHome />
-              {t("sidebar.dashboard")}
+              {t("sidebar.dashboard.dashboard")}
             </NavLink>
           </div>
         )}
