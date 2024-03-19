@@ -1,7 +1,12 @@
-import React from "react";
+import { Fragment } from "react";
+import Header from "../../../../ui/Header";
 
 const CoraporateProfile = () => {
-  return <div>CoraporateProfile</div>;
+  return (
+    <Fragment>
+      <Header title="Coraporate Profile" />
+    </Fragment>
+  );
 };
 
 export default CoraporateProfile;

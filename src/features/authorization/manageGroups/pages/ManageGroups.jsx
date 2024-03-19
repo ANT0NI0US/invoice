@@ -3,19 +3,19 @@ import Table from "../../../../ui/Table";
 import Header from "../../../../ui/Header";
 
 const columns = [
-  "sidebar.authorization.designWorkflow.id",
-  "sidebar.authorization.designWorkflow.process",
-  "sidebar.authorization.designWorkflow.processId",
+  "sidebar.authorization.manageGroups.id",
+  "sidebar.authorization.manageGroups.name",
+  "sidebar.authorization.manageGroups.status",
 ];
 const data = [];
 
-const designWorkFlow = () => {
+const ManageGroups = () => {
   return (
     <Fragment>
-      <Header title="Design WorkFlow" />
+      <Header title="Manage Groups" />
       <Table columns={columns} data={data} />
     </Fragment>
   );
 };
 
-export default designWorkFlow;
+export default ManageGroups;

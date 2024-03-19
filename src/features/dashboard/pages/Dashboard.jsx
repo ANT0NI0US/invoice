@@ -1,4 +1,6 @@
+import { Fragment } from "react";
 import Table from "../../../ui/Table";
+import Header from "../../../ui/Header";
 
 const columns = [
   "invoice Tax Number",
@@ -158,7 +160,12 @@ const data = [
 ];
 
 function Dashboard() {
-  return <Table columns={columns} data={data} />;
+  return (
+    <Fragment>
+      <Header title="Dashboard" />
+      <Table columns={columns} data={data} />
+    </Fragment>
+  );
 }
 
 export default Dashboard;
