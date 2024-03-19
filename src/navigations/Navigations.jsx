@@ -33,7 +33,7 @@ import SalesReports from "../features/reports/salesReports/pages/SalesReports";
 
 /* start authorization */
 import ManageUser from "../features/authorization/manageUser/pages/ManageUser";
-import ManageDepartment from "../features/authorization/manageDepartment/pages/ManageDepartment";
+import ManageGroups from "../features/authorization/manageGroups/pages/ManageGroups.jsx";
 import DesignWorkFlow from "../features/authorization/designWorkFlow/pages/DesignWorkFlow";
 import ManageDepartments from "../features/authorization/ManageDepartments/pages/ManageDepartments";
 /* end authorization */
@@ -110,7 +110,7 @@ export default function Navigations() {
 
           {/* Start Authorization */}
           <Route path={routes.manageUser} element={<ManageUser />} />
-          <Route path={routes.mangeDepartment} element={<ManageDepartment />} />
+          <Route path={routes.mangeDepartment} element={<ManageGroups />} />
           <Route path={routes.designWorkflow} element={<DesignWorkFlow />} />
           <Route
             path={routes.manageDepartments}

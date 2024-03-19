@@ -1,4 +1,6 @@
+import { Fragment } from "react";
 import Table from "../../../../ui/Table";
+import Header from "../../../../ui/Header";
 
 const columns = [
   "sidebar.sales.outwardInvoice.invoiceTaxNumber",
@@ -158,7 +160,12 @@ const data = [
 ];
 
 const OutwardInvoice = () => {
-  return <Table columns={columns} data={data} />;
+  return (
+    <Fragment>
+      <Header title="Outward Invoice" />
+      <Table columns={columns} data={data} />
+    </Fragment>
+  );
 };
 
 export default OutwardInvoice;

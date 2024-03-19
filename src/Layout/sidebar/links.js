@@ -44,20 +44,20 @@ const links = [
     href: "sales",
   },
   {
-    label: "sidebar.purchases",
+    label: "sidebar.purchases.purchases",
     submenuOpenState: "isPurchasesSubMenuOpen",
     icon: LiaMoneyBillWaveSolid,
     submenuItems: [
       {
-        text: "sidebar.inwardInvoices",
+        text: "sidebar.purchases.inwardInvoices.inwardInvoices",
         path: routes.inwardInvoices,
       },
       {
-        text: "sidebar.manageVendor",
+        text: "sidebar.purchases.manageVendor.manageVendor",
         path: routes.manageVendor,
       },
       {
-        text: "sidebar.internalInvoices",
+        text: "sidebar.purchases.internalInvoices.internalInvoices",
         path: routes.internalInvoices,
       },
     ],
@@ -65,12 +65,12 @@ const links = [
   },
 
   {
-    label: "sidebar.payment",
+    label: "sidebar.payment.payment",
     submenuOpenState: "isPaymentSubMenuOpen",
     icon: RiMoneyDollarCircleLine,
     submenuItems: [
       {
-        text: "sidebar.collectedInvoices",
+        text: "sidebar.payment.collectedInvoices.collectedInvoices",
         path: routes.collectedInvoices,
       },
     ],
@@ -78,12 +78,12 @@ const links = [
   },
 
   {
-    label: "sidebar.reports",
+    label: "sidebar.reports.reports",
     submenuOpenState: "isReportsSubMenuOpen",
     icon: GrDocumentText,
     submenuItems: [
       {
-        text: "sidebar.salesReports",
+        text: "sidebar.reports.salesReports.salesReports",
         path: routes.salesReports,
       },
     ],
@@ -91,56 +91,56 @@ const links = [
   },
 
   {
-    label: "sidebar.authorization",
+    label: "sidebar.authorization.authorization",
     submenuOpenState: "isAuthorizationSubMenuOpen",
     icon: IoShieldCheckmarkSharp,
     submenuItems: [
       {
-        text: "sidebar.manageUser",
+        text: "sidebar.authorization.manageUser.manageUser",
         path: routes.manageUser,
       },
       {
-        text: "sidebar.mangeDepartment",
+        text: "sidebar.authorization.manageGroups.manageGroups",
         path: routes.mangeDepartment,
       },
       {
-        text: "sidebar.designWorkflow",
+        text: "sidebar.authorization.designWorkflow.designWorkflow",
         path: routes.designWorkflow,
       },
       {
-        text: "sidebar.manageDepartments",
+        text: "sidebar.authorization.manageDepartments.manageDepartments",
         path: routes.manageDepartments,
       },
     ],
     href: "authorization",
   },
   {
-    label: "sidebar.settings",
+    label: "sidebar.settings.settings",
     submenuOpenState: "isSettingsSubMenuOpen",
     icon: IoMdSettings,
     submenuItems: [
       {
-        text: "sidebar.products",
+        text: "sidebar.settings.products.products",
         path: routes.products,
       },
       {
-        text: "sidebar.corporateProfile",
+        text: "sidebar.settings.corporateProfile.corporateProfile",
         path: routes.corporateProfile,
       },
       {
-        text: "sidebar.customFields",
+        text: "sidebar.settings.customFields.customFields",
         path: routes.customFields,
       },
       {
-        text: "sidebar.zatcaConfigurations",
+        text: "sidebar.settings.zatcaConfigurations.zatcaConfigurations",
         path: routes.zatcaConfigurations,
       },
       {
-        text: "sidebar.sequenceGenerator",
+        text: "sidebar.settings.sequenceGenerator.sequenceGenerator",
         path: routes.sequenceGenerator,
       },
       {
-        text: "sidebar.notifications",
+        text: "sidebar.settings.notifications.notifications",
         path: routes.notifications,
       },
     ],

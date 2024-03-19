@@ -69,27 +69,131 @@
         "retryCounts": "Retry Counts"
       }
     },
-    "purchases": "Purchases",
-    "payment": "Payment",
-    "reports": "Reports",
-    "authorization": "Authorization",
-    "settings": "Settings",
+    "purchases": {
+      "purchases": "Purchases",
+      "inwardInvoices": {
+        "inwardInvoices": "Inward Invoices"
+      },
+      "manageVendor": {
+        "manageVendor": "Manage Vendor",
+        "code": "Code",
+        "englishName": "English Name",
+        "email": "Email",
+        "mobile": "Mobile",
+        "status": "Status"
+      },
+      "internalInvoices": {
+        "internalInvoices": "Internal Invoices",
+        "invoiceNumber": "Invoice Number",
+        "vender": "Vender",
+        "invoiceAmount": "Invoice Amount",
+        "netInvoiceAmount": "Net Invoice Amount",
+        "dueDate": "Due Date",
+        "notes": "Notes",
+        "status": "Status"
+      }
+    },
+    "payment": {
+      "payment": "Payment",
+      "collectedInvoices": {
+        "collectedInvoices": "Collected Invoices",
+        "invoiceNumber": "Invoice Number",
+        "customer": "Customer",
+        "paymentDate": "Payment Date",
+        "invoiceAmount": "Invoice Amount",
+        "paymentAmount": "Payment Amount",
+        "dueAmount": "Due Amount",
+        "channel": "Channel",
+        "status": "Status"
+      }
+    },
+    "reports": {
+      "reports": "Reports",
+      "salesReports": {
+        "salesReports": "Sales Reports",
+        "invoiceNumber": "Invoice Number",
+        "issueDate": "Issue Date",
+        "customer": "Customer",
+        "invoiceAmount": "Invoice Amount",
+        "paidAmount": "Paid Amount",
+        "status": "Status"
+      }
+    },
+    "authorization": {
+      "authorization": "Authorization",
+      "manageUser": {
+        "manageUser": "Manage User",
+        "id": "ID",
+        "displayName": "Display Name",
+        "userName": "User Name",
+        "department": "Department"
+      },
+      "manageGroups": {
+        "manageGroups": "Manage Groups",
+        "id": "ID",
+        "name": "Name",
+        "status": "Status"
+      },
+      "designWorkflow": {
+        "designWorkflow": "Design Workflow",
+        "id": "ID",
+        "process": "Process",
+        "processId": "ProcessID"
+      },
+      "manageDepartments": {
+        "manageDepartments": "Manage Departments",
+        "id": "ID",
+        "departmentName": "Department Name",
+        "manager": "Manager"
+      }
+    },
+    "settings": {
+      "settings": "Settings",
+      "products": {
+        "products": "Products",
+        "id": "ID",
+        "englishName": "English Name",
+        "description": "Description",
+        "unitPrice": "Unit Price",
+        "tax": "Tax",
+        "default": "Default"
+      },
+      "corporateProfile": {
+        "corporateProfile": "Corporate Profile"
+      },
+      "customFields": {
+        "customFields": "Custom Fields",
+        "code": "Code",
+        "attributeName": "Attribute Name",
+        "attributeType": "Attribute Type",
+        "attributeValue": "Attribute Value",
+        "required": "Required",
+        "printLabel": "Print Label",
+        "isShare": "Is Share",
+        "channelId": "Channel ID"
+      },
+      "zatcaConfigurations": {
+        "zatcaConfigurations": "Zatca Configurations",
+        "otp": "OTP",
+        "egsCode": "EGS Code",
+        "egsAlias": "EGS Alias",
+        "invoiceType": "Invoice Type",
+        "channelId": "Channel ID",
+        "sequenceFormatter": "Sequence Formatter",
+        "seperator": "Seperator"
+      },
+      "sequenceGenerator": {
+        "sequenceGenerator": "Sequence Generator"
+      },
+      "notifications": {
+        "notifications": "Notifications",
+        "subject": "Subject",
+        "to": "To",
+        "ccStatus": "CC Status"
+      }
+    },
     "generateReport": "Generate Report",
-    "inwardInvoices": "Inward Invoices",
-    "manageVendor": "Manage Vendor",
-    "internalInvoices": "Internal Invoices",
-    "collectedInvoices": "Collected Invoices",
-    "salesReports": "Sales Reports",
-    "manageUser": "Manage User",
-    "mangeDepartment": "Mange Department",
-    "designWorkflow": "Design Workflow",
-    "manageDepartments": "Manage Departments",
-    "products": "Products",
-    "corporateProfile": "Corporate Profile",
-    "customFields": "Custom Fields",
-    "zatcaConfigurations": "Zatca Configurations",
-    "sequenceGenerator": "Sequence Generator",
-    "notifications": "Notifications"
+    "mangeDepartment": "Mange Department"
   },
   "login": {
     "title": "Login",
