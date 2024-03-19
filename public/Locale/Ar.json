@@ -201,14 +201,19 @@
   },
   "login": {
     "title": "تسجيل الدخول",
-    "userName": "اسم المستخدم",
+    "email": "البريد الإلكتروني",
+    "companyId": "معرف الشركة",
     "password": "كلمة المرور",
-    "forgotPassword": "نسيت كلمة المرور؟",
-    "newUser": "مستخدم جديد؟"
+    "forgotPassword": "هل نسيت كلمة المرور؟",
+    "newUser": "ليس لديك حساب؟",
+    "signup": "سجل"
   },
-
   "newUser": {
     "title": "إضافة مرفق (مستخدم جديد)",
+    "stepOneTitle": "تفاصيل الهوية",
+    "stepTwoTitle": "تفاصيل العنوان",
+    "stepThreeTitle": "تخطيط الفاتورة",
+    "stepFourTitle": "التكوينات",
     "formsData": {
       "next": "التالي",
       "previous": "السابق",

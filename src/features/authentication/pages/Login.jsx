@@ -1,6 +1,4 @@
 import { useState } from "react";
-import logo from "../../../assets/logo2.png";
-import image from "../../../assets/loginImage.png";
 import billImage from "../../../assets/billImage.png";
 import LoginForm from "../LoginForm";
 import NewUserForm from "../newUser/NewUserForm";
@@ -27,19 +25,7 @@ function Login() {
       </div>
 
       {/* images Container */}
-      <div className="relative hidden w-[563px] flex-col items-center justify-around overflow-hidden bg-primary bg-gradient-to-tr md:flex ">
-        {/* Logo container */}
-        <div className=" flex w-full items-center justify-between px-[10px]">
-          <img src={image} alt="login Image" className="h-[83px] w-[303px]" />
-          <img src={logo} alt="logo" className="h-[68px] w-[70px]" />
-        </div>
-
-        {/* Text Container*/}
-        <div className="text-center text-3xl text-white">
-          <h1>الفاتوره الالكترونيه</h1>
-          <p className="mt-1">E-Invoice</p>
-        </div>
-        {/* Bill Image */}
+      <div className="relative hidden w-[40%] items-center justify-around overflow-hidden bg-primary bg-gradient-to-tr md:flex">
         <div>
           <img
             src={billImage}
