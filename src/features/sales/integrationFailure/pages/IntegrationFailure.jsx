@@ -15,7 +15,7 @@ const data = [];
 const IntegrationFailure = () => {
   return (
     <Fragment>
-      <Header title="Integration Failure" />
+      <Header title="sidebar.sales.integrationFaliure.integrationFaliure" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

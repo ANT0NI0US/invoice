@@ -4,7 +4,7 @@ import Header from "../../../../ui/Header";
 const CoraporateProfile = () => {
   return (
     <Fragment>
-      <Header title="Coraporate Profile" />
+      <Header title="sidebar.settings.corporateProfile.corporateProfile" />
     </Fragment>
   );
 };

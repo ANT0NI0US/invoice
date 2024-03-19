@@ -48,7 +48,7 @@ const data = [
 const ManageCustomer = () => {
   return (
     <Fragment>
-      <Header title="Manage Customer" />
+      <Header title="sidebar.sales.manageCustomer.manageCustomer" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

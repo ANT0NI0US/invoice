@@ -16,7 +16,7 @@ const data = [];
 const InwardInvoices = () => {
   return (
     <Fragment>
-      <Header title="Inward Invoices" />
+      <Header title="sidebar.purchases.inwardInvoices.inwardInvoices" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

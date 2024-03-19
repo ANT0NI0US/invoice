@@ -15,7 +15,7 @@ const data = [];
 const SalesReports = () => {
   return (
     <Fragment>
-      <Header title="Sales Reports" />
+      <Header title="sidebar.reports.salesReports.salesReports" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

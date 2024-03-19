@@ -4,7 +4,7 @@ import Header from "../../../../ui/Header";
 const SequenceGenerator = () => {
   return (
     <Fragment>
-      <Header title="Sequence Generator" />
+      <Header title="sidebar.settings.sequenceGenerator.sequenceGenerator" />
     </Fragment>
   );
 };

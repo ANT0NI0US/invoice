@@ -162,7 +162,7 @@ const data = [
 function Dashboard() {
   return (
     <Fragment>
-      <Header title="Dashboard" />
+      <Header title="sidebar.dashboard.dashboard" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

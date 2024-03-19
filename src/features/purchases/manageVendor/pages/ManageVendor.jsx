@@ -14,7 +14,7 @@ const data = [];
 const ManageVendor = () => {
   return (
     <Fragment>
-      <Header title="Manage Vendor" />
+      <Header title="sidebar.purchases.manageVendor.manageVendor" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

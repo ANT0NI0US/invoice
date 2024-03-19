@@ -15,7 +15,7 @@ const data = [];
 const InternalInvoices = () => {
   return (
     <Fragment>
-      <Header title="Internal Invoices" />
+      <Header title="sidebar.purchases.internalInvoices.internalInvoices" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

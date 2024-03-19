@@ -16,7 +16,7 @@ const data = [];
 const ZatcaConfigrations = () => {
   return (
     <Fragment>
-      <Header title="Zatca Configrations" />
+      <Header title="sidebar.settings.zatcaConfigurations.zatcaConfigurations" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

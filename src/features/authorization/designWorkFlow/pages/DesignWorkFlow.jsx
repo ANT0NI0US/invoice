@@ -12,7 +12,7 @@ const data = [];
 const designWorkFlow = () => {
   return (
     <Fragment>
-      <Header title="Design WorkFlow" />
+      <Header title="sidebar.authorization.designWorkflow.designWorkflow" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

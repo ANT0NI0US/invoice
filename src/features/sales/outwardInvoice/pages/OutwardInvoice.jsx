@@ -162,7 +162,7 @@ const data = [
 const OutwardInvoice = () => {
   return (
     <Fragment>
-      <Header title="Outward Invoice" />
+      <Header title="sidebar.sales.outwardInvoice.outwardInvoice" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

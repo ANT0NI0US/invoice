@@ -15,7 +15,7 @@ const data = [];
 const Products = () => {
   return (
     <Fragment>
-      <Header title="Products" />
+      <Header title="sidebar.settings.products.products" />
       <Table columns={columns} data={data} />
     </Fragment>
   );

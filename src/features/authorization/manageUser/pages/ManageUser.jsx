@@ -13,7 +13,7 @@ const data = [];
 const ManageUser = () => {
   return (
     <Fragment>
-      <Header title="Manage User" />
+      <Header title="sidebar.authorization.manageUser.manageUser" />
       <Table columns={columns} data={data} />
     </Fragment>
   );
