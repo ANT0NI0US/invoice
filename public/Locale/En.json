@@ -201,14 +201,20 @@
   },
   "login": {
     "title": "Login",
-    "userName": "User Name",
+    "email": "E-mail",
+    "companyId": "Company ID",
     "password": "Password",
     "forgotPassword": "Forgot Password?",
-    "newUser": "New User?"
+    "newUser": "Don't have an account?",
+    "signup": "Signup"
   },
 
   "newUser": {
     "title": "Add Facility (New User)",
+    "stepOneTitle": "Identity Details",
+    "stepTwoTitle": "Address Details",
+    "stepThreeTitle": "Invoice Layout",
+    "stepFourTitle": "Configrations",
     "formsData": {
       "next": "Next",
       "previous": "previous",

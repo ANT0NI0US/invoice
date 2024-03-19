@@ -8,7 +8,24 @@ import StepTwo from "./StepTwo";
 import StepThree from "./StepThree";
 import StepFour from "./StepFour";
 
-const formArray = [1, 2, 3, 4];
+const formArray = [
+  {
+    number: 1,
+    title: "stepOneTitle",
+  },
+  {
+    number: 2,
+    title: "stepTwoTitle",
+  },
+  {
+    number: 3,
+    title: "stepThreeTitle",
+  },
+  {
+    number: 4,
+    title: "stepFourTitle",
+  },
+];
 const initialstate = {
   facilityName: "",
   facilityAddress: "",
@@ -29,7 +46,7 @@ const initialstate = {
 };
 
 export default function NewUserForm({ toggleIsLogin }) {
-  const [formStep, setFormStep] = useState(formArray[0]);
+  const [formStep, setFormStep] = useState(formArray[0].number);
   const [state, setState] = useState(initialstate);
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -98,7 +115,7 @@ export default function NewUserForm({ toggleIsLogin }) {
         <FormHead formArray={formArray} formStep={formStep} />
 
         {/* Form Currently Desplayed */}
-        <div>
+        <div className="min-h-[40vh]">
           {formStep === 1 && (
             <StepOne
               toggleIsLogin={toggleIsLogin}

@@ -33,20 +33,20 @@ const TranslateButton = () => {
   return (
     <div
       ref={ref}
-      className="relative flex cursor-pointer items-center gap-[10px] rounded-full bg-blue px-[10px] py-[5px] text-dark hover:bg-opacity-[0.8]"
+      className="bg-blue relative flex cursor-pointer items-center gap-[10px] rounded-full px-[10px] py-[5px] text-dark hover:bg-opacity-[0.8]"
       onClick={toggleMenu}
     >
       <MdLanguage className="text-[20px]" />
       <p className="rounded-full bg-bgColor p-[3px] text-xs font-bold">
-        {i18n.language}
+        {i18n.language === "en" ? "English" : "العربيه"}
       </p>
 
       {openMenu && (
         <div
-          className={`absolute bottom-[-65px] left-[50%] w-[50px] translate-x-[-50%] rounded-md bg-bgColor p-[5px] text-center text-sm shadow-lg`}
+          className={`absolute bottom-[-50px] left-[50%] w-[50px] translate-x-[-50%] rounded-md bg-bgColor p-[5px] text-center text-sm shadow-lg`}
         >
           <p
-            className="rounded-md transition-all hover:bg-blue hover:text-bgColor"
+            className="hover:bg-blue rounded-md transition-all hover:bg-primary hover:text-bgColor"
             onClick={() => {
               changeLanguageAndDirection("en");
               i18n.changeLanguage("en");
@@ -59,7 +59,7 @@ const TranslateButton = () => {
               changeLanguageAndDirection("ar");
               i18n.changeLanguage("ar");
             }}
-            className="rounded-md transition-all hover:bg-blue hover:text-bgColor"
+            className="hover:bg-blue rounded-md transition-all hover:bg-primary hover:text-bgColor"
           >
             AR
           </p>

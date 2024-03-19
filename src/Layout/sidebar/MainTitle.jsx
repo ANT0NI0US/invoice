@@ -14,7 +14,7 @@ export default function MainTitle({ setNavigations }) {
           To Do
         </option>
       </select>
-      <IoIosArrowDown className=" absolute right-[10px] top-[35%] translate-y-[-35%] text-xl text-primary" />
+      <IoIosArrowDown className=" absolute top-[35%] translate-y-[-35%] text-xl text-primary ltr:right-[10px] rtl:left-[10px]" />
     </div>
   );
 }
