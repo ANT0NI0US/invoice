@@ -28,6 +28,8 @@ const routes = {
   zatcaConfigurations: "settings/zatcaConfigurations",
   sequenceGenerator: "settings/sequenceGenerator",
   notifications: "settings/notifications",
+
+  generateReport: "generateReport",
 };
 
 export default routes;
