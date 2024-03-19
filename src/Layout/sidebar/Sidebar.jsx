@@ -64,7 +64,7 @@ function Sidebar({ openSidebar, closeSidebar }) {
             >
               <div className="flex  gap-[10px]">
                 <ImFilesEmpty />
-                {t("sidebar.generateReport")}
+                {t("sidebar.generateReport.generateReport")}
               </div>
 
               {/* Arrows For ltr and Rtl directions */}
