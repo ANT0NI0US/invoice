@@ -51,6 +51,13 @@ import Notifications from "../features/settings/notifications/pages/Notification
 import GenerateReports from "../features/generateReports/GenerateReports.jsx";
 /* end GenerateReports */
 
+/* start corporateProfile tabs */
+import AddressDetails from "../features/settings/coraporateProfile/tabs/addressDetails/pages/AddressDetails.jsx";
+import InvoiceLayout from "../features/settings/coraporateProfile/tabs/invoiceLayout/pages/InvoiceLayout.jsx";
+import Configurations from "../features/settings/coraporateProfile/tabs/configurations/pages/Configurations.jsx";
+import IdentityDetails from "../features/settings/coraporateProfile/tabs/identityDetails/pages/IdentityDetails.jsx";
+/* end corporateProfile tabs */
+
 const AppLayout = lazy(() => import("../Layout/AppLayout"));
 const Dashboard = lazy(
   () => import("../features/dashboard/pages/Dashboard.jsx"),
@@ -124,10 +131,32 @@ export default function Navigations() {
 
           {/* Start Settings */}
           <Route path={routes.products} element={<Products />} />
-          <Route
-            path={routes.corporateProfile}
-            element={<CoraporateProfile />}
-          />
+          {/* Start corporateProfile */}
+          <Route path={routes.corporateProfile} element={<CoraporateProfile />}>
+            <Route
+              index
+              element={<Navigate replace to={`/${routes.identityDetails}`} />}
+            />
+
+            <Route
+              path={`/${routes.identityDetails}`}
+              element={<IdentityDetails />}
+            />
+            <Route
+              path={`/${routes.addressDetails}`}
+              element={<AddressDetails />}
+            />
+            <Route
+              path={`/${routes.invoiceLayout}`}
+              element={<InvoiceLayout />}
+            />
+            <Route
+              path={`/${routes.configurations}`}
+              element={<Configurations />}
+            />
+          </Route>
+
+          {/* end corporateProfile */}
           <Route path={routes.customFields} element={<CustomFields />} />
           <Route
             path={routes.zatcaConfigurations}
@@ -142,7 +171,6 @@ export default function Navigations() {
 
           {/* Start General Reports */}
           <Route path={routes.generateReport} element={<GenerateReports />} />
-
           {/* end General Reports */}
         </Route>
       </Routes>

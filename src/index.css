@@ -29,6 +29,10 @@ a.active {
   background-color: #bcd2e0;
 }
 
+.Tabs a.active{
+  @apply border-b-2 border-[#02BEC4] bg-transparent text-[#02BEC4]
+}
+
 /* making all svg icons begger */
 svg {
   font-size: 24px;

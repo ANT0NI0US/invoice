@@ -24,6 +24,10 @@ const routes = {
 
   products: "settings/products",
   corporateProfile: "settings/corporateProfile",
+  identityDetails: "settings/corporateProfile/identityDetails",
+  addressDetails: "settings/corporateProfile/addressDetails",
+  invoiceLayout: "settings/corporateProfile/invoiceLayout",
+  configurations: "settings/corporateProfile/configurations",
   customFields: "settings/customFields",
   zatcaConfigurations: "settings/zatcaConfigurations",
   sequenceGenerator: "settings/sequenceGenerator",
