@@ -20,7 +20,7 @@ function AppLayout() {
         />
         <div className="w-full md:w-[calc(100%-300px)]">
           <Header tggleSidebar={tggleSidebar} />
-          <main className="h-[calc(100vh-113px)]  bg-[#FFFFFF] p-[20px]">
+          <main className="h-[calc(100vh-113px)]  overflow-auto bg-[#FFFFFF] p-[20px]">
             <Outlet />
           </main>
         </div>

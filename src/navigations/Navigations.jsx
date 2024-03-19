@@ -47,6 +47,10 @@ import SequenceGenerator from "../features/settings/sequenceGenerator/pages/Sequ
 import Notifications from "../features/settings/notifications/pages/Notifications";
 /* end settings */
 
+/* start GenerateReports */
+import GenerateReports from "../features/generateReports/GenerateReports.jsx";
+/* end GenerateReports */
+
 const AppLayout = lazy(() => import("../Layout/AppLayout"));
 const Dashboard = lazy(
   () => import("../features/dashboard/pages/Dashboard.jsx"),
@@ -137,6 +141,8 @@ export default function Navigations() {
           {/* end Settings */}
 
           {/* Start General Reports */}
+          <Route path={routes.generateReport} element={<GenerateReports />} />
+
           {/* end General Reports */}
         </Route>
       </Routes>
