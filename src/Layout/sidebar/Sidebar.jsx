@@ -14,8 +14,6 @@ function Sidebar({ openSidebar, closeSidebar }) {
 
   const ref = useOutsideClick(() => closeSidebar());
 
-  // shadow-[1px_0px_7px_rgb(0,0,0,0.5)]
-
   return (
     <div>
       {/* Overlay for the sidebar */}
@@ -36,21 +34,23 @@ function Sidebar({ openSidebar, closeSidebar }) {
         <Logo />
 
         {/* Main Title (Main or To Do) */}
-        <MainTitle navigations={navigations} />
+        <MainTitle setNavigations={setNavigations} />
 
         {/* Dashboard Icon */}
-        <div className="flex w-full cursor-pointer items-center justify-between rounded-md p-[10px] font-medium">
-          <NavLink
-            to={"/dashboard"}
-            className="flex w-full items-center gap-[10px] rounded-md p-[10px] font-medium"
-          >
-            <FaHome />
-            {t("sidebar.dashboard")}
-          </NavLink>
-        </div>
+        {navigations !== "todo" && (
+          <div className="flex w-full cursor-pointer items-center justify-between rounded-md p-[10px] font-medium">
+            <NavLink
+              to={"/dashboard"}
+              className="flex w-full items-center gap-[10px] rounded-md p-[10px] font-medium"
+            >
+              <FaHome />
+              {t("sidebar.dashboard")}
+            </NavLink>
+          </div>
+        )}
 
         {/* Sidebar Links */}
-        <SidebarLinks />
+        <SidebarLinks navigations={navigations} />
       </nav>
     </div>
   );
