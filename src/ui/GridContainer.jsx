@@ -1,6 +1,8 @@
-const GridContainer = ({ children }) => {
+const GridContainer = ({ children, columns = "md:grid-cols-2" }) => {
   return (
-    <div className="container mx-auto gap-4 px-4 md:grid md:grid-cols-2">
+    <div
+      className={`container mx-auto flex flex-col gap-[30px] px-4 md:grid ${columns}`}
+    >
       {children}
     </div>
   );

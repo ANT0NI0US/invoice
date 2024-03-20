@@ -16,9 +16,9 @@ const Table = ({
   const [t] = useTranslation();
 
   return (
-    <div className="max-h-[calc(100vh-150px)]  overflow-auto">
-      <table className=" min-w-full space-y-6">
-        <thead className={`${backColor} ${textColor}`}>
+    <div className="max-h-[calc(100vh-150px)] overflow-x-auto">
+      <table className="min-w-full space-y-6 ">
+        <thead className=" bg-[#BCD2E0] bg-opacity-[12%]">
           <tr className=" rounded-[12px]">
             {columns.map((column, index) => (
               <th
