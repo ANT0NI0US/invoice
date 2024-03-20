@@ -1,109 +1,98 @@
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 
+import Input from "../../../ui/Input";
 import Button from "../../../ui/Button";
 import GridContainer from "../../../ui/GridContainer";
 
-export default function StepOne({ inputHandle, next, state, toggleIsLogin }) {
+export default function StepOne({ inputHandle, next, toggleIsLogin }) {
   const [t] = useTranslation();
 
   return (
     <Fragment>
+      {/* Start Inputs */}
       <GridContainer>
-        <div className="mb-2 flex flex-col">
-          <label htmlFor="facilityName">
-            {t("newUser.formsData.facilityName")}
-          </label>
-          <input
-            value={state.facilityName}
-            onChange={inputHandle}
-            className="input"
-            type="text"
-            name="facilityName"
-            placeholder={t("newUser.formsData.facilityName")}
-            id="facilityName"
-          />
-        </div>
+        <Input
+          placeholder={t("newUser.formsData.englishName")}
+          name={"englishName"}
+          handleChange={inputHandle}
+        />
 
-        <div className="mb-2 flex flex-col">
-          <label htmlFor="facilityAddress">
-            {t("newUser.formsData.facilityAddress")}
-          </label>
-          <input
-            value={state.facilityAddress}
-            onChange={inputHandle}
-            className="input"
-            type="text"
-            name="facilityAddress"
-            placeholder={t("newUser.formsData.facilityAddress")}
-            id="facilityAddress"
-          />
-        </div>
-
-        <div className="mb-2 flex flex-col">
-          <label htmlFor="The Commercial RegistrationNumber Of The Establishment">
-            {t(
-              "newUser.formsData.theCommercialRegistrationNumberOfTheEstablishment",
-            )}
-          </label>
-          <input
-            value={state.theCommercialRegistrationNumberOfTheEstablishment}
-            onChange={inputHandle}
-            className="input"
-            type="number"
-            name="theCommercialRegistrationNumberOfTheEstablishment"
-            placeholder={t(
-              "newUser.formsData.theCommercialRegistrationNumberOfTheEstablishment",
-            )}
-          />
-        </div>
-
-        <div className="mb-2 flex flex-col">
-          <label htmlFor="facilityTaxRegistrationNumber">
-            {t("newUser.formsData.facilityTaxRegistrationNumber")}
-          </label>
-          <input
-            value={state.facilityTaxRegistrationNumber}
-            onChange={inputHandle}
-            className="input"
-            type="number"
-            name="facilityTaxRegistrationNumber"
-            placeholder={t("newUser.formsData.facilityTaxRegistrationNumber")}
-            id="facilityTaxRegistrationNumber"
-          />
-        </div>
-
-        <div className="mb-2 flex flex-col">
-          <label htmlFor="email">{t("newUser.formsData.email")}</label>
-          <input
-            value={state.email}
-            onChange={inputHandle}
-            className="input"
-            type="text"
-            name="email"
-            placeholder={t("newUser.formsData.email")}
-            id="email"
-          />
-        </div>
-
-        <div className="mb-2 flex flex-col">
-          <label htmlFor="contactNumber">
-            {t("newUser.formsData.contactNumber")}
-          </label>
-          <input
-            value={state.contactNumber}
-            onChange={inputHandle}
-            className="input"
-            type="number"
-            name="contactNumber"
-            placeholder={t("newUser.formsData.contactNumber")}
-            id="contactNumber"
-          />
-        </div>
+        <Input
+          placeholder={t("newUser.formsData.arabicName")}
+          name={"arabicName"}
+          handleChange={inputHandle}
+        />
+        <Input
+          placeholder={t("newUser.formsData.category")}
+          name={"category"}
+          handleChange={inputHandle}
+        />
+        <Input
+          placeholder={t("newUser.formsData.identificationNumber")}
+          name={"identificationNumber"}
+          handleChange={inputHandle}
+          type="number"
+        />
       </GridContainer>
 
+      <div className="my-[30px]">
+        <GridContainer columns={"md:grid-cols-3"}>
+          <Input
+            placeholder={t("newUser.formsData.schemeType")}
+            name={"schemeType"}
+            handleChange={inputHandle}
+          />
+          <Input
+            placeholder={t("newUser.formsData.mobileNumber")}
+            name={"mobileNumber"}
+            handleChange={inputHandle}
+            type="number"
+          />
+          <Input
+            placeholder={t("newUser.formsData.faxNumber")}
+            name={"faxNumber"}
+            handleChange={inputHandle}
+            type="number"
+          />
+        </GridContainer>
+      </div>
+
+      <GridContainer>
+        <Input
+          placeholder={t("newUser.formsData.email")}
+          name={"email"}
+          handleChange={inputHandle}
+        />
+        <Input
+          placeholder={t("newUser.formsData.website")}
+          name={"website"}
+          handleChange={inputHandle}
+        />
+        <Input
+          placeholder={t("newUser.formsData.vatNumber")}
+          name={"vatNumber"}
+          handleChange={inputHandle}
+          type="number"
+        />
+        <Input
+          placeholder={t("newUser.formsData.crNumber")}
+          name={"crNumber"}
+          handleChange={inputHandle}
+          type="number"
+        />
+      </GridContainer>
+      {/* End Inputs */}
+
+      <div className="my-[30px]">
+        <GridContainer>
+          <Button>{t("newUser.formsData.uploadIdentityDocument")}</Button>
+          <Button>{t("newUser.formsData.addLogo")}</Button>
+        </GridContainer>
+      </div>
+
       {/* Next Btn */}
-      <div className="ml-auto mt-[30px] flex items-center justify-between">
+      <div className="ml-auto flex items-center justify-between">
         <div className="w-[100px]">
           <Button onClick={toggleIsLogin}>{t("newUser.formsData.back")}</Button>
         </div>

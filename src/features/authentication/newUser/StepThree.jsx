@@ -3,93 +3,101 @@ import { useTranslation } from "react-i18next";
 
 import GridContainer from "../../../ui/GridContainer";
 import Button from "../../../ui/Button";
+import Input from "../../../ui/Input";
 
-export default function StepThree({ state, inputHandle, next, pre }) {
+export default function StepThree({ inputHandle, next, pre }) {
   const [t] = useTranslation();
 
   return (
     <Fragment>
+      <div className="container mx-auto mb-[30px] flex flex-col gap-[30px] px-4">
+        <Button>{t("newUser.formsData.previewOnvoiceLogo")}</Button>
+        <Button>{t("newUser.formsData.previewOnvoiceFooter")}</Button>
+        <Button>{t("newUser.formsData.previewOnvoiceStamp")}</Button>
+      </div>
+
+      {/* Start Inputs */}
       <GridContainer>
-        <div className="mb-2 flex flex-col">
-          <label htmlFor="userName">{t("newUser.formsData.userName")}</label>
-          <input
-            value={state.userName}
-            onChange={inputHandle}
-            className="input"
-            type="text"
-            name="userName"
-            placeholder={t("newUser.formsData.userName")}
-            id="userName"
-          />
-        </div>
+        <Input
+          placeholder={t("newUser.formsData.normalInvoiceFooterLineOne")}
+          name={"normalInvoiceFooterLineOne"}
+          handleChange={inputHandle}
+        />
 
-        <div className="mb-2 flex flex-col">
-          <label htmlFor="phoneNumber">
-            {t("newUser.formsData.phoneNumber")}
-          </label>
-          <input
-            value={state.phoneNumber}
-            onChange={inputHandle}
-            className="input"
-            type="number"
-            name="phoneNumber"
-            placeholder={t("newUser.formsData.phoneNumber")}
-            id="phoneNumber"
-          />
-        </div>
-
-        <div className="mb-2 flex flex-col">
-          <label htmlFor="email2">{t("newUser.formsData.email")}</label>
-          <input
-            value={state.email2}
-            onChange={inputHandle}
-            row="10"
-            className="input"
-            type="text"
-            name="email2"
-            placeholder={t("newUser.formsData.email")}
-          />
-        </div>
-
-        <div className="mb-2 flex flex-col">
-          <label className="text-slate-500" htmlFor="password">
-            {t("newUser.formsData.password")}
-          </label>
-          <input
-            value={state.password}
-            onChange={inputHandle}
-            row="10"
-            className="input"
-            type="number"
-            name="password"
-            placeholder={t("newUser.formsData.password")}
-          />
-        </div>
-
-        <div className="mb-2 flex flex-col">
-          <label className="text-slate-500" htmlFor="confirmPassword">
-            {t("newUser.formsData.confirmPassword")}
-          </label>
-          <input
-            value={state.confirmPassword}
-            onChange={inputHandle}
-            row="10"
-            className="input"
-            type="number"
-            name="confirmPassword"
-            placeholder={t("newUser.formsData.confirmPassword")}
-          />
-        </div>
+        <Input
+          placeholder={t("newUser.formsData.normalInvoiceFooterLineTwo")}
+          name={"normalInvoiceFooterLineTwo"}
+          handleChange={inputHandle}
+        />
+        <Input
+          placeholder={t("newUser.formsData.englishEpaymenyNumber")}
+          name={"englishEpaymenyNumber"}
+          handleChange={inputHandle}
+          type="number"
+        />
+        <Input
+          placeholder={t("newUser.formsData.arabicEpaymenyNumber")}
+          name={"arabicEpaymenyNumber"}
+          handleChange={inputHandle}
+          type="number"
+        />
+        <Input
+          placeholder={t("newUser.formsData.englishPurchaseOrderRef")}
+          name={"englishPurchaseOrderRef"}
+          handleChange={inputHandle}
+        />
+        <Input
+          placeholder={t("newUser.formsData.arabicPurchaseOrderRef")}
+          name={"arabicPurchaseOrderRef"}
+          handleChange={inputHandle}
+        />
+        <Input
+          placeholder={t("newUser.formsData.defaultOutwardServiceDetails")}
+          name={"defaultOutwardServiceDetails"}
+          handleChange={inputHandle}
+        />
+        <Input
+          placeholder={t("newUser.formsData.invoiceLayoutPostalCode")}
+          name={"invoiceLayoutPostalCode"}
+          handleChange={inputHandle}
+          type="number"
+        />
       </GridContainer>
+      {/* End Inputs */}
+
+      {/* Two Check boxes */}
+      <div className="container my-[30px] flex gap-[10px] px-4">
+        <div>
+          <input
+            type="checkbox"
+            id="inwardInvoiceItemsRequird"
+            name="inwardInvoiceItemsRequird"
+          />
+          <label htmlFor="inwardInvoiceItemsRequird">
+            {"  "} {t("newUser.formsData.inwardInvoiceItemsRequird")}
+          </label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="showWarkmarkOnPreview"
+            name="showWarkmarkOnPreview"
+          />
+          <label htmlFor="showWarkmarkOnPreview">
+            {"  "}
+            {t("newUser.formsData.showWarkmarkOnPreview")}
+          </label>
+        </div>
+      </div>
 
       {/* Buttons */}
-      <div className="mt-[30px] flex items-center justify-between gap-3">
-        <Button rounded="rounded-full" onClick={pre}>
-          {t("newUser.formsData.previous")}
-        </Button>
-        <Button rounded="rounded-full" onClick={next}>
-          {t("newUser.formsData.next")}
-        </Button>
+      <div className="ml-auto mt-[30px] flex items-center justify-between">
+        <div className="w-[100px]">
+          <Button onClick={pre}>{t("newUser.formsData.previous")}</Button>
+        </div>
+        <div className="w-[100px]">
+          <Button onClick={next}>{t("newUser.formsData.next")}</Button>
+        </div>
       </div>
     </Fragment>
   );
