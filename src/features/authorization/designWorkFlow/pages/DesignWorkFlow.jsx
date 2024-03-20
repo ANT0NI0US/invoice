@@ -13,7 +13,12 @@ const designWorkFlow = () => {
   return (
     <Fragment>
       <Header title="sidebar.authorization.designWorkflow.designWorkflow" />
-      <Table columns={columns} data={data} />
+      <Table
+        textColor="text-white"
+        backColor="bg-primary"
+        columns={columns}
+        data={data}
+      />
     </Fragment>
   );
 };

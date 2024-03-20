@@ -18,7 +18,12 @@ const CustomFields = () => {
   return (
     <Fragment>
       <Header title="sidebar.settings.customFields.customFields" />
-      <Table columns={columns} data={data} />
+      <Table
+        textColor="text-white"
+        backColor="bg-primary"
+        columns={columns}
+        data={data}
+      />
     </Fragment>
   );
 };

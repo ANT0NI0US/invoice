@@ -27,6 +27,10 @@
   .flexCenter {
     @apply flex items-center justify-center;
   }
+
+  .flexBetween{
+    @apply flex items-center justify-between;
+  }
 }
 
 /* Add special border color to the active link. */

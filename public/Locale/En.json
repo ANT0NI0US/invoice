@@ -159,10 +159,10 @@
       },
       "corporateProfile": {
         "corporateProfile": "Corporate Profile",
-        "identityDetails":"Identity Details",
-        "addressDetails":"Address Details",
-        "invoiceLayout":"Invoice Layout",
-        "configurations":"Configurations"
+        "identityDetails": "Identity Details",
+        "addressDetails": "Address Details",
+        "invoiceLayout": "Invoice Layout",
+        "configurations": "Configurations"
       },
       "customFields": {
         "customFields": "Custom Fields",
@@ -200,7 +200,10 @@
     },
     "generateReport": {
       "generateReport": "Generate Report",
-      "reportRequests": "Report Requests"
+      "reportRequests": "Report Requests",
+      "title": "Title",
+      "requestedOn": "Requested On",
+      "status": "Status"
     }
   },
   "login": {

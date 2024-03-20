@@ -13,7 +13,12 @@ const ManageGroups = () => {
   return (
     <Fragment>
       <Header title="sidebar.authorization.manageGroups.manageGroups" />
-      <Table columns={columns} data={data} />
+      <Table
+        textColor="text-white"
+        backColor="bg-primary"
+        columns={columns}
+        data={data}
+      />
     </Fragment>
   );
 };
