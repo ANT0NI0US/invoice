@@ -74,7 +74,7 @@ const initialstate = {
 };
 
 export default function NewUserForm({ toggleIsLogin }) {
-  const [formStep, setFormStep] = useState(formArray[3].number);
+  const [formStep, setFormStep] = useState(formArray[0].number);
   const [state, setState] = useState(initialstate);
   const [error, setError] = useState("");
 
@@ -123,8 +123,6 @@ export default function NewUserForm({ toggleIsLogin }) {
     currencies,
     acceptedFractuonsRoundingUpTi,
   } = state;
-
-  console.log(state);
 
   const navigate = useNavigate();
   const [t] = useTranslation();
