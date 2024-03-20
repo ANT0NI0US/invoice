@@ -18,7 +18,7 @@ const Table = ({
   return (
     <div className="max-h-[calc(100vh-150px)] overflow-x-auto">
       <table className="min-w-full space-y-6 ">
-        <thead className=" bg-[#BCD2E0] bg-opacity-[12%]">
+        <thead className={`${backColor} ${textColor}`}>
           <tr className=" rounded-[12px]">
             {columns.map((column, index) => (
               <th
