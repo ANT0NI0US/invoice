@@ -1,4 +1,9 @@
-export default function Input({ type = "text", placeholder }) {
+export default function Input({
+  type = "text",
+  placeholder,
+  name,
+  handleChange,
+}) {
   return (
     <div className="relative w-full">
       <input
@@ -6,6 +11,8 @@ export default function Input({ type = "text", placeholder }) {
         placeholder={placeholder}
         className="input"
         id={placeholder}
+        name={name}
+        onChange={handleChange}
       />
       <label
         htmlFor={placeholder}

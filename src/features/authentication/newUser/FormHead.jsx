@@ -10,19 +10,19 @@ export default function FormHead({ formArray, formStep }) {
   return (
     <div>
       <h1 className="text-2xl font-medium">{t("newUser.title")}</h1>
-      <div className="relative mt-[30px] flex items-center justify-around">
+      <div className="relative mt-[20px] flex items-center justify-around sm:mt-[30px]">
         {formArray.map((item, i) => (
           <Fragment key={i}>
             <div
-              className={`z-[100] h-[64px] w-[64px] rounded-full text-bgColor
+              className={`z-[100] h-[40px] w-[40px] rounded-full text-bgColor sm:h-[64px] sm:w-[64px]
               ${formStep === item.number ? "bg-lightGray" : formStep > item.number ? "bg-primary" : "bg-lightGray"} flex h-[35px] items-center
               justify-center`}
             >
               <FaCheck
-                className={`text-2xl ${formStep > item.number ? "text-bgColor" : "text-dark"}`}
+                className={`text-lg sm:text-2xl ${formStep > item.number ? "text-bgColor" : "text-dark"}`}
               />
               <div
-                className={`absolute bottom-[-30px] ${formStep > item.number ? "text-primary" : "text-gray"}`}
+                className={`absolute bottom-[-20px] text-xs sm:bottom-[-30px] sm:text-base ${formStep > item.number ? "text-primary" : "text-gray"}`}
               >
                 {t(`newUser.${item.title}`)}
               </div>

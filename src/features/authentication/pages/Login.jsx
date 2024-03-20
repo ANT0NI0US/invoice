@@ -5,13 +5,13 @@ import NewUserForm from "../newUser/NewUserForm";
 import TranslateButton from "../../../ui/TranslateButton";
 
 function Login() {
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
 
   const toggleIsLogin = () => setIsLogin((prev) => !prev);
 
   return (
     <div className="relative h-screen md:flex">
-      <div className=" absolute top-[30px] ltr:left-[50px] rtl:right-[50px]">
+      <div className=" absolute top-[20px] ltr:left-[50px] rtl:right-[50px]">
         <TranslateButton />
       </div>
 

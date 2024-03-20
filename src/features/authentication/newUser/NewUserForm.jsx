@@ -26,29 +26,106 @@ const formArray = [
     title: "stepFourTitle",
   },
 ];
+
 const initialstate = {
-  facilityName: "",
-  facilityAddress: "",
-  theCommercialRegistrationNumberOfTheEstablishment: "",
-  facilityTaxRegistrationNumber: "",
+  englishName: "",
+  arabicName: "",
+  category: "",
+  identificationNumber: "",
+  schemeType: "",
+  mobileNumber: "",
+  faxNumber: "",
   email: "",
-  contactNumber: "",
-  name: "",
-  IDNumber: "",
-  personEmail: "",
-  phone: "",
-  userName: "",
-  phoneNumber: "",
-  email2: "",
-  password: "",
-  confirmPassword: "",
-  enterTheActivationCode: "",
+  website: "",
+  vatNumber: "",
+  crNumber: "",
+
+  country: "",
+  city: "",
+  cityArabicName: "",
+  postalCode: "",
+  provinceEnglishName: "",
+  provinceArabicName: "",
+  areaEnglishName: "",
+  areaArabicName: "",
+  street: "",
+  streetArabicName: "",
+  buildingNumber: "",
+  additionalNumber: "",
+  unitEnglishNumber: "",
+  unitArabicNumber: "",
+
+  normalInvoiceFooterLineOne: "",
+  normalInvoiceFooterLineTwo: "",
+  englishEpaymenyNumber: "",
+  arabicEpaymenyNumber: "",
+  englishPurchaseOrderRef: "",
+  arabicPurchaseOrderRef: "",
+  defaultOutwardServiceDetails: "",
+  invoiceLayoutPostalCode: "",
+
+  purchaseExeption: "",
+  sellExeption: "",
+  defaultPaymentTerms: "",
+  minInvoiceItems: "",
+  maxInvoiceItems: "",
+  currencies: "",
+  acceptedFractuonsRoundingUpTi: "",
 };
 
 export default function NewUserForm({ toggleIsLogin }) {
-  const [formStep, setFormStep] = useState(formArray[0].number);
+  const [formStep, setFormStep] = useState(formArray[3].number);
   const [state, setState] = useState(initialstate);
   const [error, setError] = useState("");
+
+  const {
+    englishName,
+    arabicName,
+    category,
+    identificationNumber,
+    schemeType,
+    mobileNumber,
+    faxNumber,
+    email,
+    website,
+    vatNumber,
+    crNumber,
+
+    country,
+    city,
+    cityArabicName,
+    postalCode,
+    provinceEnglishName,
+    provinceArabicName,
+    areaEnglishName,
+    areaArabicName,
+    street,
+    streetArabicName,
+    buildingNumber,
+    additionalNumber,
+    unitEnglishNumber,
+    unitArabicNumber,
+
+    normalInvoiceFooterLineOne,
+    normalInvoiceFooterLineTwo,
+    englishEpaymenyNumber,
+    arabicEpaymenyNumber,
+    englishPurchaseOrderRef,
+    arabicPurchaseOrderRef,
+    defaultOutwardServiceDetails,
+    invoiceLayoutPostalCode,
+
+    purchaseExeption,
+    sellExeption,
+    defaultPaymentTerms,
+    minInvoiceItems,
+    maxInvoiceItems,
+    currencies,
+    acceptedFractuonsRoundingUpTi,
+  } = state;
+
+  console.log(state);
+
   const navigate = useNavigate();
   const [t] = useTranslation();
 
@@ -62,31 +139,49 @@ export default function NewUserForm({ toggleIsLogin }) {
   const next = () => {
     if (
       formStep === 1 &&
-      state.facilityName &&
-      state.facilityAddress &&
-      state.theCommercialRegistrationNumberOfTheEstablishment &&
-      state.facilityTaxRegistrationNumber &&
-      state.email &&
-      state.contactNumber
+      englishName &&
+      arabicName &&
+      category &&
+      identificationNumber &&
+      schemeType &&
+      mobileNumber &&
+      faxNumber &&
+      email &&
+      website &&
+      vatNumber &&
+      crNumber
     ) {
       setFormStep((prev) => prev + 1);
       setError("");
     } else if (
       formStep === 2 &&
-      state.name &&
-      state.IDNumber &&
-      state.personEmail &&
-      state.phone
+      country &&
+      city &&
+      cityArabicName &&
+      postalCode &&
+      provinceEnglishName &&
+      provinceArabicName &&
+      areaEnglishName &&
+      areaArabicName &&
+      street &&
+      streetArabicName &&
+      buildingNumber &&
+      additionalNumber &&
+      unitEnglishNumber &&
+      unitArabicNumber
     ) {
       setFormStep((prev) => prev + 1);
       setError("");
     } else if (
       formStep === 3 &&
-      state.userName &&
-      state.phoneNumber &&
-      state.email2 &&
-      state.password &&
-      state.confirmPassword
+      normalInvoiceFooterLineOne &&
+      normalInvoiceFooterLineTwo &&
+      englishEpaymenyNumber &&
+      arabicEpaymenyNumber &&
+      englishPurchaseOrderRef &&
+      arabicPurchaseOrderRef &&
+      defaultOutwardServiceDetails &&
+      invoiceLayoutPostalCode
     ) {
       setFormStep((prev) => prev + 1);
       setError(``);
@@ -100,7 +195,15 @@ export default function NewUserForm({ toggleIsLogin }) {
   };
 
   const finalSubmit = () => {
-    if (state.enterTheActivationCode) {
+    if (
+      purchaseExeption &&
+      sellExeption &&
+      defaultPaymentTerms &&
+      minInvoiceItems &&
+      maxInvoiceItems &&
+      currencies &&
+      acceptedFractuonsRoundingUpTi
+    ) {
       navigate("/");
       setFormStep((prev) => prev + 1);
     } else {
@@ -110,16 +213,15 @@ export default function NewUserForm({ toggleIsLogin }) {
 
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      <div className="flex h-screen w-[90%] flex-col justify-around">
+      <div className="flex h-screen w-[90%] flex-col justify-between gap-[50px] py-[70px] md:justify-around md:py-0 ">
         {/* Form Head */}
         <FormHead formArray={formArray} formStep={formStep} />
 
         {/* Form Currently Desplayed */}
-        <div className="min-h-[40vh]">
+        <div>
           {formStep === 1 && (
             <StepOne
               toggleIsLogin={toggleIsLogin}
-              state={state}
               inputHandle={inputHandle}
               next={next}
             />
@@ -153,7 +255,7 @@ export default function NewUserForm({ toggleIsLogin }) {
           )}
 
           {/* Error */}
-          <div className="mt-[20px]">
+          <div className="my-[20px]">
             <p className={`text-center text-red-500 ${!error && "opacity-0"}`}>
               {error}
             </p>

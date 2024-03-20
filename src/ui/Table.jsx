@@ -8,7 +8,7 @@ const Table = ({ columns, data }) => {
   const [t] = useTranslation();
 
   return (
-    <div className="max-h-[calc(100vh-150px)]  overflow-auto">
+    <div className="max-h-[calc(100vh-150px)] overflow-x-auto">
       <table className="min-w-full space-y-6 ">
         <thead className=" bg-[#BCD2E0] bg-opacity-[12%]">
           <tr className=" rounded-[12px]">
