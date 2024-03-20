@@ -1,10 +1,18 @@
+import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 import { FaInfoCircle } from "react-icons/fa";
 import { MdError } from "react-icons/md";
+import { MdAddBox } from "react-icons/md";
+
 // import { GrNext } from "react-icons/gr";
 // import { GrPrevious } from "react-icons/gr";
 
-const Table = ({ columns, data }) => {
+const Table = ({
+  columns,
+  data,
+  backColor = "bg-[#BCD2E0] bg-opacity-[12%]",
+  textColor = "text-dark",
+}) => {
   const [t] = useTranslation();
 
   return (
@@ -15,7 +23,7 @@ const Table = ({ columns, data }) => {
             {columns.map((column, index) => (
               <th
                 key={index}
-                className={`text-gray-500 py-7 text-center text-[14px] font-medium capitalize tracking-wider ${
+                className={`px-4 py-7 text-center text-[14px] font-medium capitalize tracking-wider ${
                   columns.length - 1 === index && " rounded-tr-[12px]"
                 } ${index === 0 && " rounded-tl-[12px]"}`}
               >
@@ -29,8 +37,17 @@ const Table = ({ columns, data }) => {
             <tr>
               <td colSpan={columns.length}>
                 <div className="flexCenter mt-5 gap-1 text-center">
-                  <MdError />
-                  <p className="font-semibold">No Data Found</p>
+                  {textColor === "text-dark" ? (
+                    <Fragment>
+                      <MdError />
+                      <p className="font-semibold">No Data Found</p>
+                    </Fragment>
+                  ) : (
+                    <Fragment>
+                      <MdAddBox />
+                      <p className="font-semibold">Add New Product</p>
+                    </Fragment>
+                  )}
                 </div>
               </td>
             </tr>
@@ -38,10 +55,7 @@ const Table = ({ columns, data }) => {
         ) : (
           <tbody className="bg-white">
             {data.map((row, rowIndex) => (
-              <tr
-                key={rowIndex}
-                className={`${rowIndex % 2 === 0 ? "bg-white" : "bg-[#BCD2E0] bg-opacity-[12%]"} border-b border-gray`}
-              >
+              <tr key={rowIndex} className={` border-b border-gray`}>
                 {row.map((cell, cellIndex) => (
                   <td
                     key={cellIndex}

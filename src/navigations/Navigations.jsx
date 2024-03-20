@@ -48,7 +48,7 @@ import Notifications from "../features/settings/notifications/pages/Notification
 /* end settings */
 
 /* start GenerateReports */
-import GenerateReports from "../features/generateReports/GenerateReports.jsx";
+import GenerateReports from "../features/generateReport/pages/GenerateReports.jsx";
 /* end GenerateReports */
 
 /* start corporateProfile tabs */

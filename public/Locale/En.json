@@ -200,7 +200,10 @@
     },
     "generateReport": {
       "generateReport": "Generate Report",
-      "reportRequests": "Report Requests"
+      "reportRequests": "Report Requests",
+      "title": "Title",
+      "requestedOn": "Requested On",
+      "status": "Status"
     }
   },
   "login": {

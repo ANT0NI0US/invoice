@@ -15,7 +15,12 @@ const ImportOutwardInvoices = () => {
   return (
     <Fragment>
       <Header title="sidebar.sales.importOutwardInvoices.importOutwardInvoices" />
-      <Table columns={columns} data={data} />
+      <Table
+        textColor="text-white"
+        backColor="bg-primary"
+        columns={columns}
+        data={data}
+      />
     </Fragment>
   );
 };
