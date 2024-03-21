@@ -5,7 +5,7 @@ import NewUserForm from "../newUser/NewUserForm";
 import TranslateButton from "../../../ui/TranslateButton";
 
 function Login() {
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
 
   const toggleIsLogin = () => setIsLogin((prev) => !prev);
 
