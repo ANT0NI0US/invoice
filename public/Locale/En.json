@@ -120,7 +120,7 @@
       "reports": "Reports",
       "salesReports": {
         "salesReports": "Sales Reports",
-        "customers":"Customers *",
+        "customers": "Customers *",
         "reportType": "Report Type *",
         "allCustomers": "All Customers",
         "chessStore": "Chess Store",
@@ -268,6 +268,9 @@
       "previewOnvoiceLogo": "Preview Onvoice Logo",
       "previewOnvoiceFooter": "Preview Onvoice Footer",
       "previewOnvoiceStamp": "Preview Onvoice Stamp",
+      "enableFlyInCustomer": "Enable Fly-in Customer",
+      "enableFlyInProduct": "Enable Fly-in Product",
+      "enableDeleteAttachmentsByUploader": "Enable Delete Attachments By Uploader",
 
       "englishName": "English Name",
       "arabicName": "Arabic Name",
