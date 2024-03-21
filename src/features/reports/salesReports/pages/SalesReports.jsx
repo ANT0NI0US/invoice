@@ -95,7 +95,9 @@ const SalesReports = () => {
             <Button>{t("sidebar.reports.salesReports.generate")}</Button>
           </div>
           <div className="w-[300px]">
-            <Button>{t("sidebar.reports.salesReports.extract")}</Button>
+            <Button variation="secondary">
+              {t("sidebar.reports.salesReports.extract")}
+            </Button>
           </div>
         </div>
       </div>

@@ -28,7 +28,7 @@ const CoraporateProfile = () => {
   return (
     <Fragment>
       <Tabs items={items} />
-      <div>
+      <div className="mt-10">
         <Outlet />
       </div>
     </Fragment>
