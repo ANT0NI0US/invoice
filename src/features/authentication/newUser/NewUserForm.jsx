@@ -74,7 +74,7 @@ const initialstate = {
 };
 
 export default function NewUserForm({ toggleIsLogin }) {
-  const [formStep, setFormStep] = useState(formArray[3].number);
+  const [formStep, setFormStep] = useState(formArray[0].number);
   const [state, setState] = useState(initialstate);
   const [error, setError] = useState("");
 
