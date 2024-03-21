@@ -82,10 +82,10 @@ const ZatcaConfigrations = () => {
 
         <div className=" flex items-center justify-end gap-5">
           <div className="w-[150px]">
-            <Button>{t("general.save")}</Button>
+            <Button variation="secondary">{t("general.cancel")}</Button>
           </div>
           <div className="w-[150px]">
-            <Button>{t("general.cancel")}</Button>
+            <Button>{t("general.save")}</Button>
           </div>
         </div>
       </div>
