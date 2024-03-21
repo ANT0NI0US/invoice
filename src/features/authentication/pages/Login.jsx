@@ -11,7 +11,7 @@ function Login() {
 
   return (
     <div className="relative h-screen md:flex">
-      <div className=" absolute top-[20px] ltr:left-[50px] rtl:right-[50px]">
+      <div className="absolute top-[20px] ltr:left-[50px] rtl:right-[50px]">
         <TranslateButton />
       </div>
 

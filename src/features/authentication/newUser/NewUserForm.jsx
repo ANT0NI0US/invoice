@@ -74,7 +74,7 @@ const initialstate = {
 };
 
 export default function NewUserForm({ toggleIsLogin }) {
-  const [formStep, setFormStep] = useState(formArray[0].number);
+  const [formStep, setFormStep] = useState(formArray[3].number);
   const [state, setState] = useState(initialstate);
   const [error, setError] = useState("");
 
@@ -211,7 +211,7 @@ export default function NewUserForm({ toggleIsLogin }) {
 
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      <div className="flex h-screen w-[90%] flex-col justify-between gap-[50px] py-[70px] md:justify-around md:py-0 ">
+      <div className="flex h-screen w-[90%] flex-col justify-between gap-[50px] py-[70px] md:justify-around ">
         {/* Form Head */}
         <FormHead formArray={formArray} formStep={formStep} />
 
