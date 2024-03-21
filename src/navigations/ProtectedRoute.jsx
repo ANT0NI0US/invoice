@@ -1,12 +1,10 @@
 import { useNavigate } from "react-router-dom";
-
 import { useEffect } from "react";
 
 function ProtectedRoute({ children }) {
   const navigate = useNavigate();
 
   // 1) Load the authenticated user
-
   const isLoading = false;
   const isAuthenticated = true;
 
@@ -23,7 +21,6 @@ function ProtectedRoute({ children }) {
   }
 
   // 4) If there is a user render the app
-
   if (isAuthenticated) return children;
 }
 

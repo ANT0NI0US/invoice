@@ -12,9 +12,7 @@ import SidebarLinks from "./SidebarLinks";
 
 function Sidebar({ openSidebar, closeSidebar }) {
   const [navigations, setNavigations] = useState("Main");
-
   const [t] = useTranslation();
-
   const ref = useOutsideClick(() => closeSidebar());
 
   return (
@@ -29,7 +27,7 @@ function Sidebar({ openSidebar, closeSidebar }) {
         className={`links-list absolute top-0 z-[101] h-[100vh] w-[270px] overflow-y-auto bg-lightRed transition-all md:static md:w-[300px] 
         ${openSidebar ? "ltr:left-0 rtl:right-0" : "ltr:left-[-300px] rtl:right-[-300px]"} shadow-[0_0_1.5px_#576E7E] `}
         style={{
-          scrollbarWidth: "thin",
+          scrollbarWidth: "none",
           scrollbarColor: "transparent transparent",
         }}
       >
@@ -41,7 +39,10 @@ function Sidebar({ openSidebar, closeSidebar }) {
 
         {/* Dashboard Icon */}
         {navigations !== "todo" && (
-          <div className="flex w-full cursor-pointer items-center justify-between rounded-md p-[10px] font-medium">
+          <div
+            onClick={closeSidebar}
+            className="flex w-full cursor-pointer items-center justify-between rounded-md p-[10px] font-medium"
+          >
             <NavLink
               to={"/dashboard"}
               className="flex w-full items-center gap-[10px] rounded-md p-[10px] font-medium"
@@ -53,11 +54,14 @@ function Sidebar({ openSidebar, closeSidebar }) {
         )}
 
         {/* Sidebar Links */}
-        <SidebarLinks navigations={navigations} />
+        <SidebarLinks navigations={navigations} closeSidebar={closeSidebar} />
 
         {/* Generate Report Icon */}
         {navigations !== "todo" && (
-          <div className="flex w-full cursor-pointer items-center justify-between rounded-md p-[10px] font-medium">
+          <div
+            onClick={closeSidebar}
+            className="flex w-full cursor-pointer items-center justify-between rounded-md p-[10px] font-medium"
+          >
             <NavLink
               to={"/generateReport"}
               className="flex w-full items-center justify-between rounded-md p-[10px] font-medium"

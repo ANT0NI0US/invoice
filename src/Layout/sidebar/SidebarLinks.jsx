@@ -4,7 +4,7 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { NavLink, useLocation } from "react-router-dom";
 import links from "./links";
 
-export default function SidebarLinks({ navigations }) {
+export default function SidebarLinks({ navigations, closeSidebar }) {
   const [menuItems, setMenuItems] = useState([]);
   const [t] = useTranslation();
   const location = useLocation();
@@ -69,6 +69,7 @@ export default function SidebarLinks({ navigations }) {
 
             {menuItems[index][item.submenuOpenState] && (
               <div
+                onClick={closeSidebar}
                 className="mx-auto mt-3 w-[90%] border-gray px-3 text-left text-sm font-bold transition-all ltr:border-l-2 rtl:border-r-2"
                 id={`submenu-${index}`}
               >
