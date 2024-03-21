@@ -88,13 +88,11 @@ export default function StepTwoFormInputs({ inputHandle }) {
           placeholder={t("newUser.formsData.unitEnglishNumber")}
           name={"unitEnglishNumber"}
           handleChange={inputHandle}
-          type="number"
         />
         <Input
           placeholder={t("newUser.formsData.unitArabicNumber")}
           name={"unitArabicNumber"}
           handleChange={inputHandle}
-          type="number"
         />
       </GridContainer>
     </Fragment>

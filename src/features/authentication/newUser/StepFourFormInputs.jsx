@@ -13,43 +13,37 @@ export default function StepFourFormInputs({ inputHandle }) {
         <div className="flex items-center gap-[3px]">
           <input
             type="checkbox"
-            id="inwardInvoiceItemsRequird"
-            name="inwardInvoiceItemsRequird"
+            id="enableFlyInCustomer"
+            name="enableFlyInCustomer"
           />
-          <label
-            htmlFor="inwardInvoiceItemsRequird"
-            className="text-sm sm:text-base"
-          >
-            {"  "} {t("newUser.formsData.inwardInvoiceItemsRequird")}
+          <label htmlFor="enableFlyInCustomer" className="text-sm sm:text-base">
+            {"  "} {t("newUser.formsData.enableFlyInCustomer")}
           </label>
         </div>
         <div className="flex items-center gap-[3px]">
           <input
             type="checkbox"
-            id="showWarkmarkOnPreview"
-            name="showWarkmarkOnPreview"
+            id="enableFlyInProduct"
+            name="enableFlyInProduct"
           />
-          <label
-            htmlFor="showWarkmarkOnPreview"
-            className="text-sm sm:text-base"
-          >
+          <label htmlFor="enableFlyInProduct" className="text-sm sm:text-base">
             {"  "}
-            {t("newUser.formsData.showWarkmarkOnPreview")}
+            {t("newUser.formsData.enableFlyInProduct")}
           </label>
         </div>
 
         <div className="flex items-center gap-[3px]">
           <input
             type="checkbox"
-            id="showWarkmarkOnPreview"
-            name="showWarkmarkOnPreview"
+            id="enableDeleteAttachmentsByUploader"
+            name="enableDeleteAttachmentsByUploader"
           />
           <label
-            htmlFor="showWarkmarkOnPreview"
+            htmlFor="enableDeleteAttachmentsByUploader"
             className="text-sm sm:text-base"
           >
             {"  "}
-            {t("newUser.formsData.showWarkmarkOnPreview")}
+            {t("newUser.formsData.enableDeleteAttachmentsByUploader")}
           </label>
         </div>
       </div>
