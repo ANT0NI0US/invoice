@@ -16,16 +16,14 @@ const Table = ({
   const [t] = useTranslation();
 
   return (
-    <div className="max-h-[calc(100vh-150px)] overflow-x-auto">
+    <div className="max-h-[calc(100vh-150px)] overflow-x-auto rounded-tl-[12px] rounded-tr-[12px]">
       <table className="min-w-full space-y-6 ">
         <thead className={`${backColor} ${textColor}`}>
           <tr className=" rounded-[12px]">
             {columns.map((column, index) => (
               <th
                 key={index}
-                className={`px-4 py-7 text-center text-[14px] font-medium capitalize tracking-wider ${
-                  columns.length - 1 === index && " rounded-tr-[12px]"
-                } ${index === 0 && " rounded-tl-[12px]"}`}
+                className={`px-4 py-7 text-center text-[14px] font-medium capitalize tracking-wider`}
               >
                 {t(`${column}`)}
               </th>
@@ -40,12 +38,14 @@ const Table = ({
                   {textColor === "text-dark" ? (
                     <Fragment>
                       <MdError />
-                      <p className="font-semibold">No Data Found</p>
+                      <p className="font-semibold">{t("table.noDataFound")}</p>
                     </Fragment>
                   ) : (
                     <Fragment>
                       <MdAddBox />
-                      <p className="font-semibold">Add New Product</p>
+                      <p className="font-semibold">
+                        {t("table.addNewProduct")}
+                      </p>
                     </Fragment>
                   )}
                 </div>

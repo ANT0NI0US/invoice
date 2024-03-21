@@ -5,6 +5,7 @@ import Header from "../../../../ui/Header";
 const columns = [
   "sidebar.sales.integrationFaliure.id",
   "sidebar.sales.integrationFaliure.subReference",
+  "sidebar.sales.integrationFaliure.majorReference",
   "sidebar.sales.integrationFaliure.dueAmount",
   "sidebar.sales.integrationFaliure.integrationTarget",
   "sidebar.sales.integrationFaliure.invoiceType",
