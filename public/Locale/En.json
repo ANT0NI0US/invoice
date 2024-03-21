@@ -1,5 +1,16 @@
 {
+  "general": {
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "table": {
+    "noDataFound": "No Data Found",
+    "addNewProduct": "Add New Product"
+  },
   "sidebar": {
+    "dashboard": {
+      "dashboard": "Dashboard"
+    },
     "sales": {
       "sales": "Sales",
       "outwardInvoice": {
@@ -43,11 +54,9 @@
       },
       "importOutwardInvoices": {
         "importOutwardInvoices": "Import Outward Invoices",
-        "invoiceNumber": "Invoice Number",
-        "debitNumber": "Debit Number",
-        "noteReference": "Note Reference",
-        "debitNoteAmount": "Debit Note Amount",
-        "debitNoteDate": "Debit Note Date",
+        "description": "Description",
+        "uploadDate": "Upload Date",
+        "importDate": "Import Date",
         "status": "Status"
       },
       "importCreditNotes": {
@@ -61,6 +70,7 @@
         "integrationFaliure": "Integration Faliure",
         "id": "ID",
         "subReference": "Sub Reference",
+        "majorReference": "Major Reference",
         "dueAmount": "Due Amount",
         "integrationTarget": "Integration Target",
         "invoiceType": "Invoice Type",
@@ -110,6 +120,20 @@
       "reports": "Reports",
       "salesReports": {
         "salesReports": "Sales Reports",
+        "customers":"Customers *",
+        "reportType": "Report Type *",
+        "allCustomers": "All Customers",
+        "chessStore": "Chess Store",
+        "grandLibrary": "Grand Library",
+        "xStore": "X Store",
+        "outwardInvoices": "Outward Invoices",
+        "collections": "Collections",
+        "outwardInvoicesWithNotesReport": "Outward Invoices With Notes Report",
+        "fromIssueDate": "From Issue Date",
+        "toIssueDate": "To Issue Date",
+        "moreDetails": "MoreDetails",
+        "generate": "Generate",
+        "extract": "Extract",
         "invoiceNumber": "Invoice Number",
         "issueDate": "Issue Date",
         "customer": "Customer",
@@ -177,6 +201,13 @@
       },
       "zatcaConfigurations": {
         "zatcaConfigurations": "Zatca Configurations",
+        "enableZatca": "Enable Zatca",
+        "zatcaEnabled": "Zatca Enabled",
+        "englishName": "English Name",
+        "identificationtype": "Identification Type *",
+        "identificationNumber": "Identification Number",
+        "taxIdentificationNumber": "Tax Identification Number",
+        "crn": "CRN",
         "otp": "OTP",
         "egsCode": "EGS Code",
         "egsAlias": "EGS Alias",
@@ -186,7 +217,12 @@
         "seperator": "Seperator"
       },
       "sequenceGenerator": {
-        "sequenceGenerator": "Sequence Generator"
+        "sequenceGenerator": "Sequence Generator",
+        "vendorsManagementErpRefrenece": "Vendors Management erpRefrenece",
+        "outwardInvoicesInvoice#": "Outward Invoices Invoice #",
+        "outwardInvoicesEPayment#": "outward Invoices ePayment #",
+        "customersManagementErpRefrenece": "Customers Management erpRefrenece",
+        "active": "Active"
       },
       "notifications": {
         "notifications": "Notifications",
@@ -194,9 +230,6 @@
         "to": "To",
         "ccStatus": "CC Status"
       }
-    },
-    "dashboard": {
-      "dashboard": "Dashboard"
     },
     "generateReport": {
       "generateReport": "Generate Report",

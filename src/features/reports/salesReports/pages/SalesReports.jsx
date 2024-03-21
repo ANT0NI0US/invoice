@@ -3,6 +3,7 @@ import Table from "../../../../ui/Table";
 import Header from "../../../../ui/Header";
 import Input from "../../../../ui/Input";
 import Button from "../../../../ui/Button";
+import { useTranslation } from "react-i18next";
 
 const columns = [
   "sidebar.reports.salesReports.invoiceNumber",
@@ -15,6 +16,7 @@ const columns = [
 const data = [];
 
 const SalesReports = () => {
+  const [t] = useTranslation();
   return (
     <Fragment>
       <Header title="sidebar.reports.salesReports.salesReports" />
@@ -23,38 +25,58 @@ const SalesReports = () => {
           <div className="flexBetween flex-col gap-10 sm:flex-row sm:gap-5 ">
             <div className="relative w-full">
               <select className="input p-[12px]" id="customer">
-                <option value="allCustomer">All Customer</option>
-                <option value="chessStore">Chess Store</option>
-                <option value="grandLibrary">Grand Library</option>
-                <option value="xStore">X Store</option>
+                <option value="allCustomer">
+                  {t("sidebar.reports.salesReports.allCustomers")}
+                </option>
+                <option value="chessStore">
+                  {t("sidebar.reports.salesReports.chessStore")}
+                </option>
+                <option value="grandLibrary">
+                  {t("sidebar.reports.salesReports.grandLibrary")}
+                </option>
+                <option value="xStore">
+                  {t("sidebar.reports.salesReports.xStore")}
+                </option>
               </select>
               <label
-                htmlFor="customer"
+                htmlFor={t("sidebar.reports.salesReports.customer")}
                 className="absolute top-[-15px] bg-bgColor p-[3px] text-sm ltr:left-[15px] rtl:right-[15px]"
               >
-                Customers *
+                {t("sidebar.reports.salesReports.customers")}
               </label>
             </div>
             <div className="relative w-full">
               <select className="input p-[12px]" id="report-type">
-                <option value="outwardInvoices">Outward Invoices</option>
-                <option value="collections">Collections</option>
+                <option value="outwardInvoices">
+                  {t("sidebar.reports.salesReports.outwardInvoices")}
+                </option>
+                <option value="collections">
+                  {t("sidebar.reports.salesReports.collections")}
+                </option>
                 <option value="outwardInvoicesReport">
-                  Outward Invoices with Notes Report
+                  {t(
+                    "sidebar.reports.salesReports.outwardInvoicesWithNotesReport",
+                  )}
                 </option>
               </select>
               <label
-                htmlFor="report-type"
+                htmlFor={t("sidebar.reports.salesReports.reportType")}
                 className="absolute top-[-15px] bg-bgColor p-[3px] text-sm ltr:left-[15px] rtl:right-[15px]"
               >
-                Report Type *
+                {t("sidebar.reports.salesReports.reportType")}
               </label>
             </div>
           </div>
 
           <div className="flexBetween flex-col gap-10 sm:flex-row sm:gap-5 ">
-            <Input placeholder="From isssue date" type="date" />
-            <Input placeholder="To issue date" type="date" />
+            <Input
+              placeholder={t("sidebar.reports.salesReports.fromIssueDate")}
+              type="date"
+            />
+            <Input
+              placeholder={t("sidebar.reports.salesReports.toIssueDate")}
+              type="date"
+            />
           </div>
         </div>
 
@@ -64,16 +86,16 @@ const SalesReports = () => {
             className="cursor-pointer text-lg font-medium text-lightB"
             htmlFor="details"
           >
-            More details
+            {t("sidebar.reports.salesReports.moreDetails")}
           </label>
         </div>
 
         <div className="flexCenter mr-0 flex-col gap-5 sm:mr-[30px] sm:items-end sm:justify-end">
           <div className="w-[300px]">
-            <Button>Generate</Button>
+            <Button>{t("sidebar.reports.salesReports.generate")}</Button>
           </div>
           <div className="w-[300px]">
-            <Button>Extract</Button>
+            <Button>{t("sidebar.reports.salesReports.extract")}</Button>
           </div>
         </div>
       </div>
