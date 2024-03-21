@@ -9,6 +9,7 @@ export default function StepThree({ inputHandle, next, pre }) {
 
   return (
     <Fragment>
+      {/* Inputs */}
       <StepThreeFormInputs inputHandle={inputHandle} />
 
       {/* Buttons */}
