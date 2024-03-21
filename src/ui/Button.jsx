@@ -2,13 +2,14 @@ export default function Button({
   children,
   type = "button",
   onClick,
-  rounded = "rounded-md",
+  variation = "primary",
 }) {
   return (
     <button
       onClick={onClick}
       type={type}
-      className={`h-[45px] w-full  bg-primary font-bold text-bgColor transition-all hover:bg-opacity-[0.8] ${rounded}`}
+      className={`h-[45px] w-full rounded-md ${variation === "secondary" ? "bg-bgColor text-primary hover:bg-primary hover:text-bgColor" : "bg-primary hover:bg-opacity-[0.8]"} 
+      border border-primary font-bold text-bgColor transition-all`}
     >
       {children}
     </button>
