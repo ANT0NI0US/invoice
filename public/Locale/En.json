@@ -1,7 +1,9 @@
 {
   "general": {
     "save": "Save",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "english": "English",
+    "arabic": "Arabic"
   },
   "table": {
     "noDataFound": "No Data Found",
