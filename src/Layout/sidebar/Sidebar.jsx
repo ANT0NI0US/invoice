@@ -3,15 +3,15 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useOutsideClick } from "../../hooks/useOutesideClick";
 import { ImFilesEmpty } from "react-icons/im";
-import { FaHome } from "react-icons/fa";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { MdOutlineHome } from "react-icons/md";
 
 import Logo from "./Logo";
 import MainTitle from "./MainTitle";
 import SidebarLinks from "./SidebarLinks";
 
 function Sidebar({ openSidebar, closeSidebar }) {
-  const [navigations, setNavigations] = useState("Main");
+  const [navigations, setNavigations] = useState("main");
   const [t] = useTranslation();
   const ref = useOutsideClick(() => closeSidebar());
 
@@ -35,7 +35,7 @@ function Sidebar({ openSidebar, closeSidebar }) {
         <Logo />
 
         {/* Main Title (Main or To Do) */}
-        <MainTitle setNavigations={setNavigations} />
+        <MainTitle setNavigations={setNavigations} navigations={navigations} />
 
         {/* Dashboard Icon */}
         {navigations !== "todo" && (
@@ -47,7 +47,7 @@ function Sidebar({ openSidebar, closeSidebar }) {
               to={"/dashboard"}
               className="flex w-full items-center gap-[10px] rounded-md p-[10px] font-medium"
             >
-              <FaHome />
+              <MdOutlineHome />
               {t("sidebar.dashboard.dashboard")}
             </NavLink>
           </div>

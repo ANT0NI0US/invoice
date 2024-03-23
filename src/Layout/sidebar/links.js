@@ -1,15 +1,16 @@
 import routes from "../../navigations/routes";
-import { IoMdSettings } from "react-icons/io";
-import { IoStatsChartSharp, IoShieldCheckmarkSharp } from "react-icons/io5";
+import { IoSettingsOutline } from "react-icons/io5";
 import { LiaMoneyBillWaveSolid } from "react-icons/lia";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { GrDocumentText } from "react-icons/gr";
+import { SlChart } from "react-icons/sl";
+import { BsShieldCheck } from "react-icons/bs";
 
 const links = [
   {
     label: "sidebar.sales.sales",
     submenuOpenState: "isSalesSubMenuOpen",
-    icon: IoStatsChartSharp,
+    icon: SlChart,
     submenuItems: [
       {
         text: "sidebar.sales.outwardInvoice.outwardInvoice",
@@ -94,7 +95,7 @@ const links = [
   {
     label: "sidebar.authorization.authorization",
     submenuOpenState: "isAuthorizationSubMenuOpen",
-    icon: IoShieldCheckmarkSharp,
+    icon: BsShieldCheck,
     submenuItems: [
       {
         text: "sidebar.authorization.manageUser.manageUser",
@@ -119,7 +120,7 @@ const links = [
   {
     label: "sidebar.settings.settings",
     submenuOpenState: "isSettingsSubMenuOpen",
-    icon: IoMdSettings,
+    icon: IoSettingsOutline,
     submenuItems: [
       {
         text: "sidebar.settings.products.products",
