@@ -7,7 +7,6 @@ export default {
         bgColor: "#fff",
         primary: "#02BEC4",
         lightRed: "#f5f5f5",
-
         darkB: "#2D404E",
         lightB: "#576E7E",
         lightGray: "#BCD2E0",

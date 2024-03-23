@@ -43,25 +43,25 @@ const TranslateButton = () => {
 
       {openMenu && (
         <div
-          className={`absolute bottom-[-50px] left-[50%] w-[50px] translate-x-[-50%] rounded-md bg-bgColor p-[5px] text-center text-sm shadow-lg`}
+          className={`absolute bottom-[-75px] left-[50%]  translate-x-[-50%] rounded-md border border-lightGray bg-bgColor p-[5px] text-center text-sm shadow-lg`}
         >
           <p
-            className="hover:bg-blue rounded-md transition-all hover:bg-primary hover:text-bgColor"
+            className="hover:bg-blue rounded-md p-[5px] transition-all hover:bg-primary hover:text-bgColor"
             onClick={() => {
               changeLanguageAndDirection("en");
               i18n.changeLanguage("en");
             }}
           >
-            EN
+            {t("general.english")}
           </p>
           <p
             onClick={() => {
               changeLanguageAndDirection("ar");
               i18n.changeLanguage("ar");
             }}
-            className="hover:bg-blue rounded-md transition-all hover:bg-primary hover:text-bgColor"
+            className="hover:bg-blue rounded-md p-[5px] transition-all hover:bg-primary hover:text-bgColor"
           >
-            AR
+            {t("general.arabic")}
           </p>
         </div>
       )}
