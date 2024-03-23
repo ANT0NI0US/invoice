@@ -5,7 +5,7 @@ import userImage from "../../assets/user.png";
 
 function Header({ tggleSidebar }) {
   return (
-    <div className="flex h-[113px] items-center justify-between bg-bgColor z-[100] relative shadow-[0_0_1.5px_#576E7E]">
+    <div className="relative z-[100] flex h-[113px] items-center justify-between border-b-[0.1px] border-lightGray bg-bgColor">
       <div className="flex w-full items-center justify-between p-[15px]">
         <div>
           <BsFillGridFill
