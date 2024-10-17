@@ -1,11 +1,11 @@
 import { Fragment } from "react";
-import { FaCheck } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { FaCheck } from "react-icons/fa";
 
 export default function FormHead({ formArray, formStep }) {
-  // Calc the percentage to desplay line progress
+  // Calc the percentage to display line progress
   const percentageCompleted = (formStep / formArray.length) * 100;
-  const [t] = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div>

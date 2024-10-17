@@ -1,25 +1,23 @@
-import { Fragment } from "react";
-import Table from "../../../../ui/Table";
-import Header from "../../../../ui/Header";
+import Table from "@/ui/Table";
+import Header from "@/ui/Header";
 
 const columns = [
-  "sidebar.sales.integrationFaliure.id",
-  "sidebar.sales.integrationFaliure.subReference",
-  "sidebar.sales.integrationFaliure.majorReference",
-  "sidebar.sales.integrationFaliure.dueAmount",
-  "sidebar.sales.integrationFaliure.integrationTarget",
-  "sidebar.sales.integrationFaliure.invoiceType",
-  "sidebar.sales.integrationFaliure.invoiceModel",
-  "sidebar.sales.integrationFaliure.retryCounts",
+  "sidebar.sales.integrationFailure.id",
+  "sidebar.sales.integrationFailure.subReference",
+  "sidebar.sales.integrationFailure.majorReference",
+  "sidebar.sales.integrationFailure.dueAmount",
+  "sidebar.sales.integrationFailure.integrationTarget",
+  "sidebar.sales.integrationFailure.invoiceType",
+  "sidebar.sales.integrationFailure.invoiceModel",
+  "sidebar.sales.integrationFailure.retryCounts",
 ];
 const data = [];
-const IntegrationFailure = () => {
-  return (
-    <Fragment>
-      <Header title="sidebar.sales.integrationFaliure.integrationFaliure" />
-      <Table columns={columns} data={data} />
-    </Fragment>
-  );
-};
 
-export default IntegrationFailure;
+export default function IntegrationFailure() {
+  return (
+    <>
+      <Header title="sidebar.sales.integrationFailure.integrationFailure" />
+      <Table columns={columns} data={data} />
+    </>
+  );
+}

@@ -1,10 +1,10 @@
 import { useState } from "react";
-import billImage from "../../../assets/billImage.png";
 import LoginForm from "../LoginForm";
 import NewUserForm from "../newUser/NewUserForm";
-import TranslateButton from "../../../ui/TranslateButton";
+import billImage from "@/assets/billImage.png";
+import TranslateButton from "@/ui/TranslateButton";
 
-function Login() {
+export default function Login() {
   const [isLogin, setIsLogin] = useState(true);
 
   const toggleIsLogin = () => setIsLogin((prev) => !prev);
@@ -27,15 +27,9 @@ function Login() {
       {/* images Container */}
       <div className="relative hidden w-[40%] items-center justify-around overflow-hidden bg-primary bg-gradient-to-tr md:flex">
         <div>
-          <img
-            src={billImage}
-            alt="bill image"
-            className="h-[323px] w-[370px]"
-          />
+          <img src={billImage} alt="bill" className="h-[323px] w-[370px]" />
         </div>
       </div>
     </div>
   );
 }
-
-export default Login;

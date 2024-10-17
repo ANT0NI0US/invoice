@@ -1,4 +1,7 @@
-const GridContainer = ({ children, columns = "md:grid-cols-2" }) => {
+export default function GridContainer({
+  children,
+  columns = "md:grid-cols-2",
+}) {
   return (
     <div
       className={`container mx-auto flex flex-col gap-[30px] px-4 md:grid ${columns}`}
@@ -6,6 +9,4 @@ const GridContainer = ({ children, columns = "md:grid-cols-2" }) => {
       {children}
     </div>
   );
-};
-
-export default GridContainer;
+}

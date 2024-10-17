@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import Table from "../../../../ui/Table";
-import Header from "../../../../ui/Header";
+import Table from "@/ui/Table";
+import Header from "@/ui/Header";
 
 const columns = [
   "sidebar.authorization.manageUser.id",
@@ -10,13 +9,11 @@ const columns = [
 ];
 const data = [];
 
-const ManageUser = () => {
+export default function ManageUser() {
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.authorization.manageUser.manageUser" />
       <Table columns={columns} data={data} />
-    </Fragment>
+    </>
   );
-};
-
-export default ManageUser;
+}

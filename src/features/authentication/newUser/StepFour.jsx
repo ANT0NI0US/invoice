@@ -1,18 +1,17 @@
-import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
-import Button from "../../../ui/Button";
 import StepFourFormInputs from "./StepFourFormInputs";
+import Button from "@/ui/Button";
 
 export default function StepFour({ inputHandle, pre, finalSubmit }) {
-  const [t] = useTranslation();
+  const { t } = useTranslation();
 
   return (
-    <Fragment>
+    <>
       {/* Inputs */}
       <StepFourFormInputs inputHandle={inputHandle} />
 
       {/* Buttons */}
-      <div className="ml-auto mt-[30px] flex items-center justify-between">
+      <div className="flexBetween ml-auto mt-[30px]">
         <div className="w-[100px]">
           <Button onClick={pre}>{t("newUser.formsData.previous")}</Button>
         </div>
@@ -20,6 +19,6 @@ export default function StepFour({ inputHandle, pre, finalSubmit }) {
           <Button onClick={finalSubmit}>{t("newUser.formsData.submit")}</Button>{" "}
         </div>
       </div>
-    </Fragment>
+    </>
   );
 }

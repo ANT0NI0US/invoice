@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import Table from "../../../../ui/Table";
-import Header from "../../../../ui/Header";
+import Table from "@/ui/Table";
+import Header from "@/ui/Header";
 
 const columns = [
   "sidebar.authorization.designWorkflow.id",
@@ -9,9 +8,9 @@ const columns = [
 ];
 const data = [];
 
-const designWorkFlow = () => {
+export default function designWorkFlow() {
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.authorization.designWorkflow.designWorkflow" />
       <Table
         textColor="text-white"
@@ -19,8 +18,6 @@ const designWorkFlow = () => {
         columns={columns}
         data={data}
       />
-    </Fragment>
+    </>
   );
-};
-
-export default designWorkFlow;
+}

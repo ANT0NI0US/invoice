@@ -1,18 +1,17 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useOutsideClick } from "../../hooks/useOutesideClick";
 import { ImFilesEmpty } from "react-icons/im";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { MdOutlineHome } from "react-icons/md";
-
+import SidebarLinks from "./SidebarLinks";
 import Logo from "./Logo";
 import MainTitle from "./MainTitle";
-import SidebarLinks from "./SidebarLinks";
+import { useOutsideClick } from "@/hooks/useOutsideClick";
 
-function Sidebar({ openSidebar, closeSidebar }) {
-  const [navigations, setNavigations] = useState("main");
-  const [t] = useTranslation();
+export default function Sidebar({ openSidebar, closeSidebar }) {
+  const [navigation, setNavigation] = useState("main");
+  const { t } = useTranslation();
   const ref = useOutsideClick(() => closeSidebar());
 
   return (
@@ -35,13 +34,13 @@ function Sidebar({ openSidebar, closeSidebar }) {
         <Logo />
 
         {/* Main Title (Main or To Do) */}
-        <MainTitle setNavigations={setNavigations} navigations={navigations} />
+        <MainTitle setNavigation={setNavigation} navigation={navigation} />
 
         {/* Dashboard Icon */}
-        {navigations !== "todo" && (
+        {navigation !== "todo" && (
           <div
             onClick={closeSidebar}
-            className="flex w-full cursor-pointer items-center justify-between rounded-md p-[10px] font-medium"
+            className="flexBetween w-full cursor-pointer rounded-md p-[10px] font-medium"
           >
             <NavLink
               to={"/dashboard"}
@@ -54,17 +53,17 @@ function Sidebar({ openSidebar, closeSidebar }) {
         )}
 
         {/* Sidebar Links */}
-        <SidebarLinks navigations={navigations} closeSidebar={closeSidebar} />
+        <SidebarLinks navigation={navigation} closeSidebar={closeSidebar} />
 
         {/* Generate Report Icon */}
-        {navigations !== "todo" && (
+        {navigation !== "todo" && (
           <div
             onClick={closeSidebar}
-            className="flex w-full cursor-pointer items-center justify-between rounded-md p-[10px] font-medium"
+            className="flexBetween w-full cursor-pointer rounded-md p-[10px] font-medium"
           >
             <NavLink
               to={"/generateReport"}
-              className="flex w-full items-center justify-between rounded-md p-[10px] font-medium"
+              className="flexBetween w-full rounded-md p-[10px] font-medium"
             >
               <div className="flex  gap-[10px]">
                 <ImFilesEmpty />
@@ -82,5 +81,3 @@ function Sidebar({ openSidebar, closeSidebar }) {
     </div>
   );
 }
-
-export default Sidebar;

@@ -1,14 +1,13 @@
-import React, { Fragment } from "react";
-import Header from "../../../../ui/Header";
 import { useTranslation } from "react-i18next";
+import Header from "@/ui/Header";
 
-const SequenceGenerator = () => {
-  const [t] = useTranslation();
+export default function SequenceGenerator() {
+  const { t } = useTranslation();
 
   const sequences = [
     {
       text: t(
-        "sidebar.settings.sequenceGenerator.vendorsManagementErpRefrenece",
+        "sidebar.settings.sequenceGenerator.vendorsManagementErpReference",
       ),
       status: t("sidebar.settings.sequenceGenerator.active"),
     },
@@ -22,13 +21,13 @@ const SequenceGenerator = () => {
     },
     {
       text: t(
-        "sidebar.settings.sequenceGenerator.customersManagementErpRefrenece",
+        "sidebar.settings.sequenceGenerator.customersManagementErpReference",
       ),
       status: t("sidebar.settings.sequenceGenerator.active"),
     },
   ];
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.settings.sequenceGenerator.sequenceGenerator" />
       <div className="flex flex-col gap-6">
         {sequences.map((sequence, index) => (
@@ -43,8 +42,6 @@ const SequenceGenerator = () => {
           </div>
         ))}
       </div>
-    </Fragment>
+    </>
   );
-};
-
-export default SequenceGenerator;
+}

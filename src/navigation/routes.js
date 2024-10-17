@@ -7,7 +7,7 @@ const routes = {
   debitNotes: "sales/DebitNotes",
   importOutwardInvoices: "sales/ImportOutwardInvoices",
   importCreditNotes: "sales/ImportCreditNotes",
-  integrationFaliure: "sales/IntegrationFaliure",
+  integrationFailure: "sales/IntegrationFaliure",
 
   inwardInvoices: "purchases/inwardInvoices",
   manageVendor: "purchases/manageVendor",

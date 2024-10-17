@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const Tabs = ({ items }) => {
+export default function Tabs({ items }) {
   return (
     <div className="Tabs flex w-full items-center justify-start gap-[10px]  border-b-[1px] border-lightB sm:gap-10">
       {items.map((item, index) => (
@@ -15,6 +15,4 @@ const Tabs = ({ items }) => {
       ))}
     </div>
   );
-};
-
-export default Tabs;
+}

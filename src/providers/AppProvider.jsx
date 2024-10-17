@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import StoreProvider from "./StoreProvider";
 import RoutesProvider from "./RoutesProvider";
-import Navigations from "../navigations/Navigations";
+import Navigation from "@/navigation/Navigation";
 
-const AppProvider = () => {
+export default function AppProvider() {
   const { i18n } = useTranslation();
 
   useEffect(() => {
@@ -15,10 +15,8 @@ const AppProvider = () => {
   return (
     <StoreProvider>
       <RoutesProvider>
-        <Navigations />
+        <Navigation />
       </RoutesProvider>
     </StoreProvider>
   );
-};
-
-export default AppProvider;
+}

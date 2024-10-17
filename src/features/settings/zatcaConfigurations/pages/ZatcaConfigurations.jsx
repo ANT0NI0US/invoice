@@ -1,9 +1,8 @@
-import { Fragment } from "react";
-import Table from "../../../../ui/Table";
-import Header from "../../../../ui/Header";
-import Button from "../../../../ui/Button";
-import Input from "../../../../ui/Input";
 import { useTranslation } from "react-i18next";
+import Table from "@/ui/Table";
+import Header from "@/ui/Header";
+import Button from "@/ui/Button";
+import Input from "@/ui/Input";
 
 const columns = [
   "sidebar.settings.zatcaConfigurations.otp",
@@ -12,14 +11,14 @@ const columns = [
   "sidebar.settings.zatcaConfigurations.invoiceType",
   "sidebar.settings.zatcaConfigurations.channelId",
   "sidebar.settings.zatcaConfigurations.sequenceFormatter",
-  "sidebar.settings.zatcaConfigurations.seperator",
+  "sidebar.settings.zatcaConfigurations.separator",
 ];
 const data = [];
 
-const ZatcaConfigrations = () => {
-  const [t] = useTranslation();
+export default function ZatcaConfigurations() {
+  const { t } = useTranslation();
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.settings.zatcaConfigurations.zatcaConfigurations" />
       <div className="my-10 w-full">
         <div className="w-[150px]">
@@ -44,7 +43,7 @@ const ZatcaConfigrations = () => {
           />
           <div className="flexBetween flex-col gap-10 sm:flex-row sm:gap-5 ">
             <div className="relative w-full">
-              <select className="input p-[12px]" id="identy-type">
+              <select className="input p-[12px]" id="identity-type">
                 <option value="crn">
                   {t("sidebar.settings.zatcaConfigurations.crn")}
                 </option>
@@ -59,10 +58,10 @@ const ZatcaConfigrations = () => {
                 </option>
               </select>
               <label
-                htmlFor="identy-type"
+                htmlFor="identity-type"
                 className="absolute top-[-15px] bg-bgColor p-[3px] text-sm ltr:left-[15px] rtl:right-[15px]"
               >
-                {t("sidebar.settings.zatcaConfigurations.identificationtype")}
+                {t("sidebar.settings.zatcaConfigurations.identificationType")}
               </label>
             </div>
             <Input
@@ -95,8 +94,6 @@ const ZatcaConfigrations = () => {
         columns={columns}
         data={data}
       />
-    </Fragment>
+    </>
   );
-};
-
-export default ZatcaConfigrations;
+}

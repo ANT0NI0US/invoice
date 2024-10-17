@@ -40,9 +40,9 @@ import ManageDepartments from "../features/authorization/ManageDepartments/pages
 
 /* start settings */
 import Products from "../features/settings/products/pages/Products";
-import CoraporateProfile from "../features/settings/coraporateProfile/pages/CoraporateProfile";
+import CorporateProfile from "../features/settings/corporateProfile/pages/CorporateProfile";
 import CustomFields from "../features/settings/customFields/pages/CustomFields";
-import ZatcaConfigrations from "../features/settings/zatcaConfigrations/pages/ZatcaConfigrations";
+import ZatcaConfigurations from "../features/settings/zatcaConfigurations/pages/ZatcaConfigurations";
 import SequenceGenerator from "../features/settings/sequenceGenerator/pages/SequenceGenerator";
 import Notifications from "../features/settings/notifications/pages/Notifications";
 /* end settings */
@@ -52,19 +52,19 @@ import GenerateReports from "../features/generateReport/pages/GenerateReports.js
 /* end GenerateReports */
 
 /* start corporateProfile tabs */
-import AddressDetails from "../features/settings/coraporateProfile/tabs/addressDetails/pages/AddressDetails.jsx";
-import InvoiceLayout from "../features/settings/coraporateProfile/tabs/invoiceLayout/pages/InvoiceLayout.jsx";
-import Configurations from "../features/settings/coraporateProfile/tabs/configurations/pages/Configurations.jsx";
-import IdentityDetails from "../features/settings/coraporateProfile/tabs/identityDetails/pages/IdentityDetails.jsx";
+import AddressDetails from "../features/settings/corporateProfile/tabs/addressDetails/pages/AddressDetails.jsx";
+import InvoiceLayout from "../features/settings/corporateProfile/tabs/invoiceLayout/pages/InvoiceLayout.jsx";
+import Configurations from "../features/settings/corporateProfile/tabs/configurations/pages/Configurations.jsx";
+import IdentityDetails from "../features/settings/corporateProfile/tabs/identityDetails/pages/IdentityDetails.jsx";
 /* end corporateProfile tabs */
 
-const AppLayout = lazy(() => import("../Layout/AppLayout"));
+const AppLayout = lazy(() => import("../layout/AppLayout"));
 const Dashboard = lazy(
   () => import("../features/dashboard/pages/Dashboard.jsx"),
 );
 const Login = lazy(() => import("../features/authentication/pages/Login.jsx"));
 
-export default function Navigations() {
+export default function Navigation() {
   return (
     <Suspense fallback={<Loader />}>
       <Routes>
@@ -94,7 +94,7 @@ export default function Navigations() {
             element={<ImportCreditNotes />}
           />
           <Route
-            path={routes.integrationFaliure}
+            path={routes.integrationFailure}
             element={<IntegrationFailure />}
           />
           {/* End Sales */}
@@ -132,7 +132,7 @@ export default function Navigations() {
           {/* Start Settings */}
           <Route path={routes.products} element={<Products />} />
           {/* Start corporateProfile */}
-          <Route path={routes.corporateProfile} element={<CoraporateProfile />}>
+          <Route path={routes.corporateProfile} element={<CorporateProfile />}>
             <Route
               index
               element={<Navigate replace to={`/${routes.identityDetails}`} />}
@@ -160,7 +160,7 @@ export default function Navigations() {
           <Route path={routes.customFields} element={<CustomFields />} />
           <Route
             path={routes.zatcaConfigurations}
-            element={<ZatcaConfigrations />}
+            element={<ZatcaConfigurations />}
           />
           <Route
             path={routes.sequenceGenerator}

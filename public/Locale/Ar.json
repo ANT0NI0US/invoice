@@ -68,8 +68,8 @@
         "importDate": "تاريخ الاستيراد",
         "status": "الحالة"
       },
-      "integrationFaliure": {
-        "integrationFaliure": "فشل التكامل",
+      "integrationFailure": {
+        "integrationFailure": "فشل التكامل",
         "id": "الهوية",
         "subReference": "المرجع الفرعي",
         "majorReference": "المرجع الرئيسي",
@@ -206,7 +206,7 @@
         "enableZatca": "تمكين زاتكا",
         "zatcaEnabled": "تمكين زاتكا",
         "englishName": "الاسم بالانجليزية",
-        "identificationtype": "نوع الهوية *",
+        "identificationType": "نوع الهوية *",
         "identificationNumber": "رقم الهوية",
         "taxIdentificationNumber": "رثم التعريف الضريبي",
         "crn": "CRN",
@@ -216,14 +216,14 @@
         "invoiceType": "نوع الفاتورة",
         "channelId": "Channel ID",
         "sequenceFormatter": "منسق التسلسل",
-        "seperator": "فاصل"
+        "separator": "فاصل"
       },
       "sequenceGenerator": {
         "sequenceGenerator": "مولد التسلسل",
-        "vendorsManagementErpRefrenece": "مرجع ادارة البائعين",
+        "vendorsManagementErpReference": "مرجع ادارة البائعين",
         "outwardInvoicesInvoice#": "الفواتير الصادرة الفاتورة رقم #",
         "outwardInvoicesEPayment#": "الفواتير الصادرة الدفع الالكتروني #",
-        "customersManagementErpRefrenece": "مرجع ادارة العملاء",
+        "customersManagementErpReference": "مرجع ادارة العملاء",
         "active": "نشط"
       },
       "notifications": {
@@ -248,7 +248,7 @@
     "password": "كلمة المرور",
     "forgotPassword": "هل نسيت كلمة المرور؟",
     "newUser": "ليس لديك حساب؟",
-    "signup": "سجل"
+    "signUp": "سجل"
   },
 
   "newUser": {
@@ -265,11 +265,11 @@
       "back": "رجوع",
       "uploadIdentityDocument": "تحميل وثائق الهوية",
       "addLogo": "إضافة شعار",
-      "inwardInvoiceItemsRequird": "العناصر الواردة في الفاتورة مطلوبة",
-      "showWarkmarkOnPreview": "إظهار علامة مائية على المعاينة",
-      "previewOnvoiceLogo": "شعار الفاتورة",
-      "previewOnvoiceFooter": "تذييل الفاتورة",
-      "previewOnvoiceStamp": "ختم الفاتورة",
+      "inwardInvoiceItemsRequired": "العناصر الواردة في الفاتورة مطلوبة",
+      "showWatermarkOnPreview": "إظهار علامة مائية على المعاينة",
+      "previewInvoiceLogo": "شعار الفاتورة",
+      "previewInvoiceFooter": "تذييل الفاتورة",
+      "previewInvoiceStamp": "ختم الفاتورة",
       "enableFlyInCustomer": "تمكين العميل المتحرك",
       "enableFlyInProduct": "تمكين المنتج المتحرك",
       "enableDeleteAttachmentsByUploader": "تمكين حذف المرفقات بواسطه القائم بالتحميل",
@@ -303,20 +303,20 @@
 
       "normalInvoiceFooterLineOne": "سطر تذييل الفاتورة العادية 1",
       "normalInvoiceFooterLineTwo": "سطر تذييل الفاتورة العادية 2",
-      "englishEpaymenyNumber": "رقم الدفع الإلكتروني بالإنجليزية",
-      "arabicEpaymenyNumber": "رقم الدفع الإلكتروني بالعربية",
+      "englishPaymentNumber": "رقم الدفع الإلكتروني بالإنجليزية",
+      "arabicPaymentNumber": "رقم الدفع الإلكتروني بالعربية",
       "englishPurchaseOrderRef": "رقم طلب الشراء بالإنجليزية",
       "arabicPurchaseOrderRef": "رقم طلب الشراء بالعربية",
       "defaultOutwardServiceDetails": "تفاصيل الخدمة الخارجية الافتراضية",
       "invoiceLayoutPostalCode": "الرمز البريدي لتخطيط الفاتورة",
 
-      "purchaseExeption": "اعفاء الشراء",
-      "sellExeption": "اعفاء البيع",
+      "purchaseException": "اعفاء الشراء",
+      "sellException": "اعفاء البيع",
       "defaultPaymentTerms": "شروط الدفع الافتراضية (ايام) ",
       "minInvoiceItems": "الحد الادني لعناصر الفاتوره",
       "maxInvoiceItems": "الحد الاقصي لعناصر الفاتوره",
       "currencies": "العملات",
-      "acceptedFractuonsRoundingUpTi": "الكسور المقبولة للتقريب لأعلى (يتم التعامل معها كنطاق +/-)"
+      "acceptedFractionsRoundingUpTi": "الكسور المقبولة للتقريب لأعلى (يتم التعامل معها كنطاق +/-)"
     }
   }
 }

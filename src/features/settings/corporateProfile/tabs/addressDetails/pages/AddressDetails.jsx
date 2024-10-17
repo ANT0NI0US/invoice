@@ -1,8 +1,9 @@
-import { Fragment, useState } from "react";
-import StepTwoFormInputs from "../../../../../authentication/newUser/StepTwoFormInputs";
-import Button from "../../../../../../ui/Button";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-const initialstate = {
+import StepTwoFormInputs from "@/features/authentication/newUser/StepTwoFormInputs";
+import Button from "@//ui/Button";
+
+const initialState = {
   country: "",
   city: "",
   cityArabicName: "",
@@ -19,10 +20,10 @@ const initialstate = {
   unitArabicNumber: "",
 };
 
-const AddressDetails = () => {
-  const [t] = useTranslation();
+export default function AddressDetails() {
+  const { t } = useTranslation();
 
-  const [state, setState] = useState(initialstate);
+  const [state, setState] = useState(initialState);
 
   const inputHandle = (e) => {
     setState({
@@ -31,7 +32,7 @@ const AddressDetails = () => {
     });
   };
   return (
-    <Fragment>
+    <>
       <StepTwoFormInputs inputHandle={inputHandle} />
       <div className="mt-8 flex w-full items-center justify-end gap-5">
         <div className="w-[150px]">
@@ -41,8 +42,6 @@ const AddressDetails = () => {
           <Button>{t("general.save")}</Button>
         </div>
       </div>
-    </Fragment>
+    </>
   );
-};
-
-export default AddressDetails;
+}

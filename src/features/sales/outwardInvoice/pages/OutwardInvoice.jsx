@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import Table from "../../../../ui/Table";
-import Header from "../../../../ui/Header";
+import Table from "@/ui/Table";
+import Header from "@/ui/Header";
 
 const columns = [
   "sidebar.sales.outwardInvoice.invoiceTaxNumber",
@@ -13,6 +12,7 @@ const columns = [
   "sidebar.sales.outwardInvoice.status",
   "sidebar.sales.outwardInvoice.info",
 ];
+
 const data = [
   [
     "5",
@@ -159,13 +159,11 @@ const data = [
   ],
 ];
 
-const OutwardInvoice = () => {
+export default function OutwardInvoice() {
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.sales.outwardInvoice.outwardInvoice" />
       <Table columns={columns} data={data} />
-    </Fragment>
+    </>
   );
-};
-
-export default OutwardInvoice;
+}

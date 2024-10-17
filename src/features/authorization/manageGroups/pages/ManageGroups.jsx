@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import Table from "../../../../ui/Table";
-import Header from "../../../../ui/Header";
+import Table from "@/ui/Table";
+import Header from "@/ui/Header";
 
 const columns = [
   "sidebar.authorization.manageGroups.id",
@@ -9,9 +8,9 @@ const columns = [
 ];
 const data = [];
 
-const ManageGroups = () => {
+export default function ManageGroups() {
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.authorization.manageGroups.manageGroups" />
       <Table
         textColor="text-white"
@@ -19,8 +18,6 @@ const ManageGroups = () => {
         columns={columns}
         data={data}
       />
-    </Fragment>
+    </>
   );
-};
-
-export default ManageGroups;
+}

@@ -1,19 +1,15 @@
-import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 import { FaInfoCircle } from "react-icons/fa";
 import { MdError } from "react-icons/md";
 import { MdAddBox } from "react-icons/md";
 
-// import { GrNext } from "react-icons/gr";
-// import { GrPrevious } from "react-icons/gr";
-
-const Table = ({
+export default function Table({
   columns,
   data,
   backColor = "bg-[#BCD2E0] bg-opacity-[12%]",
   textColor = "text-dark",
-}) => {
-  const [t] = useTranslation();
+}) {
+  const { t } = useTranslation();
 
   return (
     <div className="max-h-[calc(100vh-150px)] overflow-x-auto rounded-tl-[12px] rounded-tr-[12px]">
@@ -36,17 +32,17 @@ const Table = ({
               <td colSpan={columns.length}>
                 <div className="flexCenter mt-5 gap-1 text-center">
                   {textColor === "text-dark" ? (
-                    <Fragment>
+                    <>
                       <MdError />
                       <p className="font-semibold">{t("table.noDataFound")}</p>
-                    </Fragment>
+                    </>
                   ) : (
-                    <Fragment>
+                    <>
                       <MdAddBox />
                       <p className="font-semibold">
                         {t("table.addNewProduct")}
                       </p>
-                    </Fragment>
+                    </>
                   )}
                 </div>
               </td>
@@ -69,38 +65,6 @@ const Table = ({
           </tbody>
         )}
       </table>
-      {/* 
-      <div className="mt-6 sm:flex sm:items-center sm:justify-between ">
-        <div className="text-gray-500 dark:text-gray-400 text-sm">
-          Page
-          <span className="text-gray-700 dark:text-gray-100 font-medium">
-            1 of 10
-          </span>
-        </div>
-
-        <div className="mt-4 flex items-center gap-x-4 sm:mt-0">
-          <a
-            href="#"
-            className="text-gray-700 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 flex w-1/2 items-center justify-center gap-x-2 rounded-md border bg-white px-5 py-2 text-sm capitalize transition-colors duration-200 sm:w-auto"
-          >
-            <GrPrevious />
-
-            <span>previous</span>
-          </a>
-
-          <a
-            href="#"
-            className="text-gray-700 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 flex w-1/2 items-center justify-center gap-x-2 rounded-md border bg-white px-5 py-2 text-sm capitalize transition-colors duration-200 sm:w-auto"
-          >
-            <span>Next</span>
-
-            <GrNext />
-          </a>
-        </div>
-        </div>
-      */}
     </div>
   );
-};
-
-export default Table;
+}

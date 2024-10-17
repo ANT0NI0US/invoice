@@ -1,21 +1,21 @@
 import { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import { NavLink, useLocation } from "react-router-dom";
 import links from "./links";
 
-export default function SidebarLinks({ navigations, closeSidebar }) {
+export default function SidebarLinks({ navigation, closeSidebar }) {
   const [menuItems, setMenuItems] = useState([]);
-  const [t] = useTranslation();
+  const { t } = useTranslation();
   const location = useLocation();
 
   useEffect(() => {
     let filteredLinks = links;
-    if (navigations === "todo") {
-      filteredLinks = links.filter((link) => link?.cetegory === "todo");
+    if (navigation === "todo") {
+      filteredLinks = links.filter((link) => link?.category === "todo");
     }
     setMenuItems(filteredLinks);
-  }, [navigations]);
+  }, [navigation]);
 
   const toggleSubMenu = (index) => {
     const updatedMenuItems = menuItems.map((item, idx) => {
@@ -49,7 +49,7 @@ export default function SidebarLinks({ navigations, closeSidebar }) {
         return (
           <div key={index} className={`p-[10px] `}>
             <div
-              className={`flex w-full cursor-pointer items-center justify-between rounded-md p-[10px] font-medium ${isActive ? "active" : ""}`}
+              className={`flexBetween w-full cursor-pointer rounded-md p-[10px] font-medium ${isActive ? "active" : ""}`}
               onClick={() => toggleSubMenu(index)}
             >
               <div className="flex items-center gap-[10px]">

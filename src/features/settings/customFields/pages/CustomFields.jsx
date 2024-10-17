@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import Table from "../../../../ui/Table";
-import Header from "../../../../ui/Header";
+import Table from "@/ui/Table";
+import Header from "@/ui/Header";
 
 const columns = [
   "sidebar.settings.customFields.code",
@@ -14,9 +13,9 @@ const columns = [
 ];
 const data = [];
 
-const CustomFields = () => {
+export default function CustomFields() {
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.settings.customFields.customFields" />
       <Table
         textColor="text-white"
@@ -24,8 +23,6 @@ const CustomFields = () => {
         columns={columns}
         data={data}
       />
-    </Fragment>
+    </>
   );
-};
-
-export default CustomFields;
+}

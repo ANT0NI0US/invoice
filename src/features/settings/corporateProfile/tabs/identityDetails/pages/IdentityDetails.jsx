@@ -1,8 +1,9 @@
-import { Fragment, useState } from "react";
-import StepOneFormInputs from "../../../../../authentication/newUser/StepOneFormInputs";
-import Button from "../../../../../../ui/Button";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-const initialstate = {
+import StepOneFormInputs from "@/features/authentication/newUser/StepOneFormInputs";
+import Button from "@/ui/Button";
+
+const initialState = {
   englishName: "",
   arabicName: "",
   category: "",
@@ -15,10 +16,11 @@ const initialstate = {
   vatNumber: "",
   crNumber: "",
 };
-const IdentityDetails = () => {
-  const [t] = useTranslation();
 
-  const [state, setState] = useState(initialstate);
+export default function IdentityDetails() {
+  const { t } = useTranslation();
+
+  const [state, setState] = useState(initialState);
 
   const inputHandle = (e) => {
     setState({
@@ -27,7 +29,7 @@ const IdentityDetails = () => {
     });
   };
   return (
-    <Fragment>
+    <>
       <StepOneFormInputs inputHandle={inputHandle} />
       <div className="flex w-full items-center justify-end gap-5">
         <div className="w-[150px]">
@@ -37,8 +39,6 @@ const IdentityDetails = () => {
           <Button>{t("general.save")}</Button>
         </div>
       </div>
-    </Fragment>
+    </>
   );
-};
-
-export default IdentityDetails;
+}

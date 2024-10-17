@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function PageNotFound() {
+export default function PageNotFound() {
   return (
     <main className="flex h-screen w-full flex-col items-center justify-center bg-primary">
       <h1 className="text-9xl font-extrabold tracking-widest text-bgColor">
@@ -17,5 +17,3 @@ function PageNotFound() {
     </main>
   );
 }
-
-export default PageNotFound;

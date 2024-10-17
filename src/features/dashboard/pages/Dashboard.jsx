@@ -1,12 +1,9 @@
-import { Fragment } from "react";
-import Header from "../../../ui/Header";
+import Header from "@/ui/Header";
 
-function Dashboard() {
+export default function Dashboard() {
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.dashboard.dashboard" />
-    </Fragment>
+    </>
   );
 }
-
-export default Dashboard;

@@ -1,24 +1,22 @@
-import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
-
-import Button from "../../../ui/Button";
-import GridContainer from "../../../ui/GridContainer";
-import Input from "../../../ui/Input";
+import Button from "@/ui/Button";
+import GridContainer from "@/ui/GridContainer";
+import Input from "@/ui/Input";
 
 export default function StepThreeFormInputs({ inputHandle }) {
-  const [t] = useTranslation();
+  const { t } = useTranslation();
 
   return (
-    <Fragment>
+    <>
       <div className="container mx-auto mb-[30px] flex flex-col gap-[30px] px-4">
         <Button variation="secondary">
-          {t("newUser.formsData.previewOnvoiceLogo")}
+          {t("newUser.formsData.previewInvoiceLogo")}
         </Button>
         <Button variation="secondary">
-          {t("newUser.formsData.previewOnvoiceFooter")}
+          {t("newUser.formsData.previewInvoiceFooter")}
         </Button>
         <Button variation="secondary">
-          {t("newUser.formsData.previewOnvoiceStamp")}
+          {t("newUser.formsData.previewInvoiceStamp")}
         </Button>
       </div>
 
@@ -35,14 +33,14 @@ export default function StepThreeFormInputs({ inputHandle }) {
           handleChange={inputHandle}
         />
         <Input
-          placeholder={t("newUser.formsData.englishEpaymenyNumber")}
-          name={"englishEpaymenyNumber"}
+          placeholder={t("newUser.formsData.englishPaymentNumber")}
+          name={"englishPaymentNumber"}
           handleChange={inputHandle}
           type="number"
         />
         <Input
-          placeholder={t("newUser.formsData.arabicEpaymenyNumber")}
-          name={"arabicEpaymenyNumber"}
+          placeholder={t("newUser.formsData.arabicPaymentNumber")}
+          name={"arabicPaymentNumber"}
           handleChange={inputHandle}
           type="number"
         />
@@ -74,31 +72,31 @@ export default function StepThreeFormInputs({ inputHandle }) {
         <div className="flex items-center gap-[3px]">
           <input
             type="checkbox"
-            id="inwardInvoiceItemsRequird"
-            name="inwardInvoiceItemsRequird"
+            id="inwardInvoiceItemsRequired"
+            name="inwardInvoiceItemsRequired"
           />
           <label
-            htmlFor="inwardInvoiceItemsRequird"
+            htmlFor="inwardInvoiceItemsRequired"
             className="text-sm sm:text-base"
           >
-            {"  "} {t("newUser.formsData.inwardInvoiceItemsRequird")}
+            {"  "} {t("newUser.formsData.inwardInvoiceItemsRequired")}
           </label>
         </div>
         <div className="flex items-center gap-[3px]">
           <input
             type="checkbox"
-            id="showWarkmarkOnPreview"
-            name="showWarkmarkOnPreview"
+            id="showWatermarkOnPreview"
+            name="showWatermarkOnPreview"
           />
           <label
-            htmlFor="showWarkmarkOnPreview"
+            htmlFor="showWatermarkOnPreview"
             className="text-sm sm:text-base"
           >
             {"  "}
-            {t("newUser.formsData.showWarkmarkOnPreview")}
+            {t("newUser.formsData.showWatermarkOnPreview")}
           </label>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 }

@@ -1,15 +1,13 @@
-import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
-
-import GridContainer from "../../../ui/GridContainer";
-import Input from "../../../ui/Input";
-import Button from "../../../ui/Button";
+import GridContainer from "@/ui/GridContainer";
+import Input from "@/ui/Input";
+import Button from "@/ui/Button";
 
 export default function StepOneFormInputs({ inputHandle }) {
-  const [t] = useTranslation();
+  const { t } = useTranslation();
 
   return (
-    <Fragment>
+    <>
       <GridContainer>
         <Input
           placeholder={t("newUser.formsData.englishName")}
@@ -92,6 +90,6 @@ export default function StepOneFormInputs({ inputHandle }) {
           </Button>
         </GridContainer>
       </div>
-    </Fragment>
+    </>
   );
 }

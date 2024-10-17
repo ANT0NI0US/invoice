@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
 import FormHead from "./FormHead";
 import StepOne from "./StepOne";
 import StepTwo from "./StepTwo";
@@ -27,7 +26,7 @@ const formArray = [
   },
 ];
 
-const initialstate = {
+const initialState = {
   englishName: "",
   arabicName: "",
   category: "",
@@ -57,25 +56,25 @@ const initialstate = {
 
   normalInvoiceFooterLineOne: "",
   normalInvoiceFooterLineTwo: "",
-  englishEpaymenyNumber: "",
-  arabicEpaymenyNumber: "",
+  englishPaymentNumber: "",
+  arabicPaymentNumber: "",
   englishPurchaseOrderRef: "",
   arabicPurchaseOrderRef: "",
   defaultOutwardServiceDetails: "",
   invoiceLayoutPostalCode: "",
 
-  purchaseExeption: "",
-  sellExeption: "",
+  purchaseException: "",
+  sellException: "",
   defaultPaymentTerms: "",
   minInvoiceItems: "",
   maxInvoiceItems: "",
   currencies: "",
-  acceptedFractuonsRoundingUpTi: "",
+  acceptedFractionsRoundingUpTi: "",
 };
 
 export default function NewUserForm({ toggleIsLogin }) {
   const [formStep, setFormStep] = useState(formArray[0].number);
-  const [state, setState] = useState(initialstate);
+  const [state, setState] = useState(initialState);
   const [error, setError] = useState("");
 
   const {
@@ -108,24 +107,24 @@ export default function NewUserForm({ toggleIsLogin }) {
 
     normalInvoiceFooterLineOne,
     normalInvoiceFooterLineTwo,
-    englishEpaymenyNumber,
-    arabicEpaymenyNumber,
+    englishPaymentNumber,
+    arabicPaymentNumber,
     englishPurchaseOrderRef,
     arabicPurchaseOrderRef,
     defaultOutwardServiceDetails,
     invoiceLayoutPostalCode,
 
-    purchaseExeption,
-    sellExeption,
+    purchaseException,
+    sellException,
     defaultPaymentTerms,
     minInvoiceItems,
     maxInvoiceItems,
     currencies,
-    acceptedFractuonsRoundingUpTi,
+    acceptedFractionsRoundingUpTi,
   } = state;
 
   const navigate = useNavigate();
-  const [t] = useTranslation();
+  const { t } = useTranslation();
 
   const inputHandle = (e) => {
     setState({
@@ -174,8 +173,8 @@ export default function NewUserForm({ toggleIsLogin }) {
       formStep === 3 &&
       normalInvoiceFooterLineOne &&
       normalInvoiceFooterLineTwo &&
-      englishEpaymenyNumber &&
-      arabicEpaymenyNumber &&
+      englishPaymentNumber &&
+      arabicPaymentNumber &&
       englishPurchaseOrderRef &&
       arabicPurchaseOrderRef &&
       defaultOutwardServiceDetails &&
@@ -194,13 +193,13 @@ export default function NewUserForm({ toggleIsLogin }) {
 
   const finalSubmit = () => {
     if (
-      purchaseExeption &&
-      sellExeption &&
+      purchaseException &&
+      sellException &&
       defaultPaymentTerms &&
       minInvoiceItems &&
       maxInvoiceItems &&
       currencies &&
-      acceptedFractuonsRoundingUpTi
+      acceptedFractionsRoundingUpTi
     ) {
       navigate("/");
       setFormStep((prev) => prev + 1);
@@ -215,7 +214,7 @@ export default function NewUserForm({ toggleIsLogin }) {
         {/* Form Head */}
         <FormHead formArray={formArray} formStep={formStep} />
 
-        {/* Form Currently Desplayed */}
+        {/* Form Currently Displayed */}
         <div>
           {formStep === 1 && (
             <StepOne

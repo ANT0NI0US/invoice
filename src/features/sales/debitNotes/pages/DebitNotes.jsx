@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import Table from "../../../../ui/Table";
-import Header from "../../../../ui/Header";
+import Table from "@/ui/Table";
+import Header from "@/ui/Header";
 
 const columns = [
   "sidebar.sales.debitNotes.invoiceNumber",
@@ -45,13 +44,11 @@ const data = [
   ],
 ];
 
-const DebitNotes = () => {
+export default function DebitNotes() {
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.sales.debitNotes.debitNotes" />
       <Table columns={columns} data={data} />
-    </Fragment>
+    </>
   );
-};
-
-export default DebitNotes;
+}

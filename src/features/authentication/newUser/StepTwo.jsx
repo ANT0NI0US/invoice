@@ -1,14 +1,12 @@
-import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
-
-import Button from "../../../ui/Button";
 import StepTwoFormInputs from "./StepTwoFormInputs";
+import Button from "@/ui/Button";
 
 export default function StepTwo({ inputHandle, next, pre }) {
-  const [t] = useTranslation();
+  const { t } = useTranslation();
 
   return (
-    <Fragment>
+    <>
       {/* Inputs */}
       <StepTwoFormInputs inputHandle={inputHandle} />
 
@@ -21,6 +19,6 @@ export default function StepTwo({ inputHandle, next, pre }) {
           <Button onClick={next}>{t("newUser.formsData.next")}</Button>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 }

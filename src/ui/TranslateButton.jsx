@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { MdLanguage } from "react-icons/md";
-import { useOutsideClick } from "../hooks/useOutesideClick";
+import { useOutsideClick } from "@/hooks/useOutsideClick";
 
-const TranslateButton = () => {
-  const [t, i18n] = useTranslation();
+export default function TranslateButton() {
+  const { t, i18n } = useTranslation();
   const [openMenu, setOpenMenu] = useState(false);
 
   const toggleMenu = () => setOpenMenu((prev) => !prev);
@@ -67,6 +67,4 @@ const TranslateButton = () => {
       )}
     </div>
   );
-};
-
-export default TranslateButton;
+}

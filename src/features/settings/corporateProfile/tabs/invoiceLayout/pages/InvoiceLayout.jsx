@@ -1,23 +1,23 @@
-import { Fragment, useState } from "react";
-import StepThreeFormInputs from "../../../../../authentication/newUser/StepThreeFormInputs";
-import Button from "../../../../../../ui/Button";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import StepThreeFormInputs from "@/features/authentication/newUser/StepThreeFormInputs";
+import Button from "@/ui/Button";
 
-const initialstate = {
+const initialState = {
   normalInvoiceFooterLineOne: "",
   normalInvoiceFooterLineTwo: "",
-  englishEpaymenyNumber: "",
-  arabicEpaymenyNumber: "",
+  englishPaymentNumber: "",
+  arabicPaymentNumber: "",
   englishPurchaseOrderRef: "",
   arabicPurchaseOrderRef: "",
   defaultOutwardServiceDetails: "",
   invoiceLayoutPostalCode: "",
 };
 
-const InvoiceLayout = () => {
-  const [t] = useTranslation();
+export default function InvoiceLayout() {
+  const { t } = useTranslation();
 
-  const [state, setState] = useState(initialstate);
+  const [state, setState] = useState(initialState);
 
   const inputHandle = (e) => {
     setState({
@@ -26,7 +26,7 @@ const InvoiceLayout = () => {
     });
   };
   return (
-    <Fragment>
+    <>
       <StepThreeFormInputs inputHandle={inputHandle} />
       <div className="mt-8 flex w-full items-center justify-end gap-5">
         <div className="w-[150px]">
@@ -36,8 +36,6 @@ const InvoiceLayout = () => {
           <Button>{t("general.save")}</Button>
         </div>
       </div>
-    </Fragment>
+    </>
   );
-};
-
-export default InvoiceLayout;
+}

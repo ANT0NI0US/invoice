@@ -1,11 +1,10 @@
-import { Fragment } from "react";
-import routes from "../../../../navigations/routes";
+import { Outlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Tabs from "../components/Tabs";
-import { Outlet } from "react-router-dom";
+import routes from "@/navigation/routes";
 
-const CoraporateProfile = () => {
-  const [t] = useTranslation();
+export default function CorporateProfile() {
+  const { t } = useTranslation();
 
   const items = [
     {
@@ -26,13 +25,11 @@ const CoraporateProfile = () => {
     },
   ];
   return (
-    <Fragment>
+    <>
       <Tabs items={items} />
       <div className="mt-10">
         <Outlet />
       </div>
-    </Fragment>
+    </>
   );
-};
-
-export default CoraporateProfile;
+}

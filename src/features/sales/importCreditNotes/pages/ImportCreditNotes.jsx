@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import Table from "../../../../ui/Table";
-import Header from "../../../../ui/Header";
+import Table from "@/ui/Table";
+import Header from "@/ui/Header";
 
 const columns = [
   "sidebar.sales.importCreditNotes.description",
@@ -10,9 +9,9 @@ const columns = [
 ];
 const data = [];
 
-const ImportCreditNotes = () => {
+export default function ImportCreditNotes() {
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.sales.importCreditNotes.importCreditNotes" />
       <Table
         textColor="text-white"
@@ -20,8 +19,6 @@ const ImportCreditNotes = () => {
         columns={columns}
         data={data}
       />
-    </Fragment>
+    </>
   );
-};
-
-export default ImportCreditNotes;
+}

@@ -1,9 +1,8 @@
-import { Fragment } from "react";
-import Table from "../../../../ui/Table";
-import Header from "../../../../ui/Header";
-import Input from "../../../../ui/Input";
-import Button from "../../../../ui/Button";
 import { useTranslation } from "react-i18next";
+import Table from "@/ui/Table";
+import Header from "@/ui/Header";
+import Input from "@/ui/Input";
+import Button from "@/ui/Button";
 
 const columns = [
   "sidebar.reports.salesReports.invoiceNumber",
@@ -13,12 +12,13 @@ const columns = [
   "sidebar.reports.salesReports.paidAmount",
   "sidebar.reports.salesReports.status",
 ];
+
 const data = [];
 
-const SalesReports = () => {
-  const [t] = useTranslation();
+export default function SalesReports() {
+  const { t } = useTranslation();
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.reports.salesReports.salesReports" />
       <div className="my-10 w-full">
         <div className="my-10 flex flex-col gap-10">
@@ -107,8 +107,6 @@ const SalesReports = () => {
         columns={columns}
         data={data}
       />
-    </Fragment>
+    </>
   );
-};
-
-export default SalesReports;
+}

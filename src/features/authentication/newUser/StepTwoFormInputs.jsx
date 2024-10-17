@@ -1,14 +1,12 @@
-import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
-
-import Input from "../../../ui/Input";
-import GridContainer from "../../../ui/GridContainer";
+import Input from "@/ui/Input";
+import GridContainer from "@/ui/GridContainer";
 
 export default function StepTwoFormInputs({ inputHandle }) {
-  const [t] = useTranslation();
+  const { t } = useTranslation();
 
   return (
-    <Fragment>
+    <>
       <GridContainer>
         <Input
           placeholder={t("newUser.formsData.country")}
@@ -95,6 +93,6 @@ export default function StepTwoFormInputs({ inputHandle }) {
           handleChange={inputHandle}
         />
       </GridContainer>
-    </Fragment>
+    </>
   );
 }

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { useOutsideClick } from "../../hooks/useOutesideClick";
+import { useOutsideClick } from "@/hooks/useOutsideClick";
 
-export default function MainTitle({ setNavigations, navigations }) {
+export default function MainTitle({ setNavigation, navigation }) {
   const [openMenu, setOpenMenu] = useState(false);
+
   const toggleMenu = () => setOpenMenu((prev) => !prev);
   const ref = useOutsideClick(() => setOpenMenu(false));
 
@@ -18,10 +19,10 @@ export default function MainTitle({ setNavigations, navigations }) {
     <div className="relative cursor-pointer bg-bgColor text-primary">
       <div
         ref={ref}
-        className="flex items-center justify-center gap-[10px] border-b border-primary p-[10px] capitalize"
+        className="flexCenter gap-[10px] border-b border-primary p-[10px] capitalize"
         onClick={toggleMenu}
       >
-        {navigations}
+        {navigation}
         <IoIosArrowDown />
       </div>
 
@@ -31,13 +32,13 @@ export default function MainTitle({ setNavigations, navigations }) {
       >
         <span
           className="p-[10px] transition-all hover:bg-primary hover:text-bgColor"
-          onClick={() => setNavigations("main")}
+          onClick={() => setNavigation("main")}
         >
           Main
         </span>
         <span
-          className="p-[10px] transition-all hover:bg-primary  hover:text-bgColor"
-          onClick={() => setNavigations("todo")}
+          className="p-[10px] transition-all hover:bg-primary hover:text-bgColor"
+          onClick={() => setNavigation("todo")}
         >
           To Do
         </span>

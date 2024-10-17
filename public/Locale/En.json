@@ -68,8 +68,8 @@
         "importDate": "Import Date",
         "status": "Status"
       },
-      "integrationFaliure": {
-        "integrationFaliure": "Integration Faliure",
+      "integrationFailure": {
+        "integrationFailure": "Integration Failure",
         "id": "ID",
         "subReference": "Sub Reference",
         "majorReference": "Major Reference",
@@ -206,7 +206,7 @@
         "enableZatca": "Enable Zatca",
         "zatcaEnabled": "Zatca Enabled",
         "englishName": "English Name",
-        "identificationtype": "Identification Type *",
+        "identificationType": "Identification Type *",
         "identificationNumber": "Identification Number",
         "taxIdentificationNumber": "Tax Identification Number",
         "crn": "CRN",
@@ -216,14 +216,14 @@
         "invoiceType": "Invoice Type",
         "channelId": "Channel ID",
         "sequenceFormatter": "Sequence Formatter",
-        "seperator": "Seperator"
+        "separator": "Separator"
       },
       "sequenceGenerator": {
         "sequenceGenerator": "Sequence Generator",
-        "vendorsManagementErpRefrenece": "Vendors Management erpRefrenece",
+        "vendorsManagementErpReference": "Vendors Management erpReference",
         "outwardInvoicesInvoice#": "Outward Invoices Invoice #",
         "outwardInvoicesEPayment#": "outward Invoices ePayment #",
-        "customersManagementErpRefrenece": "Customers Management erpRefrenece",
+        "customersManagementErpReference": "Customers Management erpReference",
         "active": "Active"
       },
       "notifications": {
@@ -248,7 +248,7 @@
     "password": "Password",
     "forgotPassword": "Forgot Password?",
     "newUser": "Don't have an account?",
-    "signup": "Signup"
+    "signUp": "Sign up"
   },
 
   "newUser": {
@@ -256,7 +256,7 @@
     "stepOneTitle": "Identity Details",
     "stepTwoTitle": "Address Details",
     "stepThreeTitle": "Invoice Layout",
-    "stepFourTitle": "Configrations",
+    "stepFourTitle": "Configurations",
     "formsData": {
       "next": "Next",
       "previous": "previous",
@@ -265,11 +265,11 @@
       "back": "Back",
       "uploadIdentityDocument": "Upload Identity Document",
       "addLogo": "Add Logo",
-      "inwardInvoiceItemsRequird": "Inward Invoice Items Requird",
-      "showWarkmarkOnPreview": "Show Warkmark On Preview",
-      "previewOnvoiceLogo": "Preview Onvoice Logo",
-      "previewOnvoiceFooter": "Preview Onvoice Footer",
-      "previewOnvoiceStamp": "Preview Onvoice Stamp",
+      "inwardInvoiceItemsRequired": "Inward Invoice Items Required",
+      "showWatermarkOnPreview": "Show Watermark On Preview",
+      "previewInvoiceLogo": "Preview Invoice Logo",
+      "previewInvoiceFooter": "Preview Invoice Footer",
+      "previewInvoiceStamp": "Preview Invoice Stamp",
       "enableFlyInCustomer": "Enable Fly-in Customer",
       "enableFlyInProduct": "Enable Fly-in Product",
       "enableDeleteAttachmentsByUploader": "Enable Delete Attachments By Uploader",
@@ -303,20 +303,20 @@
 
       "normalInvoiceFooterLineOne": "Normal Invoice Footer Line 1",
       "normalInvoiceFooterLineTwo": "Normal Invoice Footer Line 2",
-      "englishEpaymenyNumber": "English Epaymeny Number",
-      "arabicEpaymenyNumber": "Arabic Epaymeny Number",
+      "englishPaymentNumber": "English Payment Number",
+      "arabicPaymentNumber": "Arabic Payment Number",
       "englishPurchaseOrderRef": "English Purchase Order Ref",
       "arabicPurchaseOrderRef": "Arabic Purchase Order Ref",
       "defaultOutwardServiceDetails": "Default Outward Service Details",
       "invoiceLayoutPostalCode": "Postal Code",
 
-      "purchaseExeption": "Purchase Exeption",
-      "sellExeption": "Sell Exeption",
+      "purchaseException": "Purchase Exception",
+      "sellException": "Sell Exception",
       "defaultPaymentTerms": "Default Payment Terms",
       "minInvoiceItems": "Min Invoice Items",
       "maxInvoiceItems": "Max Invoice Items",
       "currencies": "Currencies",
-      "acceptedFractuonsRoundingUpTi": "Accepted Fractuons Rounding Up Ti (handled as range +/-)"
+      "acceptedFractionsRoundingUpTi": "Accepted Fractions Rounding Up Ti (handled as range +/-)"
     }
   }
 }

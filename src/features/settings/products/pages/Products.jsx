@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import Table from "../../../../ui/Table";
-import Header from "../../../../ui/Header";
+import Table from "@/ui/Table";
+import Header from "@/ui/Header";
 
 const columns = [
   "sidebar.settings.products.id",
@@ -12,9 +11,9 @@ const columns = [
 ];
 const data = [];
 
-const Products = () => {
+export default function Products() {
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.settings.products.products" />
       <Table
         textColor="text-white"
@@ -22,8 +21,6 @@ const Products = () => {
         columns={columns}
         data={data}
       />
-    </Fragment>
+    </>
   );
-};
-
-export default Products;
+}

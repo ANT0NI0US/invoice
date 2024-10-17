@@ -1,4 +1,4 @@
-import routes from "../../navigations/routes";
+import routes from "@/navigation/routes";
 import { IoSettingsOutline } from "react-icons/io5";
 import { LiaMoneyBillWaveSolid } from "react-icons/lia";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
@@ -37,12 +37,12 @@ const links = [
         path: routes.importCreditNotes,
       },
       {
-        text: "sidebar.sales.integrationFaliure.integrationFaliure",
-        path: routes.integrationFaliure,
+        text: "sidebar.sales.integrationFailure.integrationFailure",
+        path: routes.integrationFailure,
       },
     ],
     href: "sales",
-    cetegory: "todo",
+    category: "todo",
   },
   {
     label: "sidebar.purchases.purchases",
@@ -63,7 +63,7 @@ const links = [
       },
     ],
     href: "purchases",
-    cetegory: "todo",
+    category: "todo",
   },
 
   {
@@ -115,7 +115,7 @@ const links = [
       },
     ],
     href: "authorization",
-    cetegory: "todo",
+    category: "todo",
   },
   {
     label: "sidebar.settings.settings",

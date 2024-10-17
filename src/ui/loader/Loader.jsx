@@ -1,6 +1,6 @@
 import styles from "./Loader.module.css";
 
-function Loader({ height = "h-[100vh]" }) {
+export default function Loader({ height = "h-[100vh]" }) {
   return (
     <div
       className={`flex ${height} items-center justify-center bg-slate-200/20 backdrop-blur-sm`}
@@ -11,5 +11,3 @@ function Loader({ height = "h-[100vh]" }) {
     </div>
   );
 }
-
-export default Loader;

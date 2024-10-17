@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import Table from "../../../../ui/Table";
-import Header from "../../../../ui/Header";
+import Table from "@/ui/Table";
+import Header from "@/ui/Header";
 
 const columns = [
   "sidebar.sales.manageCustomer.code",
@@ -45,13 +44,11 @@ const data = [
   ],
 ];
 
-const ManageCustomer = () => {
+export default function ManageCustomer() {
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.sales.manageCustomer.manageCustomer" />
       <Table columns={columns} data={data} />
-    </Fragment>
+    </>
   );
-};
-
-export default ManageCustomer;
+}

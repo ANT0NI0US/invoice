@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import Table from "../../../../ui/Table";
-import Header from "../../../../ui/Header";
+import Table from "@/ui/Table";
+import Header from "@/ui/Header";
 
 const columns = [
   "sidebar.purchases.manageVendor.code",
@@ -11,13 +10,11 @@ const columns = [
 ];
 const data = [];
 
-const ManageVendor = () => {
+export default function ManageVendor() {
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.purchases.manageVendor.manageVendor" />
       <Table columns={columns} data={data} />
-    </Fragment>
+    </>
   );
-};
-
-export default ManageVendor;
+}

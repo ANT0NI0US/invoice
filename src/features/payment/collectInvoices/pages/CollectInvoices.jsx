@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import Table from "../../../../ui/Table";
-import Header from "../../../../ui/Header";
+import Table from "@/ui/Table";
+import Header from "@/ui/Header";
 
 const columns = [
   "sidebar.payment.collectedInvoices.invoiceNumber",
@@ -12,15 +11,14 @@ const columns = [
   "sidebar.payment.collectedInvoices.channel",
   "sidebar.payment.collectedInvoices.status",
 ];
+
 const data = [];
 
-const CollectInvoices = () => {
+export default function CollectInvoices() {
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.payment.collectedInvoices.collectedInvoices" />
       <Table columns={columns} data={data} />
-    </Fragment>
+    </>
   );
-};
-
-export default CollectInvoices;
+}

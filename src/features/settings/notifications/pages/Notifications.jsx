@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import Table from "../../../../ui/Table";
-import Header from "../../../../ui/Header";
+import Table from "@/ui/Table";
+import Header from "@/ui/Header";
 
 const columns = [
   "sidebar.settings.notifications.subject",
@@ -9,13 +8,11 @@ const columns = [
 ];
 const data = [];
 
-const Notifications = () => {
+export default function Notifications() {
   return (
-    <Fragment>
+    <>
       <Header title="sidebar.settings.notifications.notifications" />
       <Table columns={columns} data={data} />
-    </Fragment>
+    </>
   );
-};
-
-export default Notifications;
+}
